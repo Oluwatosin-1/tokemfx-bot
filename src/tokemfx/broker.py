@@ -233,15 +233,15 @@ class OctaFXBroker(Broker):
 
 
 # ——— Exness implementation ————————————————————————————————————————
-from tokemfx.config import EX_API_KEY, EX_API_SECRET, EX_ACCOUNT_ID
+from tokemfx.config import EXNESS_API_KEY, EXNESS_API_SECRET, EXNESS_ACCOUNT_ID
 
 class ExnessBroker(Broker):
     BASE = "https://api.exness.com"  # example
 
     def __init__(self):
-        self.key        = EX_API_KEY
-        self.secret     = EX_API_SECRET
-        self.account_id = EX_ACCOUNT_ID
+        self.key        = EXNESS_API_KEY
+        self.secret     = EXNESS_API_SECRET
+        self.account_id = EXNESS_ACCOUNT_ID
 
     def _headers(self):
         return {
