@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from typing import Union, Dict, Any, Optional, Tuple
+from typing import Union, Dict, Any
 
 
 def load_results(path: str) -> pd.DataFrame:
@@ -20,7 +20,7 @@ def load_results(path: str) -> pd.DataFrame:
 def filter_results(df: pd.DataFrame, **params) -> pd.DataFrame:
     """
     Filter a results DataFrame by strategy parameters, e.g.
-      filter_results(df, fast_period=10, slow_period=30)
+        filter_results(df, fast_period=10, slow_period=30)
     """
     mask = pd.Series(True, index=df.index)
     for k, v in params.items():
@@ -56,7 +56,7 @@ def max_drawdown(drawdown: pd.Series) -> float:
     """
     Return the maximum drawdown (most negative value).
     """
-    return drawdown.min()
+    return float(drawdown.min())
 
 
 def cagr(equity: pd.Series) -> float:
@@ -74,7 +74,7 @@ def annualized_volatility(returns: pd.Series, periods_per_year: int = 252) -> fl
     """
     Compute annualized volatility of returns.
     """
-    return returns.std(ddof=0) * np.sqrt(periods_per_year)
+    return float(returns.std(ddof=0) * np.sqrt(periods_per_year))
 
 
 def sharpe_ratio(
@@ -88,7 +88,7 @@ def sharpe_ratio(
     excess = returns - risk_free_rate / periods_per_year
     ann_ret = excess.mean() * periods_per_year
     ann_vol = annualized_volatility(returns, periods_per_year)
-    return ann_ret / ann_vol if ann_vol != 0 else np.nan
+    return float(ann_ret / ann_vol) if ann_vol != 0 else np.nan
 
 
 def sortino_ratio(
@@ -101,10 +101,9 @@ def sortino_ratio(
     """
     excess = returns - risk_free_rate / periods_per_year
     ann_ret = excess.mean() * periods_per_year
-    # downside volatility
     negative = excess[excess < 0]
     dd_vol = np.sqrt((negative ** 2).mean() * periods_per_year)
-    return ann_ret / dd_vol if dd_vol != 0 else np.nan
+    return float(ann_ret / dd_vol) if dd_vol != 0 else np.nan
 
 
 def calmar_ratio(equity: pd.Series) -> float:
@@ -113,7 +112,7 @@ def calmar_ratio(equity: pd.Series) -> float:
     """
     dd = max_drawdown(drawdown_series(equity))
     c = cagr(equity)
-    return c / abs(dd) if dd != 0 else np.nan
+    return float(c / abs(dd)) if dd != 0 else np.nan
 
 
 def performance_summary(
@@ -125,22 +124,23 @@ def performance_summary(
     Compute a dictionary of key performance metrics from an equity curve.
     """
     returns = compute_returns(equity)
-    dd     = drawdown_series(equity)
+    dd = drawdown_series(equity)
     return {
-        "Start Value":       float(equity.iloc[0]),
-        "End Value":         float(equity.iloc[-1]),
-        "Net Profit":        float(equity.iloc[-1] - equity.iloc[0]),
-        "Total Return":      float(equity.iloc[-1] / equity.iloc[0] - 1),
-        "CAGR":              cagr(equity),
-        "Volatility":        annualized_volatility(returns, periods_per_year),
-        "Sharpe Ratio":      sharpe_ratio(returns, risk_free_rate, periods_per_year),
-        "Sortino Ratio":     sortino_ratio(returns, risk_free_rate, periods_per_year),
-        "Max Drawdown":      float(dd.min()),
-        "Calmar Ratio":      calmar_ratio(equity),
+        "Start Value":    float(equity.iloc[0]),
+        "End Value":      float(equity.iloc[-1]),
+        "Net Profit":     float(equity.iloc[-1] - equity.iloc[0]),
+        "Total Return":   float(equity.iloc[-1] / equity.iloc[0] - 1),
+        "CAGR":           cagr(equity),
+        "Volatility":     annualized_volatility(returns, periods_per_year),
+        "Sharpe Ratio":   sharpe_ratio(returns, risk_free_rate, periods_per_year),
+        "Sortino Ratio":  sortino_ratio(returns, risk_free_rate, periods_per_year),
+        "Max Drawdown":   float(dd.min()),
+        "Calmar Ratio":   calmar_ratio(equity),
     }
 
 
 # ─── Plotting utilities ─────────────────────────────────────────────────────────
+
 
 def plot_equity_curve(equity: pd.Series):
     """
@@ -149,8 +149,8 @@ def plot_equity_curve(equity: pd.Series):
     fig, ax = plt.subplots()
     equity.plot(ax=ax)
     ax.set_title("Equity Curve")
-    ax.set_ylabel("Equity")
     ax.set_xlabel("Time")
+    ax.set_ylabel("Equity")
     return fig
 
 
@@ -161,8 +161,8 @@ def plot_drawdown_curve(drawdown: pd.Series):
     fig, ax = plt.subplots()
     drawdown.plot(ax=ax)
     ax.set_title("Drawdown Curve")
-    ax.set_ylabel("Drawdown")
     ax.set_xlabel("Time")
+    ax.set_ylabel("Drawdown")
     return fig
 
 
@@ -174,12 +174,13 @@ def plot_rolling_sharpe(
     """
     Plot rolling Sharpe ratio over a moving window.
     """
-    roll_sh = returns.rolling(window).mean() / returns.rolling(window).std() * np.sqrt(periods_per_year)
+    roll_sh = returns.rolling(window).mean() / returns.rolling(window).std()
+    roll_sh *= np.sqrt(periods_per_year)
     fig, ax = plt.subplots()
     roll_sh.plot(ax=ax)
     ax.set_title(f"Rolling Sharpe (window={window})")
-    ax.set_ylabel("Sharpe")
     ax.set_xlabel("Time")
+    ax.set_ylabel("Sharpe")
     return fig
 
 
@@ -195,8 +196,8 @@ def plot_rolling_volatility(
     fig, ax = plt.subplots()
     roll_vol.plot(ax=ax)
     ax.set_title(f"Rolling Volatility (window={window})")
-    ax.set_ylabel("Volatility")
     ax.set_xlabel("Time")
+    ax.set_ylabel("Volatility")
     return fig
 
 
@@ -209,15 +210,21 @@ def plot_parameter_heatmap(
     """
     Plot a heatmap of a performance metric across two parameters.
     """
-    pivot = df.pivot_table(index=param_y, columns=param_x, values=metric)
+    pivot = df.pivot_table(
+        index=param_y,
+        columns=param_x,
+        values=metric,
+        aggfunc="mean"
+    ).sort_index(ascending=True)
     fig, ax = plt.subplots()
     cax = ax.imshow(pivot.values, aspect="auto", origin="lower")
     ax.set_xticks(np.arange(len(pivot.columns)))
-    ax.set_xticklabels(pivot.columns)
+    ax.set_xticklabels([str(c) for c in pivot.columns], rotation=45)
     ax.set_yticks(np.arange(len(pivot.index)))
-    ax.set_yticklabels(pivot.index)
+    ax.set_yticklabels([str(i) for i in pivot.index])
     ax.set_xlabel(param_x)
     ax.set_ylabel(param_y)
-    ax.set_title(f"{metric} heatmap ({param_x} vs {param_y})")
+    ax.set_title(f"{metric} Heatmap ({param_x} vs {param_y})")
     fig.colorbar(cax, ax=ax, label=metric)
+    plt.tight_layout()
     return fig

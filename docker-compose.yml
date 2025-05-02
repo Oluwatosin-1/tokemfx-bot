@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      # Redis
+      - REDIS_URL=redis://redis:6379/0
+
+      # Email alerts
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
+      - ALERT_EMAIL=${ALERT_EMAIL}
+
+      # Position sizing
+      - POSITION_SIZING_METHOD=${POSITION_SIZING_METHOD}
+      - FIXED_FRACTION=${FIXED_FRACTION}
+      - KELLY_WIN_RATE=${KELLY_WIN_RATE}
+      - KELLY_PAYOFF_RATIO=${KELLY_PAYOFF_RATIO}
+      - KELLY_FRACTION_MULTIPLIER=${KELLY_FRACTION_MULTIPLIER}
+
+      # Slack alerts
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - DRAW_ALERT_THRESHOLD=${DRAW_ALERT_THRESHOLD}
+    depends_on:
+      - redis
+    volumes:
+      - ./cache:/app/cache

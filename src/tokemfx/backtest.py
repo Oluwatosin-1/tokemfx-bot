@@ -6,8 +6,15 @@ from itertools import product
 from multiprocessing import Pool, cpu_count
 from typing import Type, Dict, Any, List, Union, Tuple
 
-from hyperopt import fmin, tpe, hp, Trials, STATUS_OK
-
+try:
+    from hyperopt import fmin, tpe, hp, Trials, STATUS_OK
+    _HYPEROPT_AVAILABLE = True
+except ImportError:
+    logging.getLogger(__name__).warning("hyperopt not installed, disabling hyperopt_optimize")
+    _HYPEROPT_AVAILABLE = False
+    # define placeholders so code still parses
+    fmin = tpe = hp = Trials = STATUS_OK = None
+    
 from tokemfx.data import DataHandler
 from tokemfx.strategy import BaseStrategy
 import pandas as pd
@@ -249,10 +256,13 @@ class BacktestEngine:
         """
         Hyperopt continuous search (sequential).
         """
+        if not _HYPEROPT_AVAILABLE:
+            raise RuntimeError("hyperopt is not installed. Please `pip install hyperopt` to use this feature.")
+        from hyperopt import STATUS_OK  # safe now
         def objective(params):
             stats = self.run(strat_cls, params, instruments, granularity, start, end)
             loss = - (stats.get("sharpe_ratio") or 0)
-            return {"loss": loss, "status": STATUS_OK, "params": params}
+            return {"loss": loss, "status": STATUS_OK, "params": params} 
 
         trials = Trials()
         best = fmin(

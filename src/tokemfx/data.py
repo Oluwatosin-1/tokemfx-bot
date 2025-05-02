@@ -1,115 +1,120 @@
 # src/tokemfx/data.py
 
-import logging
-import sqlite3
-import pickle
+import os
 import time
+import sqlite3
+import logging
+import pickle
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Optional
 
 import pandas as pd
 import redis
-
-from tokemfx.config import (
-    REDIS_URL,
-    REDIS_TTL_HISTORICAL,
-    REDIS_TTL_LATEST,
-)
 from tokemfx.broker import Broker
+
+# ─── Prometheus instrumentation (optional) ───────────────────────────────────
+try:
+    from prometheus_client import Counter, Gauge, start_http_server
+    # expose metrics on port 8000
+    start_http_server(8000)
+    PROM_REDIS_HITS    = Counter("dh_redis_hits",    "Redis cache hits")
+    PROM_REDIS_MISSES  = Counter("dh_redis_misses",  "Redis cache misses")
+    PROM_REDIS_STORES  = Counter("dh_redis_stores",  "Redis cache stores")
+    PROM_SQLITE_HITS   = Counter("dh_sqlite_hits",   "SQLite cache hits")
+    PROM_SQLITE_MISSES = Counter("dh_sqlite_misses", "SQLite cache misses")
+    PROM_CSV_HITS      = Counter("dh_csv_hits",      "CSV cache hits")
+    PROM_CSV_MISSES    = Counter("dh_csv_misses",    "CSV cache misses")
+    PROM_API_CALLS     = Counter("dh_api_calls",     "API calls made")
+except ImportError:
+    # no-op metrics if prometheus_client isn't installed
+    class _NoOp:
+        def inc(self): pass
+        def set(self, v): pass
+    PROM_REDIS_HITS = PROM_REDIS_MISSES = PROM_REDIS_STORES = _NoOp()
+    PROM_SQLITE_HITS = PROM_SQLITE_MISSES = _NoOp()
+    PROM_CSV_HITS = PROM_CSV_MISSES = _NoOp()
+    PROM_API_CALLS = _NoOp()
 
 logger = logging.getLogger(__name__)
 
+
 class DataHandler:
     """
-    Caches any Broker.fetch_candles in three layers:
-      1) Redis (in-memory) — fastest, short TTLs
-      2) SQLite (disk)    — robust storage & automatic backfill
-      3) CSV   (disk)    — ad-hoc fallback
-
-    Also tracks simple metrics on cache/API usage.
+    Fetches & caches OHLCV data via the given Broker, with caching layers:
+      1) Redis (in-memory)
+      2) SQLite (on-disk)
+      3) CSV   (ad-hoc)
+    Exposes Prometheus metrics if available.
     """
 
     def __init__(
         self,
         broker: Broker,
         cache_dir: str = "cache",
-        sqlite_path: Optional[str] = None,
-        redis_url: Optional[str] = REDIS_URL,
-        redis_ttl_historical: int = REDIS_TTL_HISTORICAL,
-        redis_ttl_latest: int     = REDIS_TTL_LATEST,
-        redis_key_prefix: str     = "tokemfx",
-        retries: int              = 3,
-        backoff: float            = 1.0,
+        sqlite_path: str = None,
+        redis_url: str = None,
+        redis_ttl_historical: int = 3600,
+        redis_ttl_latest: int = 300,
+        redis_key_prefix: str = "tokemfx",
+        retries: int = 3,
+        backoff: float = 1.0
     ):
-        self.broker = broker
-        self.retries = retries
-        self.backoff = backoff
+        self.broker               = broker
+        self.retries              = retries
+        self.backoff              = backoff
 
-        # ── Redis layer ───────────────────────────────────────────
-        self.redis = None
-        if redis_url:
-            try:
-                self.redis = redis.Redis.from_url(redis_url)
-                self.redis.ping()
-                logger.info(f"✅ Connected to Redis @ {redis_url}")
-            except Exception as e:
-                logger.warning(f"⚠️ Redis unavailable ({e}), skipping layer")
-        self.redis_ttl_historical = redis_ttl_historical
-        self.redis_ttl_latest     = redis_ttl_latest
-        self.redis_key_prefix     = redis_key_prefix
+        # CSV cache
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
 
-        # ── SQLite layer ──────────────────────────────────────────
+        # SQLite cache
         self.sqlite_path = Path(sqlite_path) if sqlite_path else None
         if self.sqlite_path:
             self._init_db()
 
-        # ── CSV fallback ──────────────────────────────────────────
-        self.cache_dir = Path(cache_dir)
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
-
-        # ── Metrics ───────────────────────────────────────────────
-        self.metrics = {
-            "redis_hits": 0,
-            "redis_misses": 0,
-            "redis_stores": 0,
-            "sqlite_hits": 0,
-            "sqlite_misses": 0,
-            "csv_hits": 0,
-            "csv_misses": 0,
-            "api_calls": 0,
-        }
-
-    def get_metrics(self) -> dict:
-        """Return accumulated metrics."""
-        return dict(self.metrics)
-
-    # ── Public API ──────────────────────────────────────────────────────────────
+        # Redis cache
+        self.redis                = None
+        self.redis_ttl_historical = redis_ttl_historical
+        self.redis_ttl_latest     = redis_ttl_latest
+        self.redis_key_prefix     = redis_key_prefix
+        if redis_url:
+            try:
+                self.redis = redis.Redis.from_url(redis_url)
+                self.redis.ping()
+                logger.info(f"Connected to Redis @ {redis_url}")
+            except Exception as e:
+                logger.warning(f"Redis connection failed ({e}); continuing without it")
 
     def get_historical(
         self,
         instrument: str,
         granularity: str,
         start: datetime,
-        end: Optional[datetime] = None
+        end: datetime = None,
+        price: str = "M"  # ignored, broker determines price type
     ) -> pd.DataFrame:
         """
-        Fetch candles between start→end (inclusive), with caching layers.
+        Return candles between [start → end], using:
+          1) Redis
+          2) SQLite (with gap backfill)
+          3) CSV fallback
+          4) Broker fetch
         """
         end = end or datetime.utcnow()
-        key = self._redis_key("hist", instrument, granularity, start, end)
+        key = self._redis_key("historical", instrument, granularity, start.isoformat(), end.isoformat())
 
         # 1) Redis
         if self.redis:
             try:
                 raw = self.redis.get(key)
                 if raw:
-                    self.metrics["redis_hits"] += 1
-                    logger.debug(f"Redis HIT {key}")
-                    return pickle.loads(raw)
+                    PROM_REDIS_HITS.inc()
+                    df = pickle.loads(raw)
+                    logger.debug(f"Redis hit: {key}")
+                    return df
                 else:
-                    self.metrics["redis_misses"] += 1
-                    logger.debug(f"Redis MISS {key}")
+                    PROM_REDIS_MISSES.inc()
+                    logger.debug(f"Redis miss: {key}")
             except Exception as e:
                 logger.warning(f"Redis GET failed: {e}")
 
@@ -119,40 +124,35 @@ class DataHandler:
         if self.sqlite_path:
             df = self._load_db(instrument, granularity, start, end)
             if not df.empty:
-                self.metrics["sqlite_hits"] += 1
+                PROM_SQLITE_HITS.inc()
             else:
-                self.metrics["sqlite_misses"] += 1
-
+                PROM_SQLITE_MISSES.inc()
             df = self._backfill(instrument, granularity, start, end, df)
 
-        # 3) CSV fallback
-        if df.empty and not self.sqlite_path:
-            path = self.cache_dir / f"{instrument}_{granularity}_{start:%Y%m%d}_{end:%Y%m%d}.csv"
-            if path.exists():
-                self.metrics["csv_hits"] += 1
-                logger.debug(f"CSV HIT {path}")
-                df = pd.read_csv(path, parse_dates=["time"], index_col="time")
+        else:
+            # 3) CSV
+            cache_file = self._cache_path(instrument, granularity, start, end)
+            if cache_file.exists():
+                PROM_CSV_HITS.inc()
+                logger.info(f"CSV hit: {cache_file}")
+                return pd.read_csv(cache_file, parse_dates=["time"], index_col="time")
             else:
-                self.metrics["csv_misses"] += 1
-                logger.debug(f"CSV MISS {path}")
+                PROM_CSV_MISSES.inc()
+                logger.info(f"CSV miss: {cache_file}")
 
-        # 4) Broker/API fetch in chunks
+        # 4) Broker fetch
         if df.empty:
-            df = self._fetch_all(instrument, granularity, start, end)
-            # persist to CSV if no SQLite
-            if not self.sqlite_path:
-                path = self.cache_dir / f"{instrument}_{granularity}_{start:%Y%m%d}_{end:%Y%m%d}.csv"
-                df.to_csv(path)
+            df = self._fetch_all_candles(instrument, granularity, start, end)
+            if not df.empty and not self.sqlite_path:
+                df.to_csv(cache_file)
+                logger.info(f"Saved CSV → {cache_file}")
 
-        # 5) Write to SQLite
-        if self.sqlite_path and not df.empty:
-            self._write_db(df, instrument, granularity)
-
-        # 6) Store to Redis
+        # 5) Store in Redis
         if self.redis and not df.empty:
             try:
                 self.redis.set(key, pickle.dumps(df), ex=self.redis_ttl_historical)
-                self.metrics["redis_stores"] += 1
+                PROM_REDIS_STORES.inc()
+                logger.debug(f"Stored in Redis: {key}")
             except Exception as e:
                 logger.warning(f"Redis SET failed: {e}")
 
@@ -162,98 +162,99 @@ class DataHandler:
         self,
         instrument: str,
         granularity: str,
-        count: int = 500
+        count: int = 500,
+        price: str = "M"
     ) -> pd.DataFrame:
         """
-        Fetch the most recent count bars, with Redis caching.
+        Fetch the most recent `count` candles, with Redis caching.
         """
         key = self._redis_key("latest", instrument, granularity, count)
 
-        # Redis
+        # 1) Redis
         if self.redis:
             try:
                 raw = self.redis.get(key)
                 if raw:
-                    self.metrics["redis_hits"] += 1
-                    return pickle.loads(raw)
+                    PROM_REDIS_HITS.inc()
+                    df = pickle.loads(raw)
+                    logger.debug(f"Redis hit: {key}")
+                    return df
                 else:
-                    self.metrics["redis_misses"] += 1
+                    PROM_REDIS_MISSES.inc()
+                    logger.debug(f"Redis miss: {key}")
             except Exception as e:
                 logger.warning(f"Redis GET latest failed: {e}")
 
-        # API
-        self.metrics["api_calls"] += 1
+        # 2) Broker fetch
+        PROM_API_CALLS.inc()
         df = self.broker.fetch_candles(
-            instrument, granularity, count=count
-        )  # Broker returns full DataFrame
+            instrument=instrument,
+            granularity=granularity,
+            count=count
+        )
 
-        # Cache
+        # 3) Store in Redis
         if self.redis and not df.empty:
             try:
                 self.redis.set(key, pickle.dumps(df), ex=self.redis_ttl_latest)
-                self.metrics["redis_stores"] += 1
+                PROM_REDIS_STORES.inc()
+                logger.debug(f"Stored latest in Redis: {key}")
             except Exception as e:
                 logger.warning(f"Redis SET latest failed: {e}")
 
         return df
 
-    # ── Internal helpers ─────────────────────────────────────────────────────────
+    # ─── Caching helpers ─────────────────────────────────────────────────────────
 
-    def _redis_key(self, kind, instr, gran, *args) -> str:
-        parts = [self.redis_key_prefix, kind, instr, gran] + [str(a) for a in args]
-        return ":".join(parts)
+    def _redis_key(self, kind: str, instrument: str, gran: str, *args) -> str:
+        return ":".join([self.redis_key_prefix, kind, instrument, gran] + list(map(str, args)))
 
-    def _fetch_all(
-        self,
-        instrument: str,
-        granularity: str,
-        start: datetime,
-        end: datetime
+    def _cache_path(self, instrument: str, gran: str, start: datetime, end: datetime) -> Path:
+        s = start.strftime("%Y%m%dT%H%M")
+        e = end.strftime("%Y%m%dT%H%M")
+        return self.cache_dir / f"{instrument}_{gran}_{s}_{e}.csv"
+
+    # ─── Broker fetch wrapper ────────────────────────────────────────────────────
+
+    def _fetch_all_candles(
+        self, instrument: str, granularity: str, start: datetime, end: datetime
     ) -> pd.DataFrame:
         """
-        Breaks a large historical request into chunks and concatenates them.
+        Chunk a long date-range into multiple broker.fetch_candles calls.
         """
-        max_count = 5000
         delta = self._gran_to_timedelta(granularity)
-        chunks, cursor = [], start
+        all_chunks, cursor = [], start
 
         while True:
-            cnt = None if end else max_count
             df_chunk = self.broker.fetch_candles(
-                instrument,
-                granularity,
+                instrument=instrument,
+                granularity=granularity,
                 start=cursor,
-                end=end if end else None,
-                count=cnt
+                end=end,
+                count=None
             )
             if df_chunk.empty:
                 break
-            chunks.append(df_chunk)
+            all_chunks.append(df_chunk)
             last = df_chunk.index[-1] + delta
-            if end and last >= end:
-                break
-            if not end and len(df_chunk) < max_count:
+            if last >= end:
                 break
             cursor = last
             time.sleep(self.backoff)
 
-        return pd.concat(chunks) if chunks else pd.DataFrame()
+        return pd.concat(all_chunks) if all_chunks else pd.DataFrame()
 
     def _gran_to_timedelta(self, gran: str) -> timedelta:
-        unit = gran[-1].upper()
-        val  = int(gran[:-1])
-        mapping = {
+        unit, val = gran[-1].upper(), int(gran[:-1])
+        return {
             "S": timedelta(seconds=val),
             "M": timedelta(minutes=val),
             "H": timedelta(hours=val),
             "D": timedelta(days=val),
             "W": timedelta(weeks=val),
-        }
-        if unit not in mapping:
-            raise ValueError(f"Unsupported granularity: {gran}")
-        return mapping[unit]
+        }.get(unit) or (_ for _ in ()).throw(ValueError(f"Bad granularity '{gran}'"))
 
-    # ── SQLite persistence ───────────────────────────────────────────────────────
+    # ─── SQLite persistence ───────────────────────────────────────────────────────
 
     def _init_db(self):
         conn = sqlite3.connect(self.sqlite_path)
@@ -272,25 +273,21 @@ class DataHandler:
         """)
         conn.commit()
         conn.close()
-        logger.info(f"Initialized SQLite cache @ {self.sqlite_path}")
+        logger.info(f"Initialized SQLite cache at {self.sqlite_path}")
 
     def _load_db(
-        self,
-        instrument: str,
-        granularity: str,
-        start: datetime,
-        end: datetime
+        self, instrument: str, granularity: str, start: datetime, end: datetime
     ) -> pd.DataFrame:
         conn = sqlite3.connect(self.sqlite_path)
-        sql = """
+        df = pd.read_sql(
+            """
             SELECT time, open, high, low, close, volume
               FROM candles
-             WHERE instrument=? AND granularity=?
+             WHERE instrument=? AND granularity=? 
                AND time BETWEEN ? AND ?
              ORDER BY time
-        """
-        df = pd.read_sql(
-            sql, conn,
+            """,
+            conn,
             params=[instrument, granularity, start.isoformat(), end.isoformat()],
             parse_dates=["time"],
             index_col="time"
@@ -307,15 +304,12 @@ class DataHandler:
         df: pd.DataFrame
     ) -> pd.DataFrame:
         """
-        Find gaps in the DataFrame’s index and fill them via broker calls.
+        Fill missing timestamps in df by fetching from broker & writing to SQLite.
         """
-        if df.empty:
-            return df
-
+        # build full index
         delta = self._gran_to_timedelta(granularity)
         full_idx = pd.date_range(start=start, end=end, freq=delta)
         missing = full_idx.difference(df.index)
-
         if missing.empty:
             return df
 
@@ -324,30 +318,27 @@ class DataHandler:
         for ts in missing[1:]:
             if ts - prev == delta:
                 prev = ts
-            else:
-                segments.append((seg_start, prev + delta))
-                seg_start = prev = ts
+                continue
+            segments.append((seg_start, prev + delta))
+            seg_start = prev = ts
         segments.append((seg_start, prev + delta))
 
-        to_store = []
+        to_write = []
         for s, e in segments:
-            chunk = self._fetch_all(instrument, granularity, s, e)
+            chunk = self._fetch_all_candles(instrument, granularity, s, e)
             if not chunk.empty:
-                to_store.append(chunk)
+                to_write.append(chunk)
 
-        if not to_store:
-            return df
+        if to_write:
+            new_df = pd.concat(to_write)
+            self._write_db(new_df, instrument, granularity)
+            # reload full range
+            return self._load_db(instrument, granularity, start, end)
 
-        new_df = pd.concat(to_store)
-        merged = pd.concat([df, new_df]).sort_index()
-        self._write_db(new_df, instrument, granularity)
-        return merged
+        return df
 
     def _write_db(
-        self,
-        df: pd.DataFrame,
-        instrument: str,
-        granularity: str
+        self, df: pd.DataFrame, instrument: str, granularity: str
     ):
         conn = sqlite3.connect(self.sqlite_path)
         df_reset = df.reset_index().rename(columns={"index": "time"})
@@ -362,4 +353,4 @@ class DataHandler:
             method="multi"
         )
         conn.close()
-        logger.debug(f"Wrote {len(df_reset)} new rows to SQLite")
+        logger.info(f"Wrote {len(df_reset)} rows to SQLite cache")
