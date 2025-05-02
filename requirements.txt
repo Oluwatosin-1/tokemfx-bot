@@ -75,7 +75,7 @@ smmap==5.0.2
 streamlit==1.45.0
 structlog==25.3.0
 tenacity==9.1.2
--e git+https://github.com/Oluwatosin-1/tokemfx-bot.git@0e627c9fce2dd050f515b285d9cb034c70773ec9#egg=tokemfx
+-e git+https://github.com/Oluwatosin-1/tokemfx-bot.git@2cd3098b47fd42520daefc0c05422d363ffbf7df#egg=tokemfx
 toml==0.10.2
 tornado==6.4.2
 tqdm==4.67.1

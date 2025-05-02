@@ -1,6 +1,6 @@
 import pandas as pd
 import backtrader as bt
-from datetime import datetime
+from datetime import datetime, timezone
 from tokemfx.strategy import MovingAverageCrossStrategy
 
 def test_ma_cross():

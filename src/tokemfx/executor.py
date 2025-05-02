@@ -1,13 +1,14 @@
 # src/tokemfx/executor.py
 
 import time
+import errno
 import logging
 import smtplib
 import ssl
 import requests
 
 from email.mime.text import MIMEText
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from threading import Event, Thread
 from typing import Type, Dict, Any
 
@@ -28,17 +29,35 @@ logger = logging.getLogger(__name__)
 
 # ─── Optional Prometheus instrumentation ─────────────────────────────────────
 try:
-    from prometheus_client import Counter, Gauge, start_http_server
-    start_http_server(8000)
-    PROM_TRADES   = Counter("exec_trades_total", "Number of trades executed")
-    PROM_EQUITY   = Gauge  ("exec_equity",       "Current account equity")
-    PROM_DRAWDOWN = Gauge  ("exec_drawdown",     "Current drawdown")
+    import prometheus_client
+    from prometheus_client import Counter, Gauge, start_http_server, REGISTRY
+
+    # attempt to start metrics endpoint, but don’t crash if port occupied
+    try:
+        start_http_server(8000)
+    except OSError as e:
+        if getattr(e, "errno", None) == errno.EADDRINUSE:
+            logger.warning("Prometheus port 8000 already in use; skipping start_http_server")
+        else:
+            logger.warning(f"Failed to start Prometheus server on 8000: {e}")
+
+    def _get_or_create_counter(name: str, desc: str):
+        try:
+            return Counter(name, desc)
+        except ValueError:
+            # already registered → reuse
+            return REGISTRY._names_to_collectors[name]
+
+    PROM_TRADES   = _get_or_create_counter("exec_trades_total",    "Number of trades executed")
+    PROM_EQUITY   = _get_or_create_counter("exec_equity",          "Current account equity")
+    PROM_DRAWDOWN = _get_or_create_counter("exec_drawdown",        "Current drawdown")
+
 except ImportError:
-    logger.warning("prometheus_client not installed; executor metrics disabled")
-    class _NoOp:
+    logger.warning("prometheus_client not installed; disabling metrics")
+    class _NoOpMetric:
         def inc(self): pass
         def set(self, v): pass
-    PROM_TRADES = PROM_EQUITY = PROM_DRAWDOWN = _NoOp()
+    PROM_TRADES = PROM_EQUITY = PROM_DRAWDOWN = _NoOpMetric()
 
 
 class Executor:
@@ -139,9 +158,10 @@ class Executor:
     def _initialize(self):
         """Seed strategy with historical bars and apply sizing."""
         df = self.dh.get_historical(
-            self.instrument, self.granularity,
-            start=datetime.utcnow() - self._lookback_timedelta(),
-            end=datetime.utcnow()
+            self.instrument,
+            self.granularity,
+            start=datetime.now(timezone.utc) - self._lookback_timedelta(),
+            end=datetime.now(timezone.utc)
         )
         if df.empty:
             raise RuntimeError("No historical data for initialization")
@@ -178,22 +198,22 @@ class Executor:
     def _loop(self):
         while not self._stop_event.is_set():
             try:
-                # Fetch latest bar
+                # 1) Fetch latest bar
                 df = self.dh.get_latest(self.instrument, self.granularity, count=1)
                 bar = df.iloc[-1]
 
-                # Feed into strategy
+                # 2) Feed into strategy
                 dat = self._strategy.data
                 dat.open[0], dat.high[0], dat.low[0], dat.close[0], dat.volume[0] = (
                     bar.open, bar.high, bar.low, bar.close, bar.volume
                 )
                 self._strategy.next()
 
-                # Update equity metric
+                # 3) Update equity metric
                 equity_val = self._cerebro.broker.getvalue()
                 PROM_EQUITY.set(equity_val)
 
-                # Handle completed orders
+                # 4) Handle executed orders
                 for order in list(self._strategy.broker.orders):
                     if order.status == order.Completed:
                         action = "BUY" if order.size > 0 else "SELL"
@@ -205,13 +225,14 @@ class Executor:
                         self._send_email("Trade Executed", text)
                         self._send_slack(f":money_with_wings: {text}")
 
-                # Drawdown alert
+                # 5) Drawdown alert
                 hist = self.dh.get_historical(
                     self.instrument, self.granularity,
-                    start=datetime.utcnow() - timedelta(days=1),
-                    end=datetime.utcnow()
+                    start=datetime.now(timezone.utc) - timedelta(days=1),
+                    end=datetime.now(timezone.utc)
                 )
-                eq   = equity_curve(compute_returns(hist["close"].pct_change().fillna(0)), initial_capital=self.cash)
+                eq   = equity_curve(compute_returns(hist["close"].pct_change().fillna(0)),
+                                    initial_capital=self.cash)
                 draw = drawdown_series(eq).min()
                 PROM_DRAWDOWN.set(draw)
                 if draw <= -DRAW_ALERT_THRESHOLD:

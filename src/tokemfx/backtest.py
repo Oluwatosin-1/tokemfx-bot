@@ -1,7 +1,7 @@
 # src/tokemfx/backtest.py
 
 import backtrader as bt
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 from itertools import product
 from multiprocessing import Pool, cpu_count
 from typing import Type, Dict, Any, List, Union, Tuple

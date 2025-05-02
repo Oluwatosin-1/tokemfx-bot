@@ -1,6 +1,6 @@
 import pytest
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 from tokemfx.data import DataHandler
 from tokemfx.broker import OANDABroker
 

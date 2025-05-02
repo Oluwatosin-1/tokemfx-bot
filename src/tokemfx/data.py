@@ -5,45 +5,59 @@ import time
 import sqlite3
 import logging
 import pickle
-from datetime import datetime, timedelta
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import pandas as pd
 import redis
 from tokemfx.broker import Broker
 
-# ─── Prometheus instrumentation (optional) ───────────────────────────────────
+logger = logging.getLogger(__name__)
+
+# ─── Optional Prometheus instrumentation ────────────────────────────────────
 try:
-    from prometheus_client import Counter, Gauge, start_http_server
-    # expose metrics on port 8000
-    start_http_server(8000)
-    PROM_REDIS_HITS    = Counter("dh_redis_hits",    "Redis cache hits")
-    PROM_REDIS_MISSES  = Counter("dh_redis_misses",  "Redis cache misses")
-    PROM_REDIS_STORES  = Counter("dh_redis_stores",  "Redis cache stores")
-    PROM_SQLITE_HITS   = Counter("dh_sqlite_hits",   "SQLite cache hits")
-    PROM_SQLITE_MISSES = Counter("dh_sqlite_misses", "SQLite cache misses")
-    PROM_CSV_HITS      = Counter("dh_csv_hits",      "CSV cache hits")
-    PROM_CSV_MISSES    = Counter("dh_csv_misses",    "CSV cache misses")
-    PROM_API_CALLS     = Counter("dh_api_calls",     "API calls made")
+    from prometheus_client import Counter, start_http_server, REGISTRY
+
+    # Try to start metrics endpoint (silent if already bound)
+    try:
+        start_http_server(8000)
+    except OSError as e:
+        logger.warning(f"Prometheus HTTP on 8000: {e}")
+
+    def _make_counter(name: str, desc: str) -> Counter:
+        try:
+            return Counter(name, desc)
+        except ValueError:
+            # Already registered → reuse
+            return REGISTRY._names_to_collectors[name]
+
+    PROM_REDIS_HITS    = _make_counter("dh_redis_hits",    "Redis cache hits")
+    PROM_REDIS_MISSES  = _make_counter("dh_redis_misses",  "Redis cache misses")
+    PROM_REDIS_STORES  = _make_counter("dh_redis_stores",  "Redis cache stores")
+    PROM_SQLITE_HITS   = _make_counter("dh_sqlite_hits",   "SQLite cache hits")
+    PROM_SQLITE_MISSES = _make_counter("dh_sqlite_misses", "SQLite cache misses")
+    PROM_CSV_HITS      = _make_counter("dh_csv_hits",      "CSV cache hits")
+    PROM_CSV_MISSES    = _make_counter("dh_csv_misses",    "CSV cache misses")
+    PROM_API_CALLS     = _make_counter("dh_api_calls",     "API calls made")
+
 except ImportError:
-    # no-op metrics if prometheus_client isn't installed
+    logger.info("prometheus_client not available; skipping metrics")
     class _NoOp:
         def inc(self): pass
-        def set(self, v): pass
     PROM_REDIS_HITS = PROM_REDIS_MISSES = PROM_REDIS_STORES = _NoOp()
     PROM_SQLITE_HITS = PROM_SQLITE_MISSES = _NoOp()
     PROM_CSV_HITS = PROM_CSV_MISSES = _NoOp()
     PROM_API_CALLS = _NoOp()
 
-logger = logging.getLogger(__name__)
-
 
 class DataHandler:
     """
-    Fetches & caches OHLCV data via the given Broker, with caching layers:
+    Fetches & caches OHLCV data via the given Broker, with layers:
       1) Redis (in-memory)
-      2) SQLite (on-disk)
+      2) SQLite (on-disk, with backfill)
       3) CSV   (ad-hoc)
+      4) Broker fetch (final fallback)
+
     Exposes Prometheus metrics if available.
     """
 
@@ -91,7 +105,7 @@ class DataHandler:
         granularity: str,
         start: datetime,
         end: datetime = None,
-        price: str = "M"  # ignored, broker determines price type
+        price: str = "M"
     ) -> pd.DataFrame:
         """
         Return candles between [start → end], using:
@@ -100,10 +114,13 @@ class DataHandler:
           3) CSV fallback
           4) Broker fetch
         """
-        end = end or datetime.utcnow()
-        key = self._redis_key("historical", instrument, granularity, start.isoformat(), end.isoformat())
+        end = end or datetime.now(timezone.utc)
+        key = self._redis_key(
+            "historical", instrument, granularity,
+            start.isoformat(), end.isoformat()
+        )
 
-        # 1) Redis
+        # ── 1) Redis ──────────────────────────────────────────────────────────
         if self.redis:
             try:
                 raw = self.redis.get(key)
@@ -120,17 +137,19 @@ class DataHandler:
 
         df = pd.DataFrame()
 
-        # 2) SQLite
+        # ── 2) SQLite with backfill ───────────────────────────────────────────
         if self.sqlite_path:
             df = self._load_db(instrument, granularity, start, end)
             if not df.empty:
                 PROM_SQLITE_HITS.inc()
+                logger.debug(f"SQLite hit: {len(df)} rows")
             else:
                 PROM_SQLITE_MISSES.inc()
+                logger.debug("SQLite miss")
             df = self._backfill(instrument, granularity, start, end, df)
 
         else:
-            # 3) CSV
+            # ── 3) CSV fallback ────────────────────────────────────────────────
             cache_file = self._cache_path(instrument, granularity, start, end)
             if cache_file.exists():
                 PROM_CSV_HITS.inc()
@@ -140,14 +159,15 @@ class DataHandler:
                 PROM_CSV_MISSES.inc()
                 logger.info(f"CSV miss: {cache_file}")
 
-        # 4) Broker fetch
+        # ── 4) Broker fetch ───────────────────────────────────────────────────
         if df.empty:
             df = self._fetch_all_candles(instrument, granularity, start, end)
             if not df.empty and not self.sqlite_path:
+                cache_file = self._cache_path(instrument, granularity, start, end)
                 df.to_csv(cache_file)
                 logger.info(f"Saved CSV → {cache_file}")
 
-        # 5) Store in Redis
+        # ── 5) Populate Redis ─────────────────────────────────────────────────
         if self.redis and not df.empty:
             try:
                 self.redis.set(key, pickle.dumps(df), ex=self.redis_ttl_historical)
@@ -170,7 +190,7 @@ class DataHandler:
         """
         key = self._redis_key("latest", instrument, granularity, count)
 
-        # 1) Redis
+        # Redis
         if self.redis:
             try:
                 raw = self.redis.get(key)
@@ -185,7 +205,7 @@ class DataHandler:
             except Exception as e:
                 logger.warning(f"Redis GET latest failed: {e}")
 
-        # 2) Broker fetch
+        # Broker fetch
         PROM_API_CALLS.inc()
         df = self.broker.fetch_candles(
             instrument=instrument,
@@ -193,7 +213,7 @@ class DataHandler:
             count=count
         )
 
-        # 3) Store in Redis
+        # Store in Redis
         if self.redis and not df.empty:
             try:
                 self.redis.set(key, pickle.dumps(df), ex=self.redis_ttl_latest)
@@ -204,26 +224,27 @@ class DataHandler:
 
         return df
 
-    # ─── Caching helpers ─────────────────────────────────────────────────────────
+    # ─── Internal Helpers ────────────────────────────────────────────────────────
 
     def _redis_key(self, kind: str, instrument: str, gran: str, *args) -> str:
-        return ":".join([self.redis_key_prefix, kind, instrument, gran] + list(map(str, args)))
+        return ":".join([self.redis_key_prefix, kind, instrument, gran]
+                        + list(map(str, args)))
 
-    def _cache_path(self, instrument: str, gran: str, start: datetime, end: datetime) -> Path:
+    def _cache_path(self, instrument: str, gran: str,
+                    start: datetime, end: datetime) -> Path:
         s = start.strftime("%Y%m%dT%H%M")
         e = end.strftime("%Y%m%dT%H%M")
         return self.cache_dir / f"{instrument}_{gran}_{s}_{e}.csv"
 
-    # ─── Broker fetch wrapper ────────────────────────────────────────────────────
-
     def _fetch_all_candles(
-        self, instrument: str, granularity: str, start: datetime, end: datetime
+        self, instrument: str, granularity: str,
+        start: datetime, end: datetime
     ) -> pd.DataFrame:
         """
-        Chunk a long date-range into multiple broker.fetch_candles calls.
+        Chunk a long date-range into broker.fetch_candles calls.
         """
         delta = self._gran_to_timedelta(granularity)
-        all_chunks, cursor = [], start
+        chunks, cursor = [], start
 
         while True:
             df_chunk = self.broker.fetch_candles(
@@ -235,24 +256,35 @@ class DataHandler:
             )
             if df_chunk.empty:
                 break
-            all_chunks.append(df_chunk)
-            last = df_chunk.index[-1] + delta
-            if last >= end:
+            chunks.append(df_chunk)
+            next_cursor = df_chunk.index[-1] + delta
+            if next_cursor >= end:
                 break
-            cursor = last
+            cursor = next_cursor
             time.sleep(self.backoff)
 
-        return pd.concat(all_chunks) if all_chunks else pd.DataFrame()
+        return pd.concat(chunks) if chunks else pd.DataFrame()
 
     def _gran_to_timedelta(self, gran: str) -> timedelta:
-        unit, val = gran[-1].upper(), int(gran[:-1])
-        return {
+        """
+        Convert a granularity string ("M1","H4","D", etc.) to a timedelta.
+        A single letter ("D","H","M","S","W") means 1 unit.
+        """
+        gran = gran.upper()
+        if len(gran) == 1:
+            unit, val = gran, 1
+        else:
+            unit, val = gran[0], int(gran[1:])
+        mapping = {
             "S": timedelta(seconds=val),
             "M": timedelta(minutes=val),
             "H": timedelta(hours=val),
             "D": timedelta(days=val),
             "W": timedelta(weeks=val),
-        }.get(unit) or (_ for _ in ()).throw(ValueError(f"Bad granularity '{gran}'"))
+        }
+        if unit not in mapping:
+            raise ValueError(f"Bad granularity '{gran}'")
+        return mapping[unit]
 
     # ─── SQLite persistence ───────────────────────────────────────────────────────
 
@@ -276,7 +308,8 @@ class DataHandler:
         logger.info(f"Initialized SQLite cache at {self.sqlite_path}")
 
     def _load_db(
-        self, instrument: str, granularity: str, start: datetime, end: datetime
+        self, instrument: str, granularity: str,
+        start: datetime, end: datetime
     ) -> pd.DataFrame:
         conn = sqlite3.connect(self.sqlite_path)
         df = pd.read_sql(
@@ -296,31 +329,28 @@ class DataHandler:
         return df
 
     def _backfill(
-        self,
-        instrument: str,
-        granularity: str,
-        start: datetime,
-        end: datetime,
+        self, instrument: str, granularity: str,
+        start: datetime, end: datetime,
         df: pd.DataFrame
     ) -> pd.DataFrame:
         """
-        Fill missing timestamps in df by fetching from broker & writing to SQLite.
+        Fill missing timestamps by fetching segments & writing to SQLite.
         """
-        # build full index
-        delta = self._gran_to_timedelta(granularity)
+        delta    = self._gran_to_timedelta(granularity)
         full_idx = pd.date_range(start=start, end=end, freq=delta)
-        missing = full_idx.difference(df.index)
+        missing  = full_idx.difference(df.index)
         if missing.empty:
             return df
 
+        # Group missing into contiguous spans
         segments, seg_start = [], missing[0]
         prev = seg_start
         for ts in missing[1:]:
             if ts - prev == delta:
                 prev = ts
-                continue
-            segments.append((seg_start, prev + delta))
-            seg_start = prev = ts
+            else:
+                segments.append((seg_start, prev + delta))
+                seg_start = prev = ts
         segments.append((seg_start, prev + delta))
 
         to_write = []
@@ -332,7 +362,6 @@ class DataHandler:
         if to_write:
             new_df = pd.concat(to_write)
             self._write_db(new_df, instrument, granularity)
-            # reload full range
             return self._load_db(instrument, granularity, start, end)
 
         return df
@@ -345,8 +374,7 @@ class DataHandler:
         df_reset["instrument"]  = instrument
         df_reset["granularity"] = granularity
         df_reset.to_sql(
-            "candles",
-            conn,
+            "candles", conn,
             if_exists="append",
             index=False,
             chunksize=500,
