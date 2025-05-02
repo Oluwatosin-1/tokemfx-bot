@@ -1,0 +1,23 @@
+# Core
+pandas
+numpy
+python-dotenv
+
+# Backtesting
+backtrader
+
+# Broker API (example: OANDA)
+oandapyV20
+
+# Quality & Formatting
+black
+flake8
+isort
+
+# Logging & Alerts
+structlog
+slack-sdk         # Slack’s official Python SDK
+
+# (Optional) Async HTTP
+aiohttp
+
