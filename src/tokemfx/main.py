@@ -1,28 +1,21 @@
-# src/tokemfx/main.py
-
-import logging
+#!/usr/bin/env python3
 import sys
+import os
+import logging
 import argparse
 
 from tokemfx.config import (
+    LOG_LEVEL,
+    REDIS_URL,
+)
+from tokemfx.config import (
     OANDA_API_KEY,
     OANDA_ACCOUNT_ID,
-    OANDA_ENV,
-    LOG_LEVEL,
+    FXCM_TOKEN,
 )
-from tokemfx.executor import Executor  # your execution engine
+from tokemfx.broker import OANDABroker, FXCMBroker
 from tokemfx.data import DataHandler
-from tokemfx.config import REDIS_URL
-
-dh = DataHandler(
-    cache_dir="cache",
-    sqlite_path="cache/candles.db",
-    redis_url=REDIS_URL,
-    redis_ttl_historical=1800,  # 30 min
-    redis_ttl_latest=60,        # 1 min
-    redis_key_prefix="tokemfx"
-)
-
+from tokemfx.executor import Executor
 
 def setup_logging():
     """Configure root logger with timestamp, level, and message."""
@@ -38,39 +31,86 @@ def main():
     setup_logging()
     logger = logging.getLogger(__name__)
 
-    # sanity-check credentials
-    if not OANDA_API_KEY or not OANDA_ACCOUNT_ID:
-        logger.error(
-            "Missing OANDA_API_KEY or OANDA_ACCOUNT_ID – "
-            "please check your .env file"
-        )
-        sys.exit(1)
-
-    logger.info("Starting TokemFX Bot", environment=OANDA_ENV)
-
     parser = argparse.ArgumentParser(
         description="TokemFX — a Python Forex trading bot"
     )
     parser.add_argument(
+        "--broker",
+        choices=["oanda", "fxcm"],
+        default="oanda",
+        help="Which broker to use (default: oanda)",
+    )
+    parser.add_argument(
         "--live",
         action="store_true",
-        help="Run in live mode (default is paper/demo)",
+        help="Run in live mode (otherwise paper/demo)",
+    )
+    parser.add_argument(
+        "--cache-dir",
+        default="cache",
+        help="Directory for CSV cache (default: cache)",
+    )
+    parser.add_argument(
+        "--sqlite-path",
+        default="cache/candles.db",
+        help="Path for SQLite cache DB (default: cache/candles.db)",
+    )
+    parser.add_argument(
+        "--redis-url",
+        default=REDIS_URL,
+        help="Redis URL for in-memory cache (default from config)",
+    )
+    parser.add_argument(
+        "--redis-ttl-historical",
+        type=int,
+        default=3600,
+        help="TTL for historical data in Redis, seconds (default: 3600)",
+    )
+    parser.add_argument(
+        "--redis-ttl-latest",
+        type=int,
+        default=300,
+        help="TTL for latest-bar data in Redis, seconds (default: 300)",
+    )
+    parser.add_argument(
+        "--redis-key-prefix",
+        default="tokemfx",
+        help="Prefix for Redis keys (default: tokemfx)",
     )
     args = parser.parse_args()
 
-    mode = "live" if args.live else "paper"
-    logger.info("Mode selected", mode=mode)
+    # ── Choose broker ────────────────────────────────────────────────────────────
+    if args.broker == "oanda":
+        if not OANDA_API_KEY or not OANDA_ACCOUNT_ID:
+            logger.error("OANDA_API_KEY and OANDA_ACCOUNT_ID must be set for OANDA broker")
+            sys.exit(1)
+        broker = OANDABroker()
+        logger.info("Using OANDA broker")
+    else:  # fxcm
+        if not FXCM_TOKEN:
+            logger.error("FXCM_TOKEN must be set for FXCM broker")
+            sys.exit(1)
+        broker = FXCMBroker()
+        logger.info("Using FXCM broker")
 
-    # pass live flag into your Executor
-    executor = Executor(live=args.live)
+    # ── Initialize DataHandler ──────────────────────────────────────────────────
+    dh = DataHandler(
+        broker=broker,
+        cache_dir=args.cache_dir,
+        sqlite_path=args.sqlite_path,
+        redis_url=args.redis_url,
+        redis_ttl_historical=args.redis_ttl_historical,
+        redis_ttl_latest=args.redis_ttl_latest,
+        redis_key_prefix=args.redis_key_prefix,
+        retries=3,
+        backoff=1.0,
+    )
+
+    # ── Start the Executor ──────────────────────────────────────────────────────
+    executor = Executor(broker=broker, data_handler=dh, live=args.live)
+    mode = "LIVE" if args.live else "PAPER"
+    logger.info(f"Starting Executor in {mode} mode")
     executor.start()
 
 if __name__ == "__main__":
     main()
-
-# #run the command below to run project
-# # paper trading (default)
-# python -m tokemfx.main
-
-# # live trading
-# python -m tokemfx.main --live
