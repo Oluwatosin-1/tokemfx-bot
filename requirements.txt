@@ -5,7 +5,8 @@ python-dotenv
 
 # Backtesting
 backtrader
-
+redis
+boto3
 # Broker API (example: OANDA)
 oandapyV20
 
@@ -21,3 +22,5 @@ slack-sdk         # Slack’s official Python SDK
 # (Optional) Async HTTP
 aiohttp
 
+matplotlib
+streamlit
