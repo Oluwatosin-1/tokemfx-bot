@@ -17,7 +17,6 @@ python -m tokemfx.main --cache-dir=~/tokemfx_cache --sqlite-path=~/tokemfx_cache
 # # live trading
 # python -m tokemfx.main --live
 # TokemFX Bot
-
 A battle-ready Python Forex trading bot with full backtesting, live (paper/demo) execution, real-time monitoring, alerts, and analytics.
 
 ---

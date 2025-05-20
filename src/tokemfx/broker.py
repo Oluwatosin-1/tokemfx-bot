@@ -4,6 +4,7 @@ import os
 from abc import ABC, abstractmethod
 from datetime import datetime
 import pandas as pd
+import MetaTrader5 as mt5  # Add this at top
 
 # ——— Abstract interface ———————————————————————————————————————————
 class Broker(ABC):
