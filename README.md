@@ -1,246 +1,97 @@
-to run the project run the command 
+# tokemFX Enterprise Trading Platform
 
-#streamlit run app.py
-# Paper/demo mode on OANDA (default)
-python -m tokemfx.main
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-# Live mode on FXCM
-python -m tokemfx.main --broker fxcm --live
+A battle-ready Python forex trading bot with full backtesting, live execution, AI-powered strategies, and enterprise-grade monitoring.
 
-# Customize caches
-python -m tokemfx.main --cache-dir=~/tokemfx_cache --sqlite-path=~/tokemfx_cache/db.sqlite
+## 🚀 Quick Start
 
-# #run the command below to run project
-# # paper trading (default)
-# python -m tokemfx.main
+```bash
+# Clone the repository
+git clone https://github.com/Oluwatosin-1/tokemfx-bot.git
+cd tokemfx-bot
 
-# # live trading
-# python -m tokemfx.main --live
-# TokemFX Bot
-A battle-ready Python Forex trading bot with full backtesting, live (paper/demo) execution, real-time monitoring, alerts, and analytics.
-
----
-
-## 🚀 Features
-
-- **Backtest Engine**  
-  • Multi-symbol, multi-timeframe support  
-  • Commission & slippage modeling  
-  • Walk-forward and Hyperopt tuning  
-  • Grid-search from the UI with heatmaps  
-
-- **Live Execution (paper/demo)**  
-  • OANDA & FXCM brokers  
-  • Flexible position sizing (fixed-fraction, Kelly criterion)  
-  • E-mail & Slack alerts on fills, errors, drawdown breaches  
-  • Drawdown threshold monitoring  
-
-- **Monitoring Dashboard**  
-  • Real-time equity & P&L metrics  
-  • Open position details & unrealized P&L  
-  • Intraday equity curve  
-
-- **Prometheus Metrics**  
-  • Cache hits/misses (Redis, SQLite, CSV)  
-  • API call counts  
-  • Live equity & drawdown gauges  
-  • Trade execution counters  
-
-- **Extensible Analytics**  
-  • Equity-curve, drawdown, rolling Sharpe, and more  
-  • Utility functions for parameter tuning and result analysis  
-
-- **Containerized**  
-  • Dockerfile for the app  
-  • `docker-compose.yml` to spin up Redis + the Streamlit app  
-
-- **CI/CD Ready**  
-  • Linting with Flake8  
-  • Tests with pytest  
-  • GitHub Actions pipeline to build & push Docker image  
-
----
-
-## 📂 Project Structure
-
-tokemfx-bot/
-├── README.md
-├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt
-├── app.py ← Streamlit UI (Backtest, Live, Monitor)
-└── src/
-└── tokemfx/
-├── analysis.py ← Performance & plotting helpers
-├── backtest.py ← BacktestEngine (grid, walk-forward, Hyperopt)
-├── broker.py ← OANDA & FXCM broker interfaces
-├── config.py ← Load .env & global settings
-├── data.py ← DataHandler with Redis/SQLite/CSV + Prometheus
-├── executor.py ← Live execution loop with alerts & sizing
-├── strategy.py ← Built-in strategies (MA, RSI, BB, ATR, EMA+RSI)
-└── tests/ ← pytest unit & integration tests
-
-makefile
-Copy
-Edit
-
----
-
-## 🛠️ Prerequisites
-
-- Python 3.10+  
-- Docker & Docker Compose (for containerized setup)  
-- Redis (if running locally without Docker)  
-- Broker accounts & API tokens (OANDA, FXCM)  
-- SMTP credentials (for e-mail alerts)  
-- Slack Incoming Webhook URL (optional)  
-
----
-
-## ⚙️ Configuration
-
-Create a `.env` file at the project root:
-
-```ini
-# OANDA
-OANDA_API_KEY=your_oanda_api_key
-OANDA_ACCOUNT_ID=your_oanda_account_id
-OANDA_ENV=practice
-
-# FXCM
-FXCM_TOKEN=your_fxcm_token
-FXCM_HOST=demo
-FXCM_PORT=443
-
-# Redis
-REDIS_URL=redis://localhost:6379/0
-REDIS_TTL_HISTORICAL=3600
-REDIS_TTL_LATEST=300
-REDIS_KEY_PREFIX=tokemfx
-
-# Email alerts
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=you@example.com
-SMTP_PASS=your_email_password
-ALERT_EMAIL=alerts@example.com
-
-# Slack alerts (optional)
-SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXXX/XXXX/XXXX
-DRAW_ALERT_THRESHOLD=0.05
-
-# Position sizing
-POSITION_SIZING_METHOD=fixed   # "fixed" or "kelly"
-FIXED_FRACTION=0.01
-KELLY_WIN_RATE=0.5
-KELLY_PAYOFF_RATIO=1.5
-KELLY_FRACTION_MULTIPLIER=1.0
-
-# General
-LOG_LEVEL=INFO
-🐳 Containerized Deployment
-Build and start with Docker Compose:
-
-bash
-Copy
-Edit
-docker-compose up --build
-Redis runs on port 6379
-
-Streamlit app runs on http://localhost:8501
-
-Prometheus metrics exposed on port 8000 (http://localhost:8000/metrics)
-
-💻 Running Locally (without Docker)
-Create & activate a virtual environment:
-
-bash
-Copy
-Edit
-python3 -m venv venv
-source venv/bin/activate
+# Install dependencies
 pip install -r requirements.txt
-Start a local Redis server:
 
-bash
-Copy
-Edit
-redis-server
-Fill in your .env as above.
-
-Launch the Streamlit app:
-
-bash
-Copy
-Edit
+# Launch the enterprise dashboard
 streamlit run app.py
-👩‍💻 Using the Streamlit Dashboard
-Backtest:
 
-Select one or more FX pairs, timeframe, date range.
+# Or launch with Docker
+docker-compose up --build
+```
 
-Choose a strategy and set its parameters.
+## 📚 Documentation
 
-(Optionally) enable “Grid Search” to sweep multiple parameter values.
+For comprehensive documentation, see the [`docs/`](./docs/) directory:
 
-View summary metrics, equity/drawdown curves, and heatmaps.
+- **[Getting Started](docs/README.md)** - Full project overview and installation guide
+- **[Enterprise Architecture](docs/architecture/ARCHITECTURE.md)** - Complete system design and modules
+- **[Deriv API Setup](docs/configuration/DERIV_OAUTH_SETUP.md)** - Authentication and configuration guide
 
-Live:
+## 🎯 Key Features
 
-Pick a single instrument, timeframe, and strategy.
+- **🤖 AI Trading Pipeline** with continuous learning and pattern recognition
+- **📊 Enterprise Dashboards** with professional monitoring and analytics
+- **💼 Industrial Backtesting** with statistical validation and optimization
+- **🛡️ Advanced Risk Management** with multi-layer controls and emergency systems
+- **📈 Executive Monitoring** with Grafana integration and performance metrics
+- **🏗️ Scalable Architecture** designed for institutional trading environments
 
-Click “Start Live” to spin up the Executor in paper/demo mode.
+## 🚀 Production Templates
 
-Alerts will be sent via e-mail and Slack on each fill, error, or drawdown breach.
+Launch the dashboard with different user roles:
 
-Monitor:
+```bash
+# Administrator access (all features)
+streamlit run app.py -- --template=admin
 
-View real-time account equity & P&L.
+# Professional trader focus
+streamlit run app.py -- --template=prop_trader
 
-Inspect your open position (entry, current price, unrealized P&L).
+# Risk analyst monitoring
+streamlit run app.py -- --template=risk_analyst
 
-See the intraday equity curve updated bar-by-bar.
+# Debug and development
+streamlit run app.py -- --template=developer
+```
 
-📊 Prometheus & Grafana
-Metrics endpoint: http://<host>:8000/metrics
+## 📜 Project Structure
 
-Sample Grafana dashboard: track dh_redis_hits, dh_api_calls, exec_equity, exec_drawdown, exec_trades_total.
+```
+📂 tokemfx-bot
+├── app.py                       # 🖥️ Main Streamlit application
+├── docs/                        # 📚 Complete documentation
+├── src/                         # 🏗️ Enterprise modular architecture
+│   ├── ai_trading_system/      # 🤖 AI/ML trading pipeline
+│   ├── backtesting/            # 🎲 Industrial backtesting engine
+│   ├── dashboard/              # 🖥️ Unified interface system
+│   ├── monitoring/             # 👁️ Enterprise observability
+│   ├── trading/                # 💼 Core trading execution
+│   ├── strategy/               # 🎯 Strategy architecture
+│   ├── charts/                 # 📊 Visualization framework
+│   └── config/                 # ⚙️ Configuration management
+├── config/                      # ⚙️ External configurations
+├── data/                        # 💾 Application data storage
+└── logs/                        # 📝 Centralized logging
+```
 
-🧪 Testing
-Run unit & integration tests with pytest:
+## 📈 Enterprise Capabilities
 
-bash
-Copy
-Edit
-pytest tests/ --maxfail=1 -q
-🤝 CI/CD
-Included .github/workflows/ci.yml to:
+Designed for institutional standards with Goldman Sachs-level architecture:
 
-Lint with Flake8
+- **AI-Enhanced Trading** with continuous model optimization
+- **Executive Intelligence** with business KPI dashboards
+- **Industrial Backtesting** with statistical significance validation
+- **Production Monitoring** with 7 professional Grafana dashboards
+- **Scalable Architecture** supporting unlimited expansions
 
-Test with pytest (spins up Redis service)
+## 📜 License
 
-Build & push Docker image on main branch
+MIT License - see LICENSE file for details.
 
-Set the following GitHub secrets:
+---
 
-DOCKER_USERNAME & DOCKER_PASSWORD
+**Built for reliability, transparency, and scalability across all trading environments.**
 
-Any env vars needed for tests (e.g. dummy API keys)
-
-🔧 Extending TokemFX
-Add strategies in strategy.py — just subclass bt.Strategy.
-
-New brokers: implement the Broker interface in broker.py.
-
-More alerts: extend Executor._send_slack or add new channels (Telegram, SMS).
-
-Advanced analytics: drop in new functions in analysis.py and call them from the UI.
-
-Hyperopt UI: wire up BacktestEngine.hyperopt_optimize to a Streamlit form.
-
-📜 License
-MIT License — see LICENSE for details.
-
-Built for reliability, transparency, and ease of extension. Happy trading!
- 
+*For detailed usage instructions and comprehensive documentation, visit the [`docs/`](./docs/) directory.*

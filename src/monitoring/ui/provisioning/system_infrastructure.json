@@ -1,0 +1,84 @@
+{
+  "dashboard": {
+    "title": "System Infrastructure Dashboard",
+    "description": "Complete system health and infrastructure monitoring",
+    "tags": ["system", "infrastructure", "health", "monitoring", "tokemfx"],
+    "timezone": "UTC",
+    "panels": [
+      {
+        "id": 1,
+        "title": "API Response Times",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+        "targets": [{
+          "expr": "api_response_time{endpoint=~"$endpoint"}",
+          "legendFormat": "{{endpoint}} Latency"
+        }],
+        "yAxes": [
+          {"format": "ms", "label": "Response Time"},
+          {"format": "short"}
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Memory & CPU Usage",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+        "targets": [
+          {
+            "expr": "system_memory_usage",
+            "legendFormat": "Memory %"
+          },
+          {
+            "expr": "system_cpu_usage",
+            "legendFormat": "CPU %"
+          }
+        ],
+        "yAxes": [
+          {"format": "percent", "label": "Usage %"},
+          {"format": "short"}
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Database Performance",
+        "type": "stat",
+        "gridPos": {"h": 6, "w": 8, "x": 0, "y": 8},
+        "targets": [{
+          "expr": "database_query_latency",
+          "legendFormat": "Query Latency"
+        }]
+      },
+      {
+        "id": 4,
+        "title": "Cache Hit Rate",
+        "type": "gauge",
+        "gridPos": {"h": 6, "w": 8, "x": 8, "y": 8},
+        "targets": [{
+          "expr": "cache_hit_ratio",
+          "legendFormat": "Cache Hit Rate"
+        }]
+      },
+      {
+        "id": 5,
+        "title": "Error Rates",
+        "type": "graph",
+        "gridPos": {"h": 6, "w": 8, "x": 16, "y": 8},
+        "targets": [{
+          "expr": "error_rate_by_component",
+          "legendFormat": "{{component}} Errors"
+        }]
+      }
+    ],
+    "time": {"from": "now-1h", "to": "now"},
+    "refresh": "30s",
+    "templating": {
+      "list": [{
+        "name": "endpoint",
+        "type": "query",
+        "query": "label_values(api_response_time, endpoint)",
+        "label": "API Endpoint"
+      }]
+    }
+  }
+}

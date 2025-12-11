@@ -1,0 +1,91 @@
+# TokemFX Trading System Configuration
+# YAML-based configuration for production deployment
+
+brokers:
+  default:
+    type: deriv
+    # Credentials handled via .env file for security
+    # DERIV_APP_ID, DERIV_API_TOKEN, DERIV_ACCOUNT_ID
+
+  # Support for multiple brokers
+  paper:
+    type: mock
+    initial_balance: 10000
+
+strategies:
+  default:
+    name: MA
+    fast_period: 10
+    slow_period: 30
+
+  aggressive:
+    name: BB
+    bb_period: 15
+    bb_dev: 1.5
+
+  conservative:
+    name: RSI
+    rsi_period: 21
+    rsi_overbought: 75
+    rsi_oversold: 25
+
+  combined:
+    name: EMA
+    fast_ema: 8
+    slow_ema: 21
+    rsi_period: 14
+
+  available:
+    - MA
+    - RSI
+    - BB
+    - ATR
+    - EMA
+
+risk:
+  max_drawdown: 0.05       # 5% max portfolio drawdown
+  max_position_size: 0.02  # 2% of account per position
+  max_daily_trades: 10     # Limited trading frequency
+  max_open_positions: 5    # Prevent over-leveraging
+  sizing_method: kelly     # kelly, fixed, percent
+  stop_loss_atr_mult: 1.5  # ATR-based stop losses
+  take_profit_mult: 2.0    # Risk:reward ratio
+
+trading:
+  instruments:
+    - R_10
+    - R_25
+    - R_50
+    - R_75
+    - R_100
+    - frxEURUSD
+    - frxUSDJPY
+    - frxGBPUSD
+  granularities:
+    - M1
+    - M5
+    - M15
+    - H1
+  poll_interval: 60         # Update frequency in seconds
+  timezone: UTC
+
+monitoring:
+  telegram: false           # Enable bot alerts
+  email: true              # Enable email notifications
+  prometheus_port: 8000    # Metrics endpoint
+  log_level: INFO
+  health_check_interval: 30 # Health checks every 30s
+
+performance:
+  enable_backtesting: true
+  backtest_initial_balance: 10000
+  backtest_commission: 0.0002
+  backtest_slippage: 0.0001
+
+alerts:
+  drawdown_thresholds:
+    - 0.02  # Minor alert at 2%
+    - 0.05  # Major alert at 5%
+  trade_confirmations: true
+  error_alerts: true
+  daily_reports: false

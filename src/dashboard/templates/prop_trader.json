@@ -1,0 +1,9 @@
+{
+  "name": "Professional Trader",
+  "description": "Full trading interface optimized for active traders",
+  "permissions": ["execute_trades", "modify_strategies", "view_positions", "risk_management"],
+  "features": ["real_time_execution", "strategy_optimization", "portfolio_tracking", "quick_backtest"],
+  "tabs": ["dashboard", "backtesting", "live_trading", "performance"],
+  "theme": "professional",
+  "layout": "wide"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Developer/Debug Mode",
+  "description": "Development and testing interface with debug tools",
+  "permissions": ["full_access", "debug_tools", "system_inspection"],
+  "features": ["debug_mode", "comprehensive_logging", "performance_metrics"],
+  "tabs": ["dashboard", "backtesting", "optimize", "live_trading", "performance", "ai_health", "system_audit", "production_monitor", "alert_dashboard", "infrastructure"],
+  "theme": "developer",
+  "layout": "wide"
+}

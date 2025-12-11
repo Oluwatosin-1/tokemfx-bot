@@ -1,0 +1,98 @@
+{
+  "dashboard": {
+    "title": "Live Trading Monitor Dashboard",
+    "description": "Real-time trading P&L, position monitoring, and risk exposure",
+    "tags": ["trading", "live", "p&l", "risk", "tokemfx"],
+    "timezone": "UTC",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Real-time P&L Chart",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 16, "x": 0, "y": 0},
+        "targets": [{
+          "expr": "portfolio_equity_curve",
+          "legendFormat": "Portfolio Value"
+        }],
+        "yAxes": [
+          {"format": "currencyUSD", "label": "Portfolio Value"},
+          {"format": "short"}
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Risk Exposure Gauges",
+        "type": "gauge",
+        "gridPos": {"h": 6, "w": 8, "x": 16, "y": 0},
+        "targets": [{
+          "expr": "current_risk_exposure",
+          "legendFormat": "Risk %"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 2},
+                {"color": "red", "value": 5}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 3,
+        "title": "Active Positions",
+        "type": "table",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "targets": [{
+          "expr": "active_positions{instrument=~"$instrument"}",
+          "legendFormat": "{{instrument}} Position"
+        }]
+      },
+      {
+        "id": 4,
+        "title": "Execution Speed",
+        "type": "stat",
+        "gridPos": {"h": 6, "w": 6, "x": 12, "y": 8},
+        "targets": [{
+          "expr": "order_execution_latency",
+          "legendFormat": "Avg Latency"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 500},
+                {"color": "red", "value": 2000}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "Trading Activity Feed",
+        "type": "logs",
+        "gridPos": {"h": 6, "w": 6, "x": 18, "y": 8},
+        "targets": [{
+          "expr": "{job=\"tokemfx-trading\"}",
+          "legendFormat": "Trading Events"
+        }]
+      }
+    ],
+    "time": {"from": "now-1d", "to": "now"},
+    "refresh": "5s",
+    "templating": {
+      "list": [{
+        "name": "instrument",
+        "type": "query",
+        "query": "label_values(active_positions, instrument)",
+        "label": "Instrument"
+      }]
+    }
+  }
+}

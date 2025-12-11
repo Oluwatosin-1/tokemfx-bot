@@ -1,0 +1,58 @@
+{
+  "prop_trader": {
+    "name": "Professional Trader",
+    "description": "Full trading interface for active traders",
+    "tabs": ["dashboard", "backtesting", "optimize", "live_trading", "performance"],
+    "permissions": ["execute_trades", "modify_strategies", "view_positions"],
+    "features": ["real_time_execution", "strategy_optimization", "portfolio_tracking"]
+  },
+  "risk_analyst": {
+    "name": "Risk Analyst",
+    "description": "Risk monitoring and analysis focused dashboard",
+    "tabs": ["dashboard", "performance", "alert_dashboard", "infrastructure"],
+    "permissions": ["view_alerts", "acknowledge_risks", "configure_alerts"],
+    "features": ["risk_monitoring", "alert_management", "system_health"]
+  },
+  "admin": {
+    "name": "System Administrator",
+    "description": "Complete system administration and monitoring with full access to all features and real-time data",
+    "tabs": ["dashboard", "backtesting", "optimize", "live_trading", "ai_trading", "performance", "ai_health", "system_audit", "production_monitor", "alert_dashboard", "infrastructure"],
+    "permissions": ["full_access", "system_controls", "user_management"],
+    "features": ["comprehensive_monitoring", "emergency_controls", "system_configuration"],
+    "routing": {
+      "home": "/dashboard",
+      "backtesting": "/backtesting-studio",
+      "strategy_optimizer": "/strategy-optimizer",
+      "live_trading": "/live-trading",
+      "ai_monitoring": "/ai-health-monitor",
+      "performance": "/performance-monitor",
+      "system_audit": "/system-audit",
+      "production": "/production-monitor",
+      "alerts": "/alert-dashboard",
+      "infrastructure": "/infrastructure",
+      "ai_trading": "/ai-trading-dashboard"
+    },
+    "navigation_hierarchy": {
+      "level_1": ["overview", "trading", "monitoring", "system"],
+      "level_2": {
+        "overview": ["dashboard"],
+        "trading": ["backtesting", "optimize", "live_trading", "ai_trading"],
+        "monitoring": ["performance", "ai_health", "production_monitor", "alert_dashboard"],
+        "system": ["system_audit", "infrastructure"]
+      }
+    },
+    "advanced_details": {
+      "data_sources": "Real-time integration with Deriv API, BacktestEngine, AI modules, and monitoring systems",
+      "refresh_rates": {"live_trading": "1s", "performance": "5s", "ai_health": "30s", "system": "60s"},
+      "data_retention": "90 days historical data, continuous real-time updates",
+      "emergency_protocols": "Automatic shutdown on anomaly detection, manual override available"
+    }
+  },
+  "developer": {
+    "name": "Developer/Debug Mode",
+    "description": "Development and testing interface with all features",
+    "tabs": ["dashboard", "backtesting", "optimize", "live_trading", "performance", "ai_health", "system_audit", "production_monitor", "alert_dashboard", "infrastructure"],
+    "permissions": ["full_access", "debug_tools", "system_inspection"],
+    "features": ["debug_mode", "comprehensive_logging", "performance_metrics"]
+  }
+}

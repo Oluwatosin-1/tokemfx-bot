@@ -1,18 +1,14 @@
 import pytest
 import pandas as pd
 from datetime import datetime, timezone, timedelta
-from tokemfx.data import DataHandler
-from tokemfx.broker import OANDABroker
+from src.test_utils import create_sample_ohlc_data
+from src.backtesting.data_handler import BacktestDataHandler
+from src.trading.execution.broker import DerivBroker as OANDABroker
 
 @pytest.fixture
 def dh(tmp_path, monkeypatch):
     # force CSV-only, no Redis/SQLite
-    return DataHandler(
-        broker=OANDABroker(),
-        cache_dir=str(tmp_path/"cache"),
-        sqlite_path=None,
-        redis_url=None
-    )
+    return BacktestDataHandler()
 
 def test_csv_fallback(tmp_path, dh, monkeypatch):
     # prepare a small CSV
@@ -25,6 +21,6 @@ def test_csv_fallback(tmp_path, dh, monkeypatch):
     path.parent.mkdir()
     df.to_csv(path)
 
-    out = dh.get_historical(instr, gran, start, end)
+    out = dh.get_historical(instr, gran, start, end, cache_dir=str(tmp_path/"cache"))
     assert isinstance(out, pd.DataFrame)
     assert len(out) == len(idx)

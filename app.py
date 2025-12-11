@@ -1,279 +1,199 @@
-#!/usr/bin/env python3
-# app.py
+"""
+TokemFX Enterprise Trading Dashboard
+Professional trading platform with full functionality.
+"""
 
+# Setup proper Python path for imports
 import sys
 import os
-from datetime import datetime, timezone
-from multiprocessing import cpu_count
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
-# ── Make sure Python can see our src/ directory ────────────────────────────────
-project_root = os.path.dirname(__file__)
-src_path     = os.path.join(project_root, "src")
-if src_path not in sys.path:
-    sys.path.insert(0, src_path)
-
-# ── Standard imports ───────────────────────────────────────────────────────────
 import streamlit as st
-import pandas as pd
+import json
+from typing import List, Dict, Any
 
-# ── Analytics helpers ─────────────────────────────────────────────────────────
-from tokemfx.analysis import (
-    compute_returns,
-    equity_curve,
-    drawdown_series,
-    performance_summary,
-    plot_equity_curve,
-    plot_drawdown_curve,
-    plot_rolling_sharpe,
-    plot_parameter_heatmap,
-)
+# ============================================================================
+# ENTERPRISE DASHBOARD - FULL FUNCTIONALITY
+# ============================================================================
 
-# ── Core components ───────────────────────────────────────────────────────────
-from tokemfx.config   import REDIS_URL
-from tokemfx.broker   import ExnessBroker, HotForexBroker, OANDABroker, FXCMBroker, OctaFXBroker
-from tokemfx.data     import DataHandler
-from tokemfx.backtest import BacktestEngine
-from tokemfx.executor import Executor
-from tokemfx.strategy import (
-    ATRBreakoutStrategy,
-    EMARSIHybridStrategy,
-    MovingAverageCrossStrategy,
-    RSIReversionStrategy,
-    BollingerBreakoutStrategy,
-)
-
-# ── Page configuration ────────────────────────────────────────────────────────
-st.set_page_config(layout="wide")
-st.title("📊 TokemFX Interactive Backtester & Live Dashboard")
-
-# ── Mode Selector ─────────────────────────────────────────────────────────────
-mode = st.sidebar.radio("Mode", ["Backtest", "Grid Search", "Live", "Monitor"])
-
-# ── Broker selection ─────────────────────────────────────────────────────────
-broker_map = {
-    "OANDA":      OANDABroker,
-    "FXCM":       FXCMBroker,
-    "HotForex":   HotForexBroker,
-    "OctaFX":     OctaFXBroker,
-    "Exness":     ExnessBroker,
-}
-broker_choice = st.sidebar.selectbox("Broker", list(broker_map.keys()))
-broker        = broker_map[broker_choice]()
-
-# ── Instruments ───────────────────────────────────────────────────────────────
-try:
-    # If your Broker subclass exposes a method to list pairs:
-    available_instruments = broker.get_available_instruments()
-except Exception:
-    # Fallback static list
-    available_instruments = ["EUR_USD", "GBP_USD", "USD_JPY", "AUD_USD"]
-
-if mode in ("Backtest", "Grid Search"):
-    instruments = st.sidebar.multiselect(
-        "Select FX pairs", available_instruments,
-        default=[available_instruments[0]]
+# Prevent multiple set_page_config calls across the entire application
+if not hasattr(st, '_page_config_set'):
+    st.set_page_config(
+        page_title="TokemFX Professional Trading",
+        page_icon="📊",
+        layout="wide",
+        initial_sidebar_state="collapsed"  # Changed from expanded to collapsed
     )
-else:
-    instruments = [st.sidebar.selectbox("Instrument", available_instruments)]
+    st._page_config_set = True
 
-# ── Granularity ───────────────────────────────────────────────────────────────
-granularity = st.sidebar.selectbox(
-    "Granularity", ["M1","M5","M15","H1","H4","D"], index=3
-)
+# ============================================================================
+# DASHBOARD CONFIGURATION
+# ============================================================================
 
-# ── Date range (Backtest / Grid) ──────────────────────────────────────────────
-if mode in ("Backtest", "Grid Search"):
-    today         = datetime.now(timezone.utc).date()
-    default_start = today.replace(year=today.year - 1)
-    start_date    = st.sidebar.date_input("Start Date", default_start)
-    end_date      = st.sidebar.date_input("End Date", today)
+def load_dashboard_template_lazy(template_name: str = "admin") -> list:
+    """
+    Load dashboard template configuration.
+    """
+    try:
+        from src.dashboard.dashboard_loader import load_dashboard_template
+        return load_dashboard_template(template_name)
+    except Exception as e:
+        print(f"Warning: Could not load dashboard template: {e}")
+        # Return fallback configuration
+        return [
+            {"name": "dashboard", "title": "📊 Dashboard", "component": "render_advanced_dashboard", "icon": "📊"},
+            {"name": "backtesting", "title": "🔍 Backtest Studio", "component": "render_advanced_backtesting", "icon": "🔍"},
+            {"name": "live_trading", "title": "🎯 Live Trading", "component": "render_live_trading", "icon": "🎯"},
+            {"name": "ai_health", "title": "🤖 AI Health", "component": "render_ai_health_monitor", "icon": "🤖"}
+        ]
 
-# ── Strategy selection ────────────────────────────────────────────────────────
-strategy_map  = {
-    "MA Cross": MovingAverageCrossStrategy,
-    "RSI Rev":  RSIReversionStrategy,
-    "BBreak":   BollingerBreakoutStrategy,
-    "ATR BO":   ATRBreakoutStrategy,
-    "EMA+RSI":  EMARSIHybridStrategy,
-}
-strategy_name = st.sidebar.selectbox("Strategy", list(strategy_map.keys()))
-strategy_cls  = strategy_map[strategy_name]
+def load_dashboard_component(component_name: str):
+    """
+    Load and render a specific dashboard component.
+    """
+    if component_name == 'dashboard':
+        from src.dashboard.dashboard_module import render_advanced_dashboard
+        render_advanced_dashboard()
 
-# ── Strategy parameters ───────────────────────────────────────────────────────
-st.sidebar.subheader("Parameters")
-params = {}
-if strategy_name == "MA Cross":
-    params["fast_period"] = st.sidebar.number_input("Fast MA", 1, 100, 10)
-    params["slow_period"] = st.sidebar.number_input("Slow MA", 1, 200, 30)
+    elif component_name == 'backtesting':
+        try:
+            from src.dashboard.components.backtesting_studio import render_backtesting_studio
+            render_backtesting_studio()
+        except ImportError:
+            from src.dashboard.ui_components.render_advanced_backtesting import render_advanced_backtesting
+            render_advanced_backtesting()
 
-elif strategy_name == "RSI Rev":
-    params["rsi_period"]     = st.sidebar.number_input("RSI period", 1, 100, 14)
-    params["rsi_oversold"]   = st.sidebar.number_input("Oversold", 1,100,30)
-    params["rsi_overbought"] = st.sidebar.number_input("Overbought",1,100,70)
-    params["period_hold"]    = st.sidebar.number_input("Hold Bars",1,50,5)
+    elif component_name == 'live_trading':
+        try:
+            from src.dashboard.components.live_trading import render_live_trading
+            render_live_trading()
+        except ImportError:
+            from src.dashboard.ui_components.render_live_trading import render_live_trading
+            render_live_trading()
 
-elif strategy_name == "BBreak":
-    params["bb_period"] = st.sidebar.number_input("BB period", 1,100,20)
-    params["bb_dev"]    = st.sidebar.number_input("BB dev", 0.1,5.0,2.0, step=0.1)
-    params["size"]      = st.sidebar.number_input("Size", 1,10_000,1000)
+    elif component_name == 'ai_health':
+        try:
+            from src.dashboard.components.ai_monitoring import render_ai_monitoring
+            render_ai_monitoring()
+        except ImportError:
+            from src.dashboard.ui_components.render_ai_health_monitor import render_ai_monitoring
+            render_ai_monitoring()
 
-elif strategy_name == "ATR BO":
-    params["donchian_period"] = st.sidebar.number_input("Donchian", 1,100,20)
-    params["atr_multiplier"]  = st.sidebar.number_input("ATR mult",0.1,5.0,1.0, step=0.1)
-    params["risk_reward"]     = st.sidebar.number_input("RR",1.0,10.0,2.0, step=0.1)
-    params["size"]            = st.sidebar.number_input("Size",1,10_000,1000)
+    elif component_name == 'ai_trading':
+        try:
+            from src.dashboard.components.ai_trading import render_ai_trading
+            render_ai_trading()
+        except ImportError:
+            st.header("🤖 **AI Trading Dashboard**")
+            st.info("AI trading dashboard component coming soon.")
 
-else:  # EMA+RSI
-    params["fast_ema"]       = st.sidebar.number_input("Fast EMA",1,100,10)
-    params["slow_ema"]       = st.sidebar.number_input("Slow EMA",1,200,30)
-    params["rsi_period"]     = st.sidebar.number_input("RSI period",1,100,14)
-    params["rsi_oversold"]   = st.sidebar.number_input("RSI oversold",1,100,30)
-    params["rsi_overbought"] = st.sidebar.number_input("RSI overbought",1,100,70)
-    params["atr_multiplier"] = st.sidebar.number_input("ATR mult",0.1,5.0,1.5,step=0.1)
-    params["size"]           = st.sidebar.number_input("Size",1,10_000,1000)
+    elif component_name == 'optimize':
+        try:
+            from src.dashboard.components.strategy_optimizer import render_strategy_optimizer
+            render_strategy_optimizer()
+        except Exception as e:
+            st.header("🎯 **Strategy Optimizer**")
+            st.error(f"❌ Failed to load strategy optimizer: {str(e)[:100]}")
+            st.info("Strategy optimizer feature temporarily unavailable.")
+            with st.expander("Debug Info", expanded=False):
+                st.code(f"Error: {e}\nComponent: {component_name}")
 
-# ── Execution controls ─────────────────────────────────────────────────────────
-def gran_to_seconds(gr: str) -> float:
-    unit = gr[-1]; val = int(gr[:-1])
-    return {"M":60,"H":3600,"D":86400}[unit] * val
+    elif component_name == 'performance':
+        try:
+            from src.dashboard.components.performance_monitor import render_performance_monitor
+            render_performance_monitor()
+        except ImportError:
+            st.header("📈 **Performance Monitor**")
+            st.info("Performance monitoring feature coming soon.")
 
-if mode == "Backtest":
-    run_bt  = st.sidebar.button("Run Backtest")
-elif mode == "Grid Search":
-    run_grid = st.sidebar.button("Run Grid Search")
-    workers  = st.sidebar.number_input("Workers", min_value=1, max_value=cpu_count(), value=1)
-elif mode == "Live":
-    if "executor" not in st.session_state:
-        st.session_state.executor = None
-    start_live = st.sidebar.button("Start Live")
-    stop_live  = st.sidebar.button("Stop Live")
+    elif component_name == 'system_audit':
+        try:
+            from src.dashboard.components.system_audit import render_system_audit
+            render_system_audit()
+        except ImportError:
+            st.header("🔬 **System Audit**")
+            st.info("System audit feature coming soon.")
 
-# ── BACKTEST ──────────────────────────────────────────────────────────────────
-if mode == "Backtest" and run_bt:
-    st.markdown("## Running Backtest…")
-    dh     = DataHandler(broker=broker, cache_dir="cache", sqlite_path="cache/candles.db", redis_url=REDIS_URL)
-    engine = BacktestEngine(data_handler=dh, cash=10_000, commission_perc=0.0002, slippage_perc=0.0001)
+    elif component_name == 'production_monitor':
+        try:
+            from src.dashboard.components.production_monitor import render_production_monitor
+            render_production_monitor()
+        except ImportError:
+            st.header("📊 **Production Monitor**")
+            st.info("Production monitoring feature coming soon.")
 
-    stats = engine.run(
-        strategy_cls, params, instruments, granularity,
-        start=pd.to_datetime(start_date).tz_localize(timezone.utc),
-        end=pd.to_datetime(end_date).tz_localize(timezone.utc)
-    )
+    elif component_name == 'alert_dashboard':
+        try:
+            from src.dashboard.components.alert_dashboard import render_alert_dashboard
+            render_alert_dashboard()
+        except ImportError:
+            st.header("🚨 **Alert Dashboard**")
+            st.info("Alert monitoring feature coming soon.")
 
-    # Plot first pair
-    df0     = dh.get_historical(instruments[0], granularity,
-                start=pd.to_datetime(start_date).tz_localize(timezone.utc),
-                end=pd.to_datetime(end_date).tz_localize(timezone.utc))
-    returns = compute_returns(df0["close"].pct_change().fillna(0))
-    equity  = equity_curve(returns, initial_capital=stats["start_cash"])
-    drawdn  = drawdown_series(equity)
+    elif component_name == 'infrastructure':
+        try:
+            from src.dashboard.components.infrastructure import render_infrastructure
+            render_infrastructure()
+        except ImportError:
+            st.header("🔧 **Infrastructure**")
+            st.info("Infrastructure monitoring feature coming soon.")
 
-    with st.expander("▶️ Summary Metrics", expanded=True):
-        st.json(stats)
+def render_fallback_component(tab_config):
+    """Render fallback component for missing features."""
+    with st.container():
+        st.warning(f"⚠️ {tab_config['title']} is currently being developed")
+        with st.expander("Component Information", expanded=False):
+            st.code(f"""
+Component: {tab_config['name']}
+Title: {tab_config['title']}
+Category: {(tab_config.get('category', 'Unknown')).title()}
+Status: Development in Progress
+URL: http://0.0.0.0:8501
+            """)
 
-    c1, c2 = st.columns(2)
-    with c1:
-        st.subheader("Equity Curve")
-        st.pyplot(plot_equity_curve(equity))
-    with c2:
-        st.subheader("Drawdown Curve")
-        st.pyplot(plot_drawdown_curve(drawdn))
+# ============================================================================
+# MAIN DASHBOARD FUNCTION
+# ============================================================================
 
-    st.subheader("Rolling Sharpe (20)")
-    st.pyplot(plot_rolling_sharpe(returns, window=20))
+def main():
+    """Main dashboard application - clean interface without sidebar clutter."""
 
-# ── GRID SEARCH ───────────────────────────────────────────────────────────────
-elif mode == "Grid Search" and run_grid:
-    st.markdown("## Running Grid Search…")
-    dh     = DataHandler(broker=broker, cache_dir="cache", sqlite_path="cache/candles.db", redis_url=REDIS_URL)
-    engine = BacktestEngine(data_handler=dh, cash=10_000, commission_perc=0.0002, slippage_perc=0.0001)
+    # Template selection (put in main area instead of sidebar)
+    if 'selected_template' not in st.session_state:
+        st.session_state.selected_template = 'admin'
 
-    # Build simple grid: each param must be a comma-list in the sidebar text_input
-    grid = {}
-    for p in params:
-        vals = st.sidebar.text_input(f"Values for {p} (comma separated)", str(params[p]))
-        # cast back to param’s type
-        typ = type(params[p])
-        grid[p] = [typ(v.strip()) for v in vals.split(",") if v.strip()]
+    try:
+        from src.dashboard.dashboard_loader import get_available_templates
+        templates = get_available_templates()
+    except:
+        templates = {'admin': 'Administrator Dashboard'}
 
-    results = engine.optimize(
-        strategy_cls, grid, instruments, granularity,
-        start=pd.to_datetime(start_date).tz_localize(timezone.utc),
-        end=pd.to_datetime(end_date).tz_localize(timezone.utc),
-        num_workers=workers
-    )
-    df_res = pd.DataFrame(results)
-    st.subheader("Top 10 by Sharpe")
-    st.dataframe(df_res.nlargest(10, "sharpe_ratio"))
+    # Dynamic tab loading based on template
+    try:
+        tab_configurations = load_dashboard_template_lazy(st.session_state.selected_template)
+    except Exception as e:
+        st.error(f"Configuration loading error: {e}")
+        tab_configurations = [
+            {"name": "dashboard", "title": "📊 Dashboard", "component": "render_advanced_dashboard", "icon": "📊"},
+            {"name": "backtesting", "title": "🔍 Backtest Studio", "component": "render_advanced_backtesting", "icon": "🔍"},
+            {"name": "live_trading", "title": "🎯 Live Trading", "component": "render_live_trading", "icon": "🎯"},
+            {"name": "ai_health", "title": "🤖 AI Health", "component": "render_ai_health_monitor", "icon": "🤖"}
+        ]
 
-    if len(grid) >= 2:
-        x, y = list(grid.keys())[:2]
-        st.subheader(f"Heatmap: {y} vs {x}")
-        fig = plot_parameter_heatmap(df_res, x, y, "sharpe_ratio")
-        st.pyplot(fig)
+    # Create tabs dynamically
+    tab_count = len(tab_configurations)
+    tabs = st.tabs([config['title'] for config in tab_configurations])
 
-# ── LIVE ──────────────────────────────────────────────────────────────────────
-elif mode == "Live":
-    st.markdown("## Live Trading Executor")
-    if start_live and st.session_state.executor is None:
-        dh = DataHandler(broker=broker, cache_dir="cache", sqlite_path="cache/candles.db", redis_url=REDIS_URL)
-        ex = Executor(
-            broker=broker,
-            data_handler=dh,
-            strategy_cls=strategy_cls,
-            strategy_params=params,
-            instrument=instruments[0],
-            granularity=granularity,
-            cash=10_000,
-            poll_interval=gran_to_seconds(granularity),
-            paper=True
-        )
-        ex.start()
-        st.session_state.executor = ex
-        st.success("Executor started (paper)")
+    # Render each component in its tab
+    for i, (tab, tab_config) in enumerate(zip(tabs, tab_configurations)):
+        with tab:
+            try:
+                # Load the component
+                load_dashboard_component(tab_config['name'])
 
-    if stop_live and st.session_state.executor:
-        st.session_state.executor.stop()
-        st.session_state.executor = None
-        st.warning("Executor stopped")
+            except Exception as e:
+                st.error(f"❌ Error loading {tab_config['name']}: {str(e)[:100]}")
+                render_fallback_component(tab_config)
 
-    if st.session_state.executor:
-        st.info("Executor running…")
-
-# ── MONITOR ───────────────────────────────────────────────────────────────────
-elif mode == "Monitor":
-    st.markdown("## Live Monitor")
-    ex = st.session_state.executor
-    if not ex:
-        st.info("Start the Executor in Live mode first.")
-    else:
-        # 1) Account equity & P&L
-        eq  = ex._cerebro.broker.getvalue()
-        pnl = eq - ex.cash
-        st.metric("Account Equity", f"{eq:.2f}", delta=f"{pnl:.2f}")
-
-        # 2) Open position
-        feed = ex._strategy.datas[0]
-        pos  = ex._cerebro.broker.getposition(feed)
-        bar  = ex.dh.get_latest(ex.instrument, ex.granularity, count=1).iloc[-1]
-        unreal = pos.size * (bar.close - pos.price)
-        pos_df = pd.DataFrame([{
-            "Instrument": ex.instrument,
-            "Size":        pos.size,
-            "Entry":       f"{pos.price:.5f}",
-            "Current":     f"{bar.close:.5f}",
-            "Unrealized":  f"{unreal:.2f}"
-        }])
-        st.table(pos_df)
-
-        # 3) Intraday equity curve
-        today   = datetime.now(timezone.utc).date()
-        df_hist = ex.dh.get_historical(
-            ex.instrument, ex.granularity,
-            start=pd.to_datetime(today).tz_localize(timezone.utc),
-            end=pd.to_datetime(today).tz_localize(timezone.utc)
-        )
-        intr_rt = compute_returns(df_hist["close"].pct_change().fillna(0))
-        intr_eq = equity_curve(intr_rt, initial_capital=ex.cash)
-        st.subheader("Intraday Equity Curve")
-        st.line_chart(intr_eq)
+if __name__ == "__main__":
+    main()

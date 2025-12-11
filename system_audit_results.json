@@ -1,0 +1,650 @@
+{
+  "imports": {
+    "total_files": 133,
+    "successful_imports": [
+      "test_utils",
+      "generate_synthetic_data",
+      "network_resilience",
+      "__init__",
+      "network_monitor",
+      "backtesting.data_handler",
+      "backtesting.config",
+      "backtesting.analysis",
+      "backtesting.results",
+      "backtesting.engine",
+      "backtesting.utils",
+      "backtesting.visualizer",
+      "config.validator",
+      "config.oauth_setup",
+      "config.settings",
+      "config.environment",
+      "ai_trading_system.main",
+      "ai_trading_system.training_data.training_pipeline",
+      "ai_trading_system.execution.ai_trade_executor",
+      "ai_trading_system.monitoring.ai_monitor",
+      "ai_trading_system.monitoring.__init__",
+      "ai_trading_system.decision_engine.strategy_selector",
+      "ai_trading_system.analytics.performance_analyzer",
+      "tests.test_strategy",
+      "tests.test_backtest_system",
+      "tests.test_datahandler",
+      "tests.test_indicator_verification",
+      "tests.test_risk_management",
+      "tests.test_pattern_reliability",
+      "tests.unit.__init__",
+      "tests.integration.indicator_cross_validation",
+      "tests.integration.automated_test_suite",
+      "tests.integration.test_trading_functionality",
+      "tests.integration.test_deriv_connection_simple",
+      "tests.simulation.live_simulation_tests",
+      "tests.benchmarking.__init__",
+      "tests.chaos.__init__",
+      "tests.validation.__init__",
+      "autotest.test_engine",
+      "charts.timeframes",
+      "charts.patterns",
+      "charts.indicators",
+      "charts.chart_utils",
+      "charts.fibonacci",
+      "charts.drawing_tools",
+      "risk_management.ai_risk_evaluator",
+      "dashboard.dashboard_module",
+      "dashboard.component_registry",
+      "dashboard.dashboard_loader",
+      "dashboard.security",
+      "dashboard.__init__",
+      "dashboard.middleware.session_middleware",
+      "dashboard.middleware.permission_middleware",
+      "dashboard.middleware.auth_middleware",
+      "dashboard.ui_components.render_ai_health_monitor",
+      "dashboard.ui_components.render_advanced_backtesting",
+      "dashboard.components.live_trading",
+      "dashboard.components.system_audit",
+      "dashboard.components.infrastructure",
+      "dashboard.components.strategy_optimizer",
+      "dashboard.components.performance_monitor",
+      "dashboard.components.production_monitor",
+      "dashboard.components.portfolio_dashboard",
+      "dashboard.components.ai_trading",
+      "dashboard.components.ai_monitoring",
+      "dashboard.components.alert_dashboard",
+      "dashboard.components.backtesting_studio",
+      "dashboard.portfolio.__init__",
+      "monitoring.__init__",
+      "monitoring.emergency.__init__",
+      "monitoring.emergency.emergency_controls",
+      "monitoring.controls.__init__",
+      "monitoring.controls.dashboard_control_system",
+      "monitoring.system.system_audit",
+      "monitoring.audit.final_audit",
+      "monitoring.audit.comprehensive_system_audit",
+      "monitoring.production.production_monitoring_system",
+      "trading.test_backtest_system",
+      "trading.__init__",
+      "trading.ui.__init__",
+      "trading.core.auto_trading_bot",
+      "trading.core.signal_generator",
+      "trading.core.__init__",
+      "trading.core.trading_intelligence",
+      "trading.simulation.__init__",
+      "trading.simulation.backtest_simulator",
+      "trading.simulation.market_simulator",
+      "trading.execution.data_handler",
+      "trading.execution.__init__",
+      "trading.execution.position_manager",
+      "trading.execution.broker",
+      "trading.monitoring.__init__",
+      "trading.monitoring.performance_tracker",
+      "trading.risk.risk_calculator",
+      "trading.risk.__init__",
+      "trading.risk.risk_manager",
+      "event.__init__",
+      "event.event_bus",
+      "strategy.__init__",
+      "strategy.config.__init__",
+      "strategy.config.risk_warnings",
+      "strategy.config.strategy_registry",
+      "strategy.money_management.sequence",
+      "strategy.money_management.__init__",
+      "strategy.money_management.progressive",
+      "strategy.money_management.martingale",
+      "strategy.ml.__init__",
+      "strategy.ml.ensemble",
+      "strategy.factory.strategy_factory",
+      "strategy.factory.__init__",
+      "strategy.technical.breakout",
+      "strategy.technical.trend",
+      "strategy.technical.moving_average",
+      "strategy.technical.__init__",
+      "strategy.technical.oscillators",
+      "strategy.base.event_driven",
+      "strategy.base.base_strategy",
+      "strategy.base.__init__"
+    ],
+    "failed_imports": [
+      {
+        "module": "backtesting.__init__",
+        "error": "No module named 'backtesting.engine'"
+      },
+      {
+        "module": "backtesting.optimizer",
+        "error": "No module named 'backtesting.engine'"
+      },
+      {
+        "module": "config.__init__",
+        "error": "No module named 'config.settings'"
+      },
+      {
+        "module": "ai_trading_system.__init__",
+        "error": "No module named 'ai_trading_system'"
+      },
+      {
+        "module": "ai_trading_system.training_data.__init__",
+        "error": "No module named 'ai_trading_system'"
+      },
+      {
+        "module": "ai_trading_system.monitoring.model_health",
+        "error": "No module named 'ai_trading_system'"
+      },
+      {
+        "module": "tests.integration.__init__",
+        "error": "No module named 'tests'"
+      },
+      {
+        "module": "charts.__init__",
+        "error": "No module named 'charts'"
+      },
+      {
+        "module": "risk_management.__init__",
+        "error": "No module named 'risk_management'"
+      },
+      {
+        "module": "dashboard.ui_components.__init__",
+        "error": "No module named 'dashboard.core'"
+      },
+      {
+        "module": "dashboard.ui_components.render_live_trading",
+        "error": "No module named 'dashboard.core'"
+      },
+      {
+        "module": "monitoring.ui.__init__",
+        "error": "cannot import name 'MonitoringUI' from 'monitoring.ui.provisioning' (unknown location)"
+      },
+      {
+        "module": "monitoring.system.__init__",
+        "error": "cannot import name 'SystemAudit' from 'monitoring.system.system_audit' (/Users/oluwatosin/Desktop/tokemfx-bot/src/monitoring/system/system_audit.py)"
+      },
+      {
+        "module": "monitoring.production.__init__",
+        "error": "cannot import name 'SystemHealth' from 'monitoring.production.production_monitoring_system' (/Users/oluwatosin/Desktop/tokemfx-bot/src/monitoring/production/production_monitoring_system.py)"
+      },
+      {
+        "module": "trading.risk.position_sizer",
+        "error": "invalid syntax (position_sizer.py, line 269)"
+      }
+    ],
+    "missing_modules": [],
+    "circular_imports": []
+  },
+  "placeholders": {
+    "placeholder_indicators": [
+      {
+        "file": "src/test_utils.py",
+        "line": 8,
+        "content": "- Mock backtest results and strategy data",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/backtesting/results.py",
+        "line": 452,
+        "content": "'ulcer_index': 0.0,  # Placeholder for now",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/backtesting/results.py",
+        "line": 453,
+        "content": "'downside_deviation': 0.0,  # Placeholder for now",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/backtesting/results.py",
+        "line": 454,
+        "content": "'tail_ratio': 0.0,  # Placeholder for now",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/config/oauth_setup.py",
+        "line": 206,
+        "content": "# For demo purposes, create placeholder tokens",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/execution/ai_trade_executor.py",
+        "line": 459,
+        "content": "# AI monitoring placeholder - removed ai_monitor import to fix import errors",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/execution/ai_trade_executor.py",
+        "line": 512,
+        "content": "# AI monitoring placeholder - removed ai_monitor import to fix import errors",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/decision_engine/strategy_selector.py",
+        "line": 529,
+        "content": "# Generate mock performance data for demo purposes",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/decision_engine/strategy_selector.py",
+        "line": 548,
+        "content": "Get mock performance data for strategies (replace with real data).",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/decision_engine/strategy_selector.py",
+        "line": 554,
+        "content": "Mock performance metrics",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/decision_engine/strategy_selector.py",
+        "line": 556,
+        "content": "# This is placeholder data - in production, get from real execution logs",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/ai_trading_system/decision_engine/strategy_selector.py",
+        "line": 584,
+        "content": "# Return mock data for known strategies, or generate for unknown ones",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 8,
+        "content": "- Mock trading results and performance metrics",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 97,
+        "content": "Generate mock backtest results for testing purposes.",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 191,
+        "content": "logger.info(f\"Generated mock backtest results for {len(all_results)} strategies\")",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 195,
+        "content": "logger.error(f\"Error generating mock backtest results: {e}\")",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 202,
+        "content": "Generate mock trading data for testing dashboard functionality.",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 210,
+        "content": "DataFrame with mock trading data",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 263,
+        "content": "logger.info(f\"Generated {len(df)} mock trading records\")",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 267,
+        "content": "logger.error(f\"Error generating mock trading data: {e}\")",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 385,
+        "content": "Create mock API response for testing.",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 388,
+        "content": "success: Whether the mock response should be successful",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 392,
+        "content": "Mock API response dictionary",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/test_backtest_system.py",
+        "line": 408,
+        "content": "'message': error_message or 'Mock error for testing'",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/unit/__init__.py",
+        "line": 7,
+        "content": "# Placeholder for future unit tests",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/tests/integration/automated_test_suite.py",
+        "line": 5,
+        "content": "This module provides mock backtest results and sample OHLC data for testing.",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/simulation/live_simulation_tests.py",
+        "line": 716,
+        "content": "# This is a simplified placeholder",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/tests/simulation/live_simulation_tests.py",
+        "line": 766,
+        "content": "'max_concurrent_orders': 100,  # Placeholder",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/tests/benchmarking/__init__.py",
+        "line": 7,
+        "content": "# Placeholder for future benchmarking tests",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/tests/chaos/__init__.py",
+        "line": 7,
+        "content": "# Placeholder for future chaos tests",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/tests/validation/__init__.py",
+        "line": 18,
+        "content": "# Mock validation logic",
+        "pattern": "#\\s*(dummy|mock|fake|stub)"
+      },
+      {
+        "file": "src/autotest/test_engine.py",
+        "line": 285,
+        "content": "# Create mock data and risk parameters",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/autotest/test_engine.py",
+        "line": 313,
+        "content": "# Create mock data and risk parameters",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/autotest/test_engine.py",
+        "line": 341,
+        "content": "# Create mock data and risk parameters",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/charts/drawing_tools.py",
+        "line": 208,
+        "content": "'center_x': len(range(ratio)),  # Placeholder - would need actual x-coordinates",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/charts/drawing_tools.py",
+        "line": 435,
+        "content": "return go.Figure()  # Placeholder - would use actual make_subplots in real implementation",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/risk_management/ai_risk_evaluator.py",
+        "line": 129,
+        "content": "'max_drawdown_avg': 8.5,  # Placeholder - would calculate from actual data",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/dashboard/dashboard_module.py",
+        "line": 94,
+        "content": "# Performance stats placeholder",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/component_registry.py",
+        "line": 144,
+        "content": "\"\"\"Create a placeholder component for missing modules.\"\"\"",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/component_registry.py",
+        "line": 146,
+        "content": "def placeholder():",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/component_registry.py",
+        "line": 149,
+        "content": "return placeholder",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/ui_components/render_ai_health_monitor.py",
+        "line": 26,
+        "content": "# Create placeholder functions/classes for compatibility",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/ui_components/render_live_trading.py",
+        "line": 438,
+        "content": "# Mock portfolio data",
+        "pattern": "#\\s*(dummy|mock|fake|stub)"
+      },
+      {
+        "file": "src/dashboard/ui_components/render_live_trading.py",
+        "line": 463,
+        "content": "# Mock holdings data",
+        "pattern": "#\\s*(dummy|mock|fake|stub)"
+      },
+      {
+        "file": "src/dashboard/ui_components/render_advanced_backtesting.py",
+        "line": 329,
+        "content": "# Mock quick results",
+        "pattern": "#\\s*(dummy|mock|fake|stub)"
+      },
+      {
+        "file": "src/dashboard/ui_components/render_advanced_backtesting.py",
+        "line": 748,
+        "content": "# Mock recent activities",
+        "pattern": "#\\s*(dummy|mock|fake|stub)"
+      },
+      {
+        "file": "src/dashboard/components/alert_dashboard.py",
+        "line": 34,
+        "content": "# Average response time (placeholder - would need actual tracking)",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/components/alert_dashboard.py",
+        "line": 38,
+        "content": "# Escalated alerts (placeholder)",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/dashboard/components/backtesting_studio.py",
+        "line": 804,
+        "content": "# Mock optimization results",
+        "pattern": "#\\s*(dummy|mock|fake|stub)"
+      },
+      {
+        "file": "src/monitoring/controls/dashboard_control_system.py",
+        "line": 239,
+        "content": "# Initialize with dummy data",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/monitoring/controls/dashboard_control_system.py",
+        "line": 562,
+        "content": "\"\"\"Placeholder when Streamlit is not available.\"\"\"",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 296,
+        "content": "# TODO: Fix import - no src.tokemfx.risk module exists",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 300,
+        "content": "# Placeholder for now",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 301,
+        "content": "return {'healthy': True, 'status': 'operational', 'note': 'placeholder - import needs fixing'}",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 308,
+        "content": "# TODO: Fix import - no src.tokemfx.trading_types module exists",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 312,
+        "content": "# Placeholder for now",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 313,
+        "content": "return {'healthy': True, 'instruments': 25, 'status': 'operational', 'note': 'placeholder - import needs fixing'}",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 330,
+        "content": "return {'healthy': True, 'status': 'operational', 'note': 'placeholder check'}",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/monitoring/production/production_monitoring_system.py",
+        "line": 765,
+        "content": "db_files = ['cache/candles.db', 'sql/schema.sql']  # Example database files",
+        "pattern": "example.*data"
+      },
+      {
+        "file": "src/trading/test_backtest_system.py",
+        "line": 429,
+        "content": "# Simple MA crossover mock",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/test_backtest_system.py",
+        "line": 477,
+        "content": "\"\"\"Mock backtest for moving average strategy\"\"\"",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/test_backtest_system.py",
+        "line": 493,
+        "content": "\"\"\"Mock backtest for RSI strategy\"\"\"",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/test_backtest_system.py",
+        "line": 512,
+        "content": "\"\"\"Mock backtest for Bollinger Band strategy\"\"\"",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/test_backtest_system.py",
+        "line": 531,
+        "content": "\"\"\"Mock backtest with random signals\"\"\"",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/ui/__init__.py",
+        "line": 26,
+        "content": "AI Trading UI component placeholder.",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/ui/__init__.py",
+        "line": 39,
+        "content": "Trading dashboard component placeholder.",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/core/auto_trading_bot.py",
+        "line": 226,
+        "content": "# Find profitable patterns (dummy implementation)",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/core/signal_generator.py",
+        "line": 412,
+        "content": "'instrument': 'placeholder',  # Will be filled by caller",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/core/signal_generator.py",
+        "line": 423,
+        "content": "'instrument': 'placeholder',  # Will be filled by caller",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/core/signal_generator.py",
+        "line": 442,
+        "content": "'instrument': 'placeholder',  # Will be filled by caller",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/core/signal_generator.py",
+        "line": 454,
+        "content": "'instrument': 'placeholder',  # Will be filled by caller",
+        "pattern": "\\b(dummy|fake|mock|stub|placeholder)\\b"
+      },
+      {
+        "file": "src/trading/simulation/backtest_simulator.py",
+        "line": 396,
+        "content": "total_value += quantity * 100  # placeholder",
+        "pattern": "#\\s*(TODO|FIXME|PLACEHOLDER|NOT\\s+IMPLEMENTED)"
+      }
+    ],
+    "todo_comments": [],
+    "dummy_data": [],
+    "hardcoded_values": [],
+    "files_checked": 133
+  },
+  "dashboard": {
+    "dashboard_modules": [
+      "dashboard_module imported successfully",
+      "Advanced dashboard rendering available"
+    ],
+    "data_sources": [
+      "Real account data function found"
+    ],
+    "real_implementations": [
+      "Chart modules with real implementations"
+    ],
+    "api_integrations": [
+      "Deriv API configuration available"
+    ]
+  },
+  "scores": {
+    "import_success": 0.8872180451127819,
+    "placeholder_score": 0,
+    "dashboard_score": 50,
+    "overall_score": 16.962406015037594
+  }
+}

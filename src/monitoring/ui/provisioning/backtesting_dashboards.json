@@ -1,0 +1,119 @@
+{
+  "dashboard": {
+    "title": "Backtesting Analytics Dashboard",
+    "description": "Comprehensive backtesting performance analysis and optimization tracking",
+    "tags": ["backtesting", "analytics", "performance", "tokemfx"],
+    "timezone": "UTC",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Strategy Performance Matrix",
+        "type": "table",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+        "targets": [{
+          "expr": "backtest_strategy_performance{strategy=~\"$strategy\"}",
+          "legendFormat": "{{strategy}} - {{metric}}"
+        }],
+        "fieldConfig": {
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "win_rate"},
+              "properties": [{"id": "thresholds", "value": {
+                "mode": "percentage",
+                "steps": [
+                  {"color": "red", "value": null},
+                  {"color": "orange", "value": 40},
+                  {"color": "yellow", "value": 50},
+                  {"color": "green", "value": 60}
+                ]
+              }}]
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "title": "Walk-Forward Analysis",
+        "type": "graph",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+        "targets": [{
+          "expr": "backtest_walk_forward_returns{strategy=~\"$strategy\"}",
+          "legendFormat": "{{strategy}} Out-of-Sample"
+        }],
+        "yAxes": [
+          {"format": "percent", "label": "Returns %"},
+          {"format": "short"}
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Optimization Convergence",
+        "description": "Parameter optimization fitness over time",
+        "type": "heatmap",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "targets": [{
+          "expr": "optimization_fitness{parameter=~\"$parameter\"}",
+          "legendFormat": "{{parameter}} Fitness"
+        }],
+        "heatmap": {
+          "cards": {"cardPadding": 2, "cardRound": 2}
+        }
+      },
+      {
+        "id": 4,
+        "title": "Risk-Adjusted Metrics",
+        "type": "bargauge",
+        "gridPos": {"h": 6, "w": 8, "x": 12, "y": 8},
+        "targets": [{
+          "expr": "backtest_sharpe_ratio{strategy=~\"$strategy\"}",
+          "legendFormat": "{{strategy}} Sharpe"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"color": "red", "value": null},
+                {"color": "orange", "value": 0.5},
+                {"color": "yellow", "value": 1.0},
+                {"color": "green", "value": 1.5}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "Drawdown Analysis",
+        "type": "graph",
+        "gridPos": {"h": 6, "w": 8, "x": 20, "y": 8},
+        "targets": [{
+          "expr": "backtest_max_drawdown{strategy=~\"$strategy\"}",
+          "legendFormat": "{{strategy}} Drawdown"
+        }],
+        "yAxes": [
+          {"format": "percent", "label": "Drawdown %"},
+          {"format": "short"}
+        ]
+      }
+    ],
+    "time": {"from": "now-90d", "to": "now"},
+    "refresh": "30m",
+    "templating": {
+      "list": [
+        {
+          "name": "strategy",
+          "type": "query",
+          "query": "label_values(backtest_strategy_performance, strategy)",
+          "label": "Strategy"
+        },
+        {
+          "name": "parameter",
+          "type": "query",
+          "query": "label_values(optimization_fitness, parameter)",
+          "label": "Parameter"
+        }
+      ]
+    }
+  }
+}

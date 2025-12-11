@@ -1,15 +1,80 @@
 version: "3.8"
+
 services:
+  # Database for trade history & analytics
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: tokemfx
+      POSTGRES_USER: tokemfx
+      POSTGRES_PASSWORD: tokemfx_password
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tokemfx -d tokemfx"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # High-performance caching
   redis:
-    image: redis:6-alpine
+    image: redis:7-alpine
     ports:
       - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
 
+  # Metrics collection
+  prometheus:
+    image: prom/prometheus:v2.45.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=200h'
+    depends_on:
+      - app
+
+  # Metrics visualization
+  grafana:
+    image: grafana/grafana:10.1.4
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin123
+      GF_USERS_ALLOW_SIGN_UP: false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./config/grafana/provisioning:/etc/grafana/provisioning
+      - ./config/grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - prometheus
+
+  # Main application
   app:
     build: .
     ports:
-      - "8501:8501"
+      - "8501:8501"    # Streamlit UI
+      - "8000:8000"    # Prometheus metrics
     environment:
+      # Deriv API (set in .env file)
+      - DERIV_APP_ID=${DERIV_APP_ID}
+      - DERIV_API_TOKEN=${DERIV_API_TOKEN}
+      - DERIV_ACCOUNT_ID=${DERIV_ACCOUNT_ID}
+
+      # Database
+      - DATABASE_URL=postgresql://tokemfx:tokemfx_password@postgres:5432/tokemfx
+
       # Redis
       - REDIS_URL=redis://redis:6379/0
 
@@ -20,6 +85,10 @@ services:
       - SMTP_PASS=${SMTP_PASS}
       - ALERT_EMAIL=${ALERT_EMAIL}
 
+      # Telegram alerts
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+
       # Position sizing
       - POSITION_SIZING_METHOD=${POSITION_SIZING_METHOD}
       - FIXED_FRACTION=${FIXED_FRACTION}
@@ -27,10 +96,27 @@ services:
       - KELLY_PAYOFF_RATIO=${KELLY_PAYOFF_RATIO}
       - KELLY_FRACTION_MULTIPLIER=${KELLY_FRACTION_MULTIPLIER}
 
-      # Slack alerts
-      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      # Risk limits
       - DRAW_ALERT_THRESHOLD=${DRAW_ALERT_THRESHOLD}
+
+      # Logging
+      - LOG_LEVEL=${LOG_LEVEL}
     depends_on:
-      - redis
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_completed_successfully
     volumes:
       - ./cache:/app/cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/metrics"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  redis_data:
+  prometheus_data:
+  grafana_data:

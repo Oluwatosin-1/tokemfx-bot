@@ -1,0 +1,90 @@
+{
+  "dashboard": {
+    "title": "Strategy Performance Dashboard",
+    "description": "Strategy comparison, optimization, and risk-return analysis",
+    "tags": ["strategy", "performance", "comparison", "tokemfx"],
+    "timezone": "UTC",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Strategy Comparison Matrix",
+        "type": "table",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0},
+        "targets": [{
+          "expr": "strategy_performance{strategy=~\"$strategy\", timeframe=~\"$timeframe\"}",
+          "legendFormat": "{{strategy}} - {{metric}}"
+        }]
+      },
+      {
+        "id": 2,
+        "title": "Risk-Return Scatter Plot",
+        "type": "scatter",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0},
+        "targets": [
+          {
+            "expr": "strategy_total_return{strategy=~\"$strategy\"}",
+            "legendFormat": "{{strategy}} Return %"
+          },
+          {
+            "expr": "strategy_max_drawdown{strategy=~\"$strategy\"}",
+            "legendFormat": "{{strategy}} Drawdown %"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Monthly Performance Heatmap",
+        "type": "heatmap",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8},
+        "targets": [{
+          "expr": "strategy_monthly_performance{strategy=~\"$strategy\"}",
+          "legendFormat": "{{strategy}} {{month}}"
+        }]
+      },
+      {
+        "id": 4,
+        "title": "Profit Factor Distribution",
+        "type": "histogram",
+        "gridPos": {"h": 6, "w": 8, "x": 12, "y": 8},
+        "targets": [{
+          "expr": "strategy_profit_factor{strategy=~\"$strategy\"}",
+          "legendFormat": "Profit Factor"
+        }]
+      },
+      {
+        "id": 5,
+        "title": "Asset Class Performance",
+        "type": "bargauge",
+        "gridPos": {"h": 6, "w": 8, "x": 20, "y": 8},
+        "targets": [{
+          "expr": "strategy_asset_performance{instrument_class=~\"$asset_class\"}",
+          "legendFormat": "{{instrument_class}} Return"
+        }]
+      }
+    ],
+    "time": {"from": "now-1y", "to": "now"},
+    "refresh": "1h",
+    "templating": {
+      "list": [
+        {
+          "name": "strategy",
+          "type": "query",
+          "query": "label_values(strategy_performance, strategy)",
+          "label": "Strategy"
+        },
+        {
+          "name": "timeframe",
+          "type": "query",
+          "query": "label_values(strategy_performance, timeframe)",
+          "label": "Timeframe"
+        },
+        {
+          "name": "asset_class",
+          "type": "query",
+          "query": "label_values(strategy_asset_performance, instrument_class)",
+          "label": "Asset Class"
+        }
+      ]
+    }
+  }
+}

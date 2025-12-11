@@ -1,0 +1,9 @@
+{
+  "name": "System Administrator",
+  "description": "Complete system administration and monitoring control",
+  "permissions": ["full_access", "system_controls", "user_management", "emergency_controls"],
+  "features": ["comprehensive_monitoring", "system_configuration", "emergency_controls"],
+  "tabs": ["dashboard", "backtesting", "optimize", "live_trading", "ai_trading", "performance", "ai_health", "system_audit", "production_monitor", "alert_dashboard", "infrastructure"],
+  "theme": "enterprise",
+  "layout": "wide"
+}

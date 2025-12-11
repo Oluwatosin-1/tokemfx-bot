@@ -1,0 +1,1525 @@
+2025-12-07 12:42:33,186 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 12:42:33,187 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 12:42:33,187 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 12:42:33,187 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 12:53:46,991 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 12:53:46,993 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 12:53:46,993 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 12:53:46,993 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:09:55,390 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:09:55,390 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:09:55,391 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:09:55,391 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:24:46,442 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:24:46,443 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:24:46,443 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:24:46,443 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:31:52,950 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:31:52,958 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:31:52,959 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:31:52,959 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:33:30,657 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:33:30,657 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:33:30,658 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:33:30,658 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:33:30,658 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:33:30,658 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:33:30,658 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:33:30,658 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:39:21,397 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:39:21,397 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:39:21,397 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 13:39:21,403 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:39:21,403 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:39:21,403 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 13:39:21,403 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:39:21,403 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:39:21,403 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 13:39:21,403 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:39:21,403 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 13:39:21,403 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 14:09:21,752 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 14:09:21,753 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 14:09:21,754 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 14:09:21,754 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 14:39:28,846 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 14:39:28,846 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 14:39:28,846 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 14:39:28,846 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 15:04:17,628 - INFO - AI decision recorded: confidence=0.700
+2025-12-07 15:45:07,609 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-07 15:45:07,609 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 15:45:07,609 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 15:45:07,610 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 15:59:20,817 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-07 15:59:20,818 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 15:59:20,818 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 15:59:20,818 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:03:21,684 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-07 16:03:21,684 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-07 16:03:21,721 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:03:21,721 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:03:21,722 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:03:21,722 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:03:21,722 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:03:21,722 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:04:47,265 - INFO - 🔬 RUNNING AI HEALTH DIAGNOSTICS
+2025-12-07 16:04:47,265 - INFO - 🔬 RUNNING AI HEALTH DIAGNOSTICS
+2025-12-07 16:04:47,271 - INFO - ✅ AI HEALTH DIAGNOSTICS COMPLETED
+2025-12-07 16:04:47,271 - INFO - ✅ AI HEALTH DIAGNOSTICS COMPLETED
+2025-12-07 16:04:47,271 - INFO - 🔍 Issues found: 0
+2025-12-07 16:04:47,271 - INFO - 🔍 Issues found: 0
+2025-12-07 16:04:47,271 - INFO - 📋 Actions required: 0
+2025-12-07 16:04:47,271 - INFO - 📋 Actions required: 0
+2025-12-07 16:06:45,904 - INFO - 🔬 RUNNING AI HEALTH DIAGNOSTICS
+2025-12-07 16:06:45,904 - INFO - 🔬 RUNNING AI HEALTH DIAGNOSTICS
+2025-12-07 16:06:45,905 - INFO - ✅ AI HEALTH DIAGNOSTICS COMPLETED
+2025-12-07 16:06:45,905 - INFO - ✅ AI HEALTH DIAGNOSTICS COMPLETED
+2025-12-07 16:06:45,906 - INFO - 🔍 Issues found: 0
+2025-12-07 16:06:45,906 - INFO - 🔍 Issues found: 0
+2025-12-07 16:06:45,907 - INFO - 📋 Actions required: 0
+2025-12-07 16:06:45,907 - INFO - 📋 Actions required: 0
+2025-12-07 16:09:39,584 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:09:39,585 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:09:39,585 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:09:39,585 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:10:16,912 - INFO - 🔬 RUNNING AI HEALTH DIAGNOSTICS
+2025-12-07 16:10:16,919 - INFO - ✅ AI HEALTH DIAGNOSTICS COMPLETED
+2025-12-07 16:10:16,919 - INFO - 🔍 Issues found: 0
+2025-12-07 16:10:16,919 - INFO - 📋 Actions required: 0
+2025-12-07 16:16:31,017 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:16:31,017 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:16:31,018 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:16:31,018 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:16:31,018 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:16:31,018 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:16:31,019 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:16:31,019 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:20:47,109 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:20:47,109 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:20:47,109 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:20:47,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:20:47,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:20:47,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:20:47,112 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:20:47,112 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:20:47,112 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:20:47,113 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:20:47,113 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:20:47,113 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:24:42,922 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:24:42,922 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:24:42,922 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:24:42,922 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:24:42,924 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:24:42,924 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:24:42,924 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:24:42,924 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:24:42,924 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:24:42,924 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:24:42,924 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:24:42,924 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:24:42,925 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:24:42,925 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:24:42,925 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:24:42,925 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:43:51,716 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:43:51,716 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:43:51,716 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:43:51,716 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:43:51,716 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:43:51,718 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:43:51,718 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:43:51,718 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:43:51,718 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:43:51,718 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:43:51,718 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:43:51,718 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:43:51,718 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:43:51,718 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:43:51,718 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:43:51,718 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:43:51,718 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:43:51,718 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:43:51,718 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:43:51,718 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:59:13,642 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:59:13,642 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:59:13,642 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:59:13,642 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:59:13,642 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:59:13,642 - ERROR - ⚠️ AI components not fully available: No module named 'pytest'
+2025-12-07 16:59:13,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:59:13,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:59:13,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:59:13,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:59:13,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:59:13,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-07 16:59:13,646 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:59:13,646 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:59:13,646 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:59:13,646 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:59:13,646 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:59:13,646 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-07 16:59:13,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:59:13,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:59:13,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:59:13,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:59:13,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-07 16:59:13,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 11:57:55,247 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 11:57:55,248 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 11:57:55,248 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 11:57:55,249 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 11:57:55,255 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 11:57:55,255 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 11:57:55,255 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 11:57:55,255 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 11:57:55,255 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 11:57:55,255 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 11:57:55,255 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 11:57:55,255 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:02:44,622 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:02:44,623 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:02:44,623 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:02:44,623 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:02:44,625 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:02:44,625 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:02:44,625 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:02:44,625 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:02:44,625 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:02:44,625 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:02:44,625 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:02:44,625 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:03:09,561 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:03:09,561 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:03:09,561 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:03:09,561 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:03:09,563 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:03:09,563 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:03:09,563 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:03:09,563 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:03:09,563 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:03:09,563 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:03:09,563 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:03:09,563 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:06:09,413 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:06:09,413 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:06:09,414 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:06:09,414 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:06:09,416 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:06:09,416 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:06:09,416 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:06:09,416 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:06:09,417 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:06:09,417 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:06:09,417 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:06:09,417 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:06:48,929 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:06:48,930 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:06:48,930 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:06:48,930 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:06:48,932 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:06:48,932 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:06:48,932 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:06:48,932 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:06:48,932 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:06:48,932 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:06:48,932 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:06:48,932 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:07:33,298 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:07:33,298 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:07:33,298 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:07:33,298 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:07:33,300 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:07:33,300 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:07:33,301 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:07:33,301 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:07:33,301 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:07:33,301 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:07:33,301 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:07:33,301 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:14:18,428 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:14:18,429 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:14:18,429 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:14:18,429 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:14:18,441 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:14:18,441 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:14:18,441 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:14:18,441 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:14:18,441 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:14:18,441 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:14:18,441 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:14:18,441 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:16:28,203 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:16:28,205 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:16:28,206 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:16:28,206 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:16:28,210 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:16:28,210 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:16:28,210 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:16:28,210 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:16:28,211 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:16:28,211 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:16:28,211 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:16:28,211 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:18:22,355 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:18:22,355 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:18:22,355 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:18:22,356 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:18:22,358 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:18:22,358 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:18:22,358 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:18:22,358 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:18:22,358 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:18:22,358 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:18:22,359 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:18:22,359 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:19:20,218 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:19:20,225 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:19:20,225 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:19:20,225 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:19:20,228 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:19:20,228 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:19:20,228 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:19:20,228 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:19:20,228 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:19:20,228 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:19:20,228 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:19:20,228 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:26:03,840 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:26:03,840 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:26:03,840 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:26:03,841 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:26:03,844 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:26:03,844 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:26:03,844 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:26:03,844 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:26:03,844 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:26:03,844 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:26:03,844 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:26:03,844 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:30:47,521 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:30:47,521 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:30:47,522 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:30:47,522 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:30:47,524 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:30:47,524 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:30:47,524 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:30:47,524 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:30:47,524 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:30:47,524 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:30:47,524 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:30:47,524 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:34:03,638 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:34:03,641 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:34:03,642 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:34:03,642 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:34:03,643 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:34:03,643 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 12:34:03,644 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:34:03,644 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 12:34:03,644 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:34:03,644 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 12:34:03,644 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 12:34:03,644 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,472 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,473 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,473 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,474 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,478 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,478 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,478 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,478 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,478 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,478 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,478 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,478 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,481 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,481 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,481 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,481 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,481 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,481 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,481 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,481 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,481 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,481 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,481 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,481 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,484 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,484 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,484 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,484 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,485 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,485 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,485 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,485 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,486 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,486 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,486 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,486 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,507 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,507 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,507 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,507 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,507 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:00:30,508 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,508 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,508 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,508 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,508 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:00:30,508 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,508 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,508 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,508 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,508 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:00:30,508 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,508 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,508 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,508 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:00:30,508 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,745 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,746 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,747 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,747 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,752 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,752 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,752 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,752 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,753 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,753 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,754 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,754 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,760 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,760 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,760 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,761 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,761 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,761 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,761 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,761 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,761 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,761 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,761 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,761 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,766 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,766 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,766 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,766 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,766 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,766 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,766 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,766 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,767 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,767 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,767 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,767 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,767 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,767 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,767 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,767 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,794 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,794 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,794 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,794 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,794 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:02:57,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:02:57,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:02:57,798 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,798 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,798 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,798 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:02:57,798 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,436 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,436 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,437 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,437 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,439 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,439 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,439 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,439 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,440 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,440 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,440 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,440 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,446 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,446 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,446 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,447 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,447 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,447 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,447 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,447 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,447 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,447 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,447 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,447 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,448 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,448 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,448 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,448 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,449 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,449 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,449 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,449 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,449 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,449 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,449 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,449 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,450 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,450 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,450 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,450 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,497 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,497 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,497 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,497 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,497 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:04:10,502 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,502 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,502 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,502 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,502 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:04:10,502 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,502 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,502 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,502 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,502 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:04:10,503 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,503 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,503 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,503 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:04:10,503 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,895 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,896 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,896 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,896 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,900 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,900 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,900 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,900 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,901 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,901 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,901 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,901 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,903 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,903 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,903 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,904 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,904 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,904 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,904 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,904 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,904 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,904 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,904 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,904 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,905 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,905 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,905 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,905 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,905 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,905 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,905 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,905 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,906 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,906 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,906 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,906 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,906 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,906 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,906 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,906 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,920 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,920 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,920 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,920 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,920 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:05:38,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:05:38,920 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,920 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,920 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,920 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,920 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:05:38,920 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,920 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,920 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,920 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:05:38,920 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:14:16,239 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:14:16,240 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:14:16,240 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:14:16,240 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:14:16,245 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:14:16,245 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:14:16,245 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:14:16,245 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:14:16,245 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:14:16,245 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:14:16,245 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:14:16,245 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:17:38,391 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:17:38,392 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:17:38,392 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:17:38,392 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:17:38,395 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:17:38,395 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:17:38,396 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:17:38,396 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:17:38,396 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:17:38,396 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:17:38,396 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:17:38,396 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:20:43,798 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:20:43,799 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:20:43,799 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:20:43,799 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:20:43,802 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:20:43,802 - ERROR - ⚠️ AI components not fully available: cannot import name 'test_ai_decision_consistency' from 'src.tests.test_pattern_reliability' (/Users/oluwatosin/Desktop/tokemfx-bot/src/tests/test_pattern_reliability.py)
+2025-12-08 13:20:43,803 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:20:43,803 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:20:43,803 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:20:43,803 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:20:43,803 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:20:43,803 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:25:47,858 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:25:47,859 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:25:47,859 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:25:47,860 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:25:47,864 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:25:47,864 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:25:47,864 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:25:47,864 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:25:47,864 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:25:47,864 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:25:47,865 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:25:47,865 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:27:30,004 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:27:30,006 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:27:30,006 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:27:30,006 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:27:30,009 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:27:30,009 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:27:30,010 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:27:30,010 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:27:30,010 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:27:30,010 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:27:30,010 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:27:30,010 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:34:19,429 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:34:19,430 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:34:19,430 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:34:19,430 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:34:19,433 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:34:19,433 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:34:19,433 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:34:19,433 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:34:19,433 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:34:19,433 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:34:19,433 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:34:19,433 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:35:12,869 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:35:12,870 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:35:12,870 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:35:12,870 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:35:12,872 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:35:12,872 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:35:12,872 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:35:12,872 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:35:12,872 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:35:12,872 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:35:12,872 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:35:12,872 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:50:31,295 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:50:31,297 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:50:31,297 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:50:31,297 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:50:31,300 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:50:31,300 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:50:31,301 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:50:31,301 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:50:31,301 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:50:31,301 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:50:31,302 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:50:31,302 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:52:02,226 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:52:02,227 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:52:02,227 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:52:02,228 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:52:02,232 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:52:02,232 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 13:52:02,232 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:52:02,232 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 13:52:02,232 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:52:02,232 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 13:52:02,233 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 13:52:02,233 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,260 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,260 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,261 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,261 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,263 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,263 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,263 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,263 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,263 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,263 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,264 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,264 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,268 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,268 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,268 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,268 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,268 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,268 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,268 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,268 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,268 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,269 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,269 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,269 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,270 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,270 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,270 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,270 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,271 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,271 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,271 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,271 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,271 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,271 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,271 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,271 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,271 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,271 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,271 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,271 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,304 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,304 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,304 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,304 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,304 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:18:18,304 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,304 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,304 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,304 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,304 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:18:18,305 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,305 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,305 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,305 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,305 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:18:18,305 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,305 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,305 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,305 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:18:18,305 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:25:43,152 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:25:43,153 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:25:43,153 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:25:43,154 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:25:43,161 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:25:43,161 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:25:43,162 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:25:43,162 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:25:43,162 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:25:43,162 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:25:43,162 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:25:43,162 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:25:43,175 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:25:43,175 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:25:43,175 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:25:43,176 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:25:43,176 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:25:43,176 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:25:43,177 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:25:43,177 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:25:43,177 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:25:43,177 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:25:43,177 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:25:43,177 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:28:46,959 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:28:46,961 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:28:46,961 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:28:46,961 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:28:46,981 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:28:46,981 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:28:46,982 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:28:46,982 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:28:46,982 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:28:46,982 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:28:46,982 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:28:46,982 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:28:47,042 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:28:47,042 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:28:47,042 - ERROR - ⚠️ AI components not fully available: No module named 'src.final_audit'
+2025-12-08 14:28:47,043 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:28:47,043 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:28:47,043 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:28:47,043 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:28:47,043 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:28:47,043 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:28:47,043 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:28:47,043 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:28:47,043 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:30:46,194 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:30:46,195 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:30:46,195 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:30:46,197 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:30:46,197 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:30:46,198 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:30:46,198 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:30:46,198 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:30:46,198 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:30:46,203 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:30:46,203 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:30:46,203 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:30:46,204 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:30:46,204 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:30:46,204 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:30:46,204 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:30:46,204 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:30:46,204 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:41:40,864 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:41:40,865 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:41:40,866 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:41:40,876 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:41:40,876 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:41:40,877 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:41:40,877 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:41:40,883 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:41:40,883 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:41:40,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:41:40,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:41:40,920 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:41:40,921 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:41:40,921 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:41:40,921 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:41:40,921 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:41:40,921 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:41:40,921 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:44:08,789 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:44:08,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:44:08,791 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:44:08,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:44:08,797 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:44:08,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:44:08,797 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:44:08,799 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:44:08,799 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:44:08,812 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:44:08,812 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:44:08,812 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:44:08,812 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:44:08,812 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:44:08,812 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:44:08,813 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:44:08,813 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:44:08,813 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:45:33,183 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:45:33,183 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:45:33,184 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:45:33,186 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:45:33,186 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:45:33,186 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:45:33,186 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:45:33,186 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:45:33,186 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:45:33,199 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:45:33,199 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:45:33,199 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:45:33,199 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:45:33,199 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:45:33,199 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:45:33,200 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:45:33,200 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:45:33,200 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:06,910 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:06,911 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:06,911 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:06,913 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:06,913 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:06,913 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:06,913 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:06,913 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:06,913 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:06,919 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:06,919 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:06,919 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:06,919 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:06,919 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:06,919 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:06,921 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:06,921 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:06,921 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:56,645 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:56,645 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:56,645 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:56,648 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:56,648 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:56,648 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:56,648 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:56,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:56,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:56,656 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:56,656 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:56,656 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:48:56,657 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:56,657 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:56,657 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:48:56,657 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:56,657 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:48:56,657 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:51:19,745 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:51:19,745 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:51:19,746 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:51:19,748 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:51:19,748 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:51:19,748 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:51:19,748 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:51:19,749 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:51:19,749 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:51:19,760 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:51:19,760 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:51:19,760 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:51:19,760 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:51:19,760 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:51:19,760 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:51:19,760 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:51:19,760 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:51:19,760 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:55:47,970 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:55:47,971 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:55:47,971 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:55:47,974 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:55:47,974 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:55:47,974 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:55:47,974 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:55:47,974 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:55:47,974 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:55:47,982 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:55:47,982 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:55:47,982 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 14:55:47,982 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:55:47,982 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:55:47,982 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 14:55:47,983 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:55:47,983 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 14:55:47,983 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:00:37,926 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:00:37,927 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:00:37,927 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:00:37,931 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:00:37,931 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:00:37,931 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:00:37,931 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:00:37,931 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:00:37,931 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:00:37,938 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:00:37,938 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:00:37,938 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:00:37,938 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:00:37,938 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:00:37,938 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:00:37,938 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:00:37,938 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:00:37,938 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:06:07,931 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:06:07,931 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:06:07,931 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:06:07,935 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:06:07,935 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:06:07,935 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:06:07,935 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:06:07,936 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:06:07,936 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:06:07,944 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:06:07,944 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:06:07,944 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:06:07,944 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:06:07,944 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:06:07,944 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:06:07,944 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:06:07,944 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:06:07,944 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:18:38,262 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:18:38,263 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:18:38,263 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:18:38,272 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:18:38,272 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:18:38,273 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:18:38,273 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:18:38,273 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:18:38,273 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:18:38,280 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:18:38,280 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:18:38,280 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 15:18:38,280 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:18:38,280 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:18:38,280 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 15:18:38,280 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:18:38,280 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 15:18:38,280 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:25:21,015 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:25:21,016 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:25:21,016 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:25:21,018 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:25:21,018 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:25:21,018 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:25:21,018 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:25:21,020 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:25:21,020 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:38:36,262 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:38:36,262 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:38:36,262 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:38:36,270 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:38:36,270 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:38:36,270 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:38:36,270 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:38:36,270 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:38:36,270 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:54:53,430 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:54:53,430 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:54:53,430 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 18:54:53,431 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:54:53,431 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:54:53,431 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 18:54:53,431 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:54:53,431 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 18:54:53,431 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 19:06:24,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 19:06:24,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 19:06:24,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 19:06:24,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 19:06:24,111 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 19:06:24,111 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 19:06:24,111 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 19:06:24,111 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 19:06:24,111 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 19:06:24,111 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 19:06:24,111 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 19:06:24,111 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 21:43:25,321 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 21:43:25,321 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 21:43:25,322 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 21:43:25,336 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 21:43:25,336 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 21:43:25,337 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 21:43:25,337 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 21:43:25,338 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 21:43:25,338 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 22:03:38,751 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 22:03:38,751 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 22:03:38,751 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 22:03:38,756 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 22:03:38,756 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 22:03:38,756 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 22:03:38,756 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 22:03:38,756 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 22:03:38,756 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:18:28,602 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:18:28,603 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:18:28,603 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:18:28,606 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:18:28,606 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:18:28,606 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:18:28,606 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:18:28,607 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:18:28,607 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:20,891 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:20,891 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:20,891 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:20,892 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:20,892 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:20,892 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:20,892 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:20,892 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:20,892 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:38,379 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:38,379 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:38,379 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:38,379 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-08 23:26:38,380 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:38,380 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:38,380 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:38,380 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-08 23:26:38,381 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:38,381 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:38,381 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-08 23:26:38,381 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:41:02,175 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:41:02,176 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:41:02,177 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:41:02,184 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:41:02,184 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:41:02,193 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:41:02,193 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:41:02,193 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:41:02,193 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:43:36,617 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:43:36,617 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:43:36,617 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:43:36,619 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:43:36,619 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:43:36,619 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:43:36,622 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:43:36,622 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:43:36,622 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:54:06,366 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:54:06,367 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:54:06,367 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:54:06,371 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:54:06,371 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 02:54:06,371 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:54:06,371 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 02:54:06,373 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 02:54:06,373 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 03:14:28,975 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 03:14:28,976 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 03:14:28,977 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 03:14:29,069 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 03:14:29,069 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 03:14:29,070 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 03:14:29,070 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 03:14:29,070 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 03:14:29,070 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:26:53,005 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:26:53,006 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:26:53,006 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:26:53,015 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:26:53,015 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:26:53,018 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:26:53,018 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:26:53,019 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:26:53,019 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:42:27,336 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:42:27,339 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:42:27,339 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:42:27,342 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:42:27,342 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:42:27,343 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:42:27,343 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:42:27,344 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:42:27,344 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:47:12,948 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:47:12,948 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:47:12,948 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:47:12,950 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:47:12,950 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:47:12,950 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:47:12,950 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:47:12,950 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:47:12,950 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:47:48,987 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:47:48,988 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:47:48,988 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:47:48,990 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:47:48,990 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:47:48,991 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:47:48,991 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:47:48,991 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:47:48,991 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:53:40,106 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:53:40,107 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:53:40,107 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:53:40,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:53:40,110 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 13:53:40,110 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:53:40,110 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 13:53:40,113 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 13:53:40,113 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 14:28:33,792 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 14:28:33,794 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 14:28:33,794 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 14:28:33,817 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 14:28:33,817 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 14:28:33,817 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 14:28:33,817 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 14:28:33,817 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 14:28:33,817 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 15:34:44,995 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 15:34:44,996 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 15:34:44,996 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 15:34:44,999 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 15:34:44,999 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 15:34:44,999 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 15:34:44,999 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 15:34:44,999 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 15:34:44,999 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 15:43:39,426 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 15:43:39,426 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 15:43:39,426 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 15:43:39,427 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 15:43:39,427 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 15:43:39,427 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 15:43:39,427 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 15:43:39,427 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 15:43:39,427 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 16:36:46,656 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 16:36:46,661 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 16:36:46,661 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 16:36:46,671 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 16:36:46,671 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 16:36:46,672 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 16:36:46,672 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 16:36:46,672 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 16:36:46,672 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:02:48,451 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:02:48,453 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:02:48,455 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:02:48,467 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:02:48,467 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:02:48,467 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:02:48,467 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:02:48,468 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:02:48,468 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:11:40,300 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:11:40,301 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:11:40,301 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:11:40,306 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:11:40,306 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:11:40,306 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:11:40,306 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:11:40,306 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:11:40,306 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:15:13,725 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:15:13,726 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:15:13,727 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:15:13,729 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:15:13,729 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:15:13,729 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:15:13,729 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:15:13,729 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:15:13,729 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:22:36,001 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:22:36,002 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:22:36,002 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:22:36,005 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:22:36,005 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:22:36,005 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:22:36,005 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:22:36,005 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:22:36,005 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:24:11,410 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:24:11,411 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:24:11,411 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:24:11,414 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:24:11,414 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:24:11,414 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:24:11,414 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:24:11,414 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:24:11,414 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:48:03,646 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:48:03,647 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:48:03,648 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:48:03,655 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:48:03,655 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 17:48:03,655 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:48:03,655 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 17:48:03,656 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 17:48:03,656 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:32:22,012 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:32:22,013 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:32:22,013 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:32:22,017 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:32:22,017 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:32:22,019 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:32:22,019 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:32:22,019 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:32:22,019 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:35:07,280 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:35:07,280 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:35:07,280 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:35:07,297 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:35:07,297 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:35:07,297 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:35:07,297 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:35:07,298 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:35:07,298 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:39,134 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:39,136 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:39,137 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:39,184 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:39,184 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:39,240 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:39,240 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:39,241 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:39,241 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:52,578 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:52,578 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:52,578 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:52,579 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:52,579 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:52,579 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:52,660 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:52,660 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:52,662 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:52,662 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:52,663 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:52,663 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:52,677 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:52,677 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:49:52,679 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:52,679 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:49:52,679 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:49:52,679 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:50:34,335 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:50:34,337 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:50:34,337 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:50:34,341 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:50:34,341 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:50:34,342 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:50:34,342 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:50:34,343 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:50:34,343 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:51:52,519 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:51:52,520 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:51:52,520 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:51:52,524 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:51:52,524 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:51:52,524 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:51:52,524 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:51:52,526 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:51:52,526 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:52:44,120 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:52:44,121 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:52:44,122 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:52:44,314 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:52:44,314 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:52:44,319 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:52:44,319 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:52:44,319 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:52:44,319 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:53:07,938 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:53:07,939 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:53:07,939 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:53:07,943 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:53:07,943 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 18:53:07,944 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:53:07,944 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 18:53:07,944 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 18:53:07,944 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 20:01:37,852 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 20:01:37,852 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 20:01:37,853 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 20:01:37,855 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 20:01:37,855 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 20:01:37,856 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 20:01:37,856 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 20:01:37,856 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 20:01:37,856 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 20:01:37,866 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 20:01:37,866 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 20:01:37,866 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 20:01:37,866 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 20:01:37,866 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 20:01:37,866 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 20:01:37,867 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 20:01:37,867 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 20:01:37,867 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:03:33,838 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:03:33,842 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:03:33,842 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:03:33,849 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:03:33,849 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:03:33,850 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:03:33,850 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:03:33,850 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:03:33,850 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:13:55,038 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:13:55,255 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:13:55,255 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:13:55,283 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:13:55,283 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:13:55,283 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:13:55,283 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:13:55,286 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:13:55,286 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:14:47,459 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:14:47,465 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:14:47,465 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:14:47,485 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:14:47,485 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:14:47,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:14:47,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:14:47,485 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:14:47,485 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:17:17,747 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:17:17,756 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:17:17,758 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:17:17,777 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:17:17,777 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:17:17,778 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:17:17,778 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:17:17,778 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:17:17,778 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:27:02,484 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:27:02,485 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:27:02,486 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:27:02,514 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:27:02,514 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:27:02,516 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:27:02,516 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:27:02,516 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:27:02,516 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:30:08,421 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:30:08,435 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:30:08,436 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:30:08,448 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:30:08,448 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:30:08,448 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:30:08,448 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:30:08,448 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:30:08,448 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:07,526 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:07,526 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:07,526 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:07,526 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:07,527 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:07,527 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:07,527 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:07,527 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:07,527 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:07,527 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:07,527 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:07,527 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:09,053 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:09,053 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:09,053 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:09,053 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:09,053 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:35:09,059 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:09,059 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:09,059 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:09,059 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:09,059 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:35:09,061 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:09,061 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:09,061 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:09,061 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:35:09,061 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:37:58,780 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:37:58,780 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:37:58,780 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:37:58,780 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:37:58,780 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:37:58,780 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 21:37:58,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:37:58,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:37:58,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:37:58,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:37:58,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:37:58,790 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 21:37:58,790 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:37:58,790 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:37:58,790 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:37:58,790 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:37:58,790 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 21:37:58,790 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:35,501 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:35,502 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:35,502 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:35,505 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:35,505 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:35,506 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:35,506 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:35,506 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:35,506 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:35,614 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:35,617 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:35,618 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:35,629 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:35,629 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:35,630 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:35,630 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:35,631 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:35,631 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:46,288 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:46,289 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:46,289 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:46,292 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:46,292 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:03:46,293 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:46,293 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:03:46,293 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:03:46,293 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:08:33,366 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:08:33,382 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:08:33,382 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:08:33,392 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:08:33,392 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-09 22:08:33,393 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:08:33,393 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-09 22:08:33,393 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-09 22:08:33,393 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:04:17,194 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:04:17,194 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:04:17,195 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:04:17,204 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:04:17,204 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:04:17,205 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:04:17,205 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:04:17,331 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:04:17,331 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:11:58,192 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:11:58,193 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:11:58,194 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:11:58,196 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:11:58,196 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:11:58,197 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:11:58,197 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:11:58,197 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:11:58,197 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:14:22,965 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:14:22,966 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:14:22,966 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:14:22,969 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:14:22,969 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:14:22,969 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:14:22,969 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:14:22,970 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:14:22,970 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:14:45,823 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:14:45,823 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:14:45,824 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:14:45,826 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:14:45,826 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:14:45,826 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:14:45,826 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:14:45,826 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:14:45,826 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:15:08,027 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:15:08,029 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:15:08,029 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:15:08,033 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:15:08,033 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:15:08,034 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:15:08,034 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:15:08,035 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:15:08,035 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:16:07,861 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:16:07,861 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:16:07,861 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:16:07,864 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:16:07,864 - INFO - 🤖 AI Monitoring Dashboard initialized
+2025-12-10 15:16:07,864 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:16:07,864 - INFO - 🎯 Confidence Alert Threshold: 0.7
+2025-12-10 15:16:07,864 - INFO - 🚨 Drift Sensitivity: 0.1
+2025-12-10 15:16:07,864 - INFO - 🚨 Drift Sensitivity: 0.1

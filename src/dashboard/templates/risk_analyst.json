@@ -1,0 +1,9 @@
+{
+  "name": "Risk Analyst", 
+  "description": "Risk monitoring and compliance focused interface",
+  "permissions": ["view_positions", "view_alerts", "acknowledge_risks", "configure_alerts"],
+  "features": ["risk_monitoring", "alert_management", "compliance_tracking"],
+  "tabs": ["dashboard", "performance", "alert_dashboard", "infrastructure"],
+  "theme": "compliance",
+  "layout": "wide"
+}

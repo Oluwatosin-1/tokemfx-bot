@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "TokemFX - Production-Ready Forex Trading System"
+authors:
+  - given-names: TokemFX
+    family-names: Team
+repository-code: "https://github.com/your-org/tokemfx-bot"
+preferred-citation:
+  type: software
+  title: "TokemFX Trading Bot"
+  abstract: |
+    A comprehensive, production-ready forex trading system built with Python,
+    featuring advanced architecture patterns for scalability and maintainability.
+
+    Key Features:
+    - Event-driven architecture for component decoupling
+    - Factory patterns for extensible broker/strategy creation
+    - Comprehensive risk management system
+    - Multi-layer caching (Redis, SQLite, CSV)
+    - Real-time monitoring with Prometheus metrics
+    - Configurable trading strategies with Backtrader
+    - WebSocket integration for live data feeds
+    - Professional deployment with Docker-compose
+  repository-code: "https://github.com/your-org/tokemfx-bot"
+  license: MIT
+  date-released: 2025-01-01

@@ -1,0 +1,190 @@
+2025-12-07 13:06:11,723 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 13:06:11,723 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:06:11,723 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:06:11,724 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:06:11,724 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:07:11,211 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 13:07:11,212 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:07:11,212 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:07:11,212 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:07:11,212 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:09:58,216 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:09:58,217 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:09:58,217 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:09:58,217 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:09:58,217 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:21:54,573 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 13:21:54,574 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:21:54,574 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:21:54,574 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:21:54,574 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:24:46,613 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:24:46,615 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:24:46,615 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:24:46,615 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:24:46,615 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:31:53,300 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:31:53,304 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:31:53,305 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:31:53,306 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:31:53,306 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:33:30,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:33:30,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:33:30,785 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:33:30,785 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:33:30,785 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:33:30,785 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:33:30,785 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:33:30,785 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:33:30,786 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:33:30,786 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:39:21,946 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:39:21,946 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:39:21,946 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 13:39:21,948 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:39:21,948 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:39:21,948 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 13:39:21,949 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:39:21,949 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:39:21,949 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 13:39:21,949 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:39:21,949 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:39:21,949 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 13:39:21,949 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:39:21,949 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 13:39:21,949 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 14:09:21,898 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 14:09:21,901 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 14:09:21,901 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 14:09:21,902 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 14:09:21,902 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 14:39:28,981 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 14:39:28,982 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 14:39:28,983 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 14:39:28,983 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 14:39:28,983 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 15:45:07,884 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 15:45:07,885 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 15:45:07,885 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 15:45:07,889 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 15:45:07,889 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 15:59:21,075 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 15:59:21,076 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 15:59:21,076 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 15:59:21,076 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 15:59:21,076 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:03:22,123 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 16:03:22,123 - WARNING - ❌ Prometheus client not available - install with: pip install prometheus_client
+2025-12-07 16:03:22,136 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:03:22,136 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:03:22,136 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:03:22,136 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:03:22,139 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:03:22,139 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:03:22,139 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:03:22,139 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:09:39,708 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:09:39,709 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:09:39,709 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:09:39,710 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:09:39,710 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:16:31,153 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:16:31,153 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:16:31,154 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:16:31,154 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:16:31,154 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:16:31,154 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:16:31,154 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:16:31,154 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:16:31,154 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:16:31,154 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:20:47,460 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:20:47,460 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:20:47,460 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:20:47,473 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:20:47,473 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:20:47,473 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:20:47,474 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:20:47,474 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:20:47,474 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:20:47,474 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:20:47,474 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:20:47,474 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:20:47,474 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:20:47,474 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:20:47,474 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:24:42,956 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:24:42,956 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:24:42,956 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:24:42,956 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:24:42,957 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:24:42,957 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:24:42,957 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:24:42,957 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:24:42,957 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:24:42,957 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:24:42,957 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:24:42,957 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:24:42,957 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:24:42,957 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:24:42,957 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:24:42,957 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:24:42,958 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:24:42,958 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:24:42,958 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:24:42,958 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:43:51,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:43:51,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:43:51,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:43:51,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:43:51,782 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:43:51,788 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:43:51,788 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:43:51,788 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:43:51,788 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:43:51,788 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:43:51,789 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:43:51,789 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:43:51,789 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:43:51,789 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:43:51,789 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:43:51,789 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:43:51,789 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:43:51,789 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:43:51,789 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:43:51,789 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:43:51,789 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:43:51,789 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:43:51,789 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:43:51,789 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:43:51,789 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:59:14,013 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:59:14,013 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:59:14,013 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:59:14,013 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:59:14,013 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:59:14,013 - INFO - ✅ Prometheus client available - metrics collection enabled
+2025-12-07 16:59:14,018 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:59:14,018 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:59:14,018 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:59:14,018 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:59:14,018 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:59:14,018 - INFO - 📊 Prometheus Metrics Collector initialized
+2025-12-07 16:59:14,018 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:59:14,018 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:59:14,018 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:59:14,018 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:59:14,018 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:59:14,018 - WARNING - ⚠️ No Grafana API key provided - using default credentials
+2025-12-07 16:59:14,019 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:59:14,019 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:59:14,019 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:59:14,019 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:59:14,019 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:59:14,019 - INFO - 📈 Grafana Dashboard Manager initialized for http://localhost:3000
+2025-12-07 16:59:14,019 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:59:14,019 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:59:14,019 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:59:14,019 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:59:14,019 - INFO - 🏛️ Comprehensive Monitoring System initialized
+2025-12-07 16:59:14,019 - INFO - 🏛️ Comprehensive Monitoring System initialized
