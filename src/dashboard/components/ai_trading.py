@@ -20,6 +20,12 @@ def render_ai_trading():
     from src.dashboard.security import clean_old_session_data
     clean_old_session_data()
 
+    # Initialize AI trading state
+    if 'ai_trading_active' not in st.session_state:
+        st.session_state.ai_trading_active = False
+    if 'ai_trading_paused' not in st.session_state:
+        st.session_state.ai_trading_paused = False
+
     st.header("🤖 AI Trading Dashboard")
 
     # AI System Status Summary
@@ -41,31 +47,93 @@ def render_ai_trading():
     has_admin_access = user_has_admin_permissions()
 
     if has_admin_access:
-        st.error("🚨 HIGH RISK - AI TRADING ACTIVATED")
-        emergency_cols = st.columns(3)
-        with emergency_cols[0]:
-            if check_rate_limit("emergency_stop", 10):  # 10 second cooldown
-                if st.button("🛑 STOP ALL AI TRADING", type="primary", use_container_width=True):
-                    try:
-                        success = stop_all_ai_trading()
-                        if success:
-                            st.success("✅ All AI trading stopped")
-                            dashboard_security.log_security_event("EMERGENCY_STOP", {"action": "stopped_all_ai_trading", "success": True})
-                        else:
-                            st.error("❌ Failed to stop AI trading")
-                            dashboard_security.log_security_event("EMERGENCY_STOP", {"action": "stopped_all_ai_trading", "success": False})
-                    except Exception as e:
-                        st.error(f"❌ Emergency stop failed: {str(e)[:50]}")
-                        dashboard_security.log_security_event("EMERGENCY_STOP", {"action": "stopped_all_ai_trading", "error": str(e)})
+        # Display AI status
+        if st.session_state.ai_trading_active:
+            if st.session_state.ai_trading_paused:
+                st.warning("⏸️ AI TRADING PAUSED")
             else:
-                st.button("🛑 STOP ALL AI TRADING", type="primary", use_container_width=True, disabled=True)
-        with emergency_cols[1]:
-            if check_rate_limit("pause_ai", 5):  # 5 second cooldown
-                if st.button("⚡ PAUSE DECISIONS"):
-                    st.warning("⏸️ AI decision making paused")
-                    dashboard_security.log_security_event("AI_PAUSE", {"action": "paused_ai_decisions"})
-        with emergency_cols[2]:
-            risk_level = st.selectbox("AI Risk Level", ["Conservative", "Moderate", "Aggressive"], index=1)
+                st.error("🚨 AI TRADING ACTIVE - HIGH RISK")
+        else:
+            st.info("⏹️ AI Trading is currently stopped")
+
+        # AI Control buttons
+        control_cols = st.columns(4)
+        with control_cols[0]:
+            if not st.session_state.ai_trading_active:
+                if st.button("▶️ START AI TRADING", type="primary", use_container_width=True):
+                    st.session_state.ai_trading_active = True
+                    st.session_state.ai_trading_paused = False
+                    try:
+                        # Start actual AI trading system
+                        success = start_ai_trading()
+                        if success:
+                            st.success("✅ AI Trading started")
+                            dashboard_security.log_security_event("AI_START", {"action": "started_ai_trading", "success": True})
+                        else:
+                            st.error("❌ Failed to start AI trading")
+                            st.session_state.ai_trading_active = False
+                    except Exception as e:
+                        st.error(f"❌ Start failed: {str(e)[:50]}")
+                        st.session_state.ai_trading_active = False
+                    st.rerun()
+            else:
+                st.button("▶️ START AI TRADING", use_container_width=True, disabled=True)
+
+        with control_cols[1]:
+            if st.session_state.ai_trading_active and not st.session_state.ai_trading_paused:
+                if check_rate_limit("pause_ai", 5):
+                    if st.button("⏸️ PAUSE AI", use_container_width=True):
+                        st.session_state.ai_trading_paused = True
+                        try:
+                            pause_ai_trading()
+                            st.warning("⏸️ AI decision making paused")
+                            dashboard_security.log_security_event("AI_PAUSE", {"action": "paused_ai_decisions"})
+                        except Exception as e:
+                            st.error(f"❌ Pause failed: {str(e)[:50]}")
+                        st.rerun()
+                else:
+                    st.button("⏸️ PAUSE AI", use_container_width=True, disabled=True)
+            else:
+                st.button("⏸️ PAUSE AI", use_container_width=True, disabled=True)
+
+        with control_cols[2]:
+            if st.session_state.ai_trading_paused:
+                if st.button("▶️ RESUME AI", use_container_width=True):
+                    st.session_state.ai_trading_paused = False
+                    try:
+                        resume_ai_trading()
+                        st.success("✅ AI trading resumed")
+                        dashboard_security.log_security_event("AI_RESUME", {"action": "resumed_ai_trading"})
+                    except Exception as e:
+                        st.error(f"❌ Resume failed: {str(e)[:50]}")
+                    st.rerun()
+            else:
+                st.button("▶️ RESUME AI", use_container_width=True, disabled=True)
+
+        with control_cols[3]:
+            if st.session_state.ai_trading_active:
+                if check_rate_limit("emergency_stop", 10):
+                    if st.button("🛑 STOP ALL", type="primary", use_container_width=True):
+                        st.session_state.ai_trading_active = False
+                        st.session_state.ai_trading_paused = False
+                        try:
+                            success = stop_all_ai_trading()
+                            if success:
+                                st.success("✅ All AI trading stopped")
+                                dashboard_security.log_security_event("EMERGENCY_STOP", {"action": "stopped_all_ai_trading", "success": True})
+                            else:
+                                st.error("❌ Failed to stop AI trading")
+                        except Exception as e:
+                            st.error(f"❌ Emergency stop failed: {str(e)[:50]}")
+                            dashboard_security.log_security_event("EMERGENCY_STOP", {"action": "stopped_all_ai_trading", "error": str(e)})
+                        st.rerun()
+                else:
+                    st.button("🛑 STOP ALL", type="primary", use_container_width=True, disabled=True)
+            else:
+                st.button("🛑 STOP ALL", use_container_width=True, disabled=True)
+
+        # Risk level selector
+        risk_level = st.selectbox("AI Risk Level", ["Conservative", "Moderate", "Aggressive"], index=1)
     else:
         st.warning("🔒 **Limited Access**: Emergency AI controls require administrator privileges.")
         risk_level = "Moderate"  # Safe default
@@ -362,6 +430,42 @@ def get_ai_system_status():
     except Exception as e:
         print(f"Error fetching AI system status: {e}")
         return None
+
+def start_ai_trading():
+    """Start AI trading system."""
+    try:
+        from src.trading.core.auto_trading_bot import start_ai_trading as start_bot
+        success = start_bot()
+        if success:
+            print("✅ AI trading started by user")
+        return success
+    except Exception as e:
+        print(f"Error starting AI trading: {e}")
+        return False
+
+def pause_ai_trading():
+    """Pause AI trading decisions."""
+    try:
+        from src.trading.core.auto_trading_bot import pause_ai_trading as pause_bot
+        success = pause_bot()
+        if success:
+            print("⏸️ AI trading paused by user")
+        return success
+    except Exception as e:
+        print(f"Error pausing AI trading: {e}")
+        return False
+
+def resume_ai_trading():
+    """Resume AI trading decisions."""
+    try:
+        from src.trading.core.auto_trading_bot import resume_ai_trading as resume_bot
+        success = resume_bot()
+        if success:
+            print("▶️ AI trading resumed by user")
+        return success
+    except Exception as e:
+        print(f"Error resuming AI trading: {e}")
+        return False
 
 def stop_all_ai_trading():
     """Emergency stop all AI trading activity."""

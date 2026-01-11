@@ -558,3 +558,918 @@
 2025-12-10 15:15:08,013 - INFO - 🏥 Production Monitoring System initialized
 2025-12-10 15:16:07,852 - INFO - 🏥 Production Monitoring System initialized
 2025-12-11 11:55:03,333 - INFO - 🏥 Production Monitoring System initialized
+2025-12-11 11:56:51,559 - INFO - 🚨 Running emergency system health check
+2025-12-11 11:56:52,619 - ERROR - ❌ Metrics collection failed: (pid=97648)
+2025-12-11 11:56:53,781 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 11:56:53,814 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 11:56:53,815 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 11:56:53,815 - INFO - 🚨 Running emergency system health check
+2025-12-11 11:56:54,822 - ERROR - ❌ Metrics collection failed: (pid=97648)
+2025-12-11 11:56:55,709 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 11:56:55,721 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 11:56:55,721 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 12:06:40,944 - INFO - 🚨 Running emergency system health check
+2025-12-11 12:06:41,989 - ERROR - ❌ Metrics collection failed: (pid=98742)
+2025-12-11 12:06:43,142 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 12:06:43,145 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 12:06:43,145 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 12:06:43,145 - INFO - 🚨 Running emergency system health check
+2025-12-11 12:06:44,147 - ERROR - ❌ Metrics collection failed: (pid=98742)
+2025-12-11 12:06:45,004 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 12:06:45,005 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 12:06:45,005 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 12:42:55,071 - INFO - 🚨 Running emergency system health check
+2025-12-11 12:42:56,171 - ERROR - ❌ Metrics collection failed: (pid=7422)
+2025-12-11 12:42:57,523 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 12:42:57,571 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 12:42:57,572 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 12:42:57,575 - INFO - 🚨 Running emergency system health check
+2025-12-11 12:42:58,586 - ERROR - ❌ Metrics collection failed: (pid=7422)
+2025-12-11 12:42:59,408 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 12:42:59,410 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 12:42:59,410 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 13:10:25,038 - INFO - 🚨 Running emergency system health check
+2025-12-11 13:10:26,086 - ERROR - ❌ Metrics collection failed: (pid=10866)
+2025-12-11 13:10:28,781 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 13:10:28,792 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 13:10:28,793 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-11 13:10:28,794 - INFO - 🚨 Running emergency system health check
+2025-12-11 13:10:29,800 - ERROR - ❌ Metrics collection failed: (pid=11567)
+2025-12-11 13:10:30,777 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-11 13:10:30,786 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-11 13:10:30,786 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:19:25,109 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 20:27:08,179 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 20:28:14,513 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:28:15,597 - ERROR - ❌ Metrics collection failed: (pid=12030)
+2025-12-14 20:28:17,961 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:28:17,963 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:28:17,964 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:28:17,964 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:28:18,972 - ERROR - ❌ Metrics collection failed: (pid=12030)
+2025-12-14 20:28:20,936 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:28:20,938 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:28:20,938 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:33:02,048 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:33:03,059 - ERROR - ❌ Metrics collection failed: (pid=12198)
+2025-12-14 20:33:05,200 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:33:05,202 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:33:05,202 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:33:05,203 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:33:06,206 - ERROR - ❌ Metrics collection failed: (pid=12198)
+2025-12-14 20:33:07,647 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:33:07,648 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:33:07,648 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:33:32,857 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:33:33,862 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:33:35,701 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:33:35,703 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:33:35,704 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:33:35,704 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:33:36,710 - ERROR - ❌ Metrics collection failed: (pid=12233)
+2025-12-14 20:33:38,987 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:33:38,989 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:33:38,989 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:35:01,171 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:35:02,226 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:35:06,028 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:35:06,030 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:35:06,031 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:35:06,031 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:35:07,038 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:35:08,525 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:35:08,527 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:35:08,527 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:38:21,089 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:38:22,099 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:38:25,114 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:38:25,121 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:38:25,122 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:38:25,122 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:38:26,127 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:38:29,744 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:38:29,755 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:38:29,755 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:38:31,625 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:38:32,633 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:38:34,693 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:38:34,695 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:38:34,695 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:38:34,695 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:38:35,697 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:38:37,502 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:38:37,504 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:38:37,505 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:38:55,853 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:38:56,875 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:38:58,882 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:38:58,887 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:38:58,887 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:38:58,887 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:38:59,894 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:39:02,315 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:39:02,316 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:39:02,317 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:45:15,987 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:45:16,995 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:45:21,685 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:45:21,699 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:45:21,699 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:45:21,699 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:45:22,702 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:45:23,858 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:45:23,859 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:45:23,860 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:45:26,228 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:45:27,234 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:45:28,381 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:45:28,383 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:45:28,383 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:45:28,384 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:45:29,419 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:45:32,583 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:45:32,586 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:45:32,586 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:45:47,802 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:45:48,808 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:45:50,794 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:45:50,795 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:45:50,795 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:45:50,796 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:45:51,800 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:45:53,534 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 20:45:53,537 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:45:53,537 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:54:09,472 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 20:54:09,472 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 20:55:51,894 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:55:51,894 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:55:52,904 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:55:52,904 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:57:08,266 - ERROR - ❌ Email alert failed: [Errno 60] Operation timed out
+2025-12-14 20:57:08,266 - ERROR - ❌ Email alert failed: [Errno 60] Operation timed out
+2025-12-14 20:57:08,269 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:57:08,269 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:57:08,269 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:57:08,269 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:57:08,270 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:57:08,270 - INFO - 🚨 Running emergency system health check
+2025-12-14 20:57:09,274 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:57:09,274 - ERROR - ❌ Metrics collection failed: (pid=12173)
+2025-12-14 20:58:24,275 - ERROR - ❌ Email alert failed: [Errno 60] Operation timed out
+2025-12-14 20:58:24,275 - ERROR - ❌ Email alert failed: [Errno 60] Operation timed out
+2025-12-14 20:58:24,279 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:58:24,279 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 20:58:24,279 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 20:58:24,279 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:06:03,384 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 21:06:38,761 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:06:39,772 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:06:42,278 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:06:42,281 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:06:42,281 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:06:42,282 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:06:43,287 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:06:45,955 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:06:45,957 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:06:45,957 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:07:10,581 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:07:11,588 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:07:13,419 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:07:13,421 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:07:13,421 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:07:13,422 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:07:14,428 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:07:16,350 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:07:16,352 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:07:16,352 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:07:50,076 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:07:51,079 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:07:52,459 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:07:52,460 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:07:52,460 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:07:52,461 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:07:53,467 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:07:54,576 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:07:54,577 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:07:54,577 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:09:13,884 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:09:14,931 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:09:17,217 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:09:17,219 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:09:17,219 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:09:17,220 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:09:18,223 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:09:19,942 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:09:19,943 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:09:19,943 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:10:17,770 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:10:18,780 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:10:19,892 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:10:19,894 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:10:19,894 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:10:19,895 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:10:20,900 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:10:23,326 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:10:23,327 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:10:23,327 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:11:42,598 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:11:43,609 - ERROR - ❌ Metrics collection failed: (pid=14717)
+2025-12-14 21:11:44,825 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:11:44,827 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:11:44,828 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:11:44,828 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:11:45,832 - ERROR - ❌ Metrics collection failed: (pid=14717)
+2025-12-14 21:11:49,088 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:11:49,090 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:11:49,090 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:14:13,877 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:14:14,885 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:14:17,227 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:14:17,251 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:14:17,257 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:14:17,257 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:14:18,263 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:14:20,057 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:14:20,059 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:14:20,059 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:16:07,074 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:16:08,082 - ERROR - ❌ Metrics collection failed: (pid=14990)
+2025-12-14 21:16:09,367 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:16:09,368 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:16:09,368 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:16:09,368 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:16:10,370 - ERROR - ❌ Metrics collection failed: (pid=14990)
+2025-12-14 21:16:12,805 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:16:12,806 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:16:12,807 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:22:15,487 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:22:16,501 - ERROR - ❌ Metrics collection failed: (pid=15349)
+2025-12-14 21:22:19,528 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:22:19,530 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:22:19,530 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 21:22:19,530 - INFO - 🚨 Running emergency system health check
+2025-12-14 21:22:20,532 - ERROR - ❌ Metrics collection failed: (pid=12913)
+2025-12-14 21:22:22,527 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 21:22:22,530 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 21:22:22,530 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:17:14,894 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 22:19:29,817 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:19:30,824 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:19:33,102 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:19:33,104 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:19:33,104 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:19:33,105 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:19:34,106 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:20:03,668 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:20:03,669 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:20:03,670 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:25:58,800 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:25:59,807 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:26:02,671 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:26:02,674 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:26:02,674 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:26:02,674 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:26:03,679 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:26:04,927 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:26:04,928 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:26:04,928 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:27:02,969 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:27:03,975 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:27:05,184 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:27:05,188 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:27:05,188 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:27:05,189 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:27:06,192 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:27:12,754 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:27:12,756 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:27:12,756 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:28:01,056 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:28:02,060 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:28:03,297 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:28:03,298 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:28:03,299 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:28:03,299 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:28:04,305 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:28:05,531 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:28:05,532 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:28:05,533 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:29:25,091 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:29:26,098 - ERROR - ❌ Metrics collection failed: (pid=19416)
+2025-12-14 22:29:27,497 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:29:27,499 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:29:27,500 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:29:27,501 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:29:28,505 - ERROR - ❌ Metrics collection failed: (pid=19416)
+2025-12-14 22:29:31,405 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:29:31,406 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:29:31,406 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:30:40,941 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:30:41,946 - ERROR - ❌ Metrics collection failed: (pid=19475)
+2025-12-14 22:30:44,546 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:30:44,548 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:30:44,548 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:30:44,548 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:30:45,553 - ERROR - ❌ Metrics collection failed: (pid=19475)
+2025-12-14 22:30:47,046 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:30:47,047 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:30:47,047 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:32:06,556 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:32:07,564 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:32:09,167 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:32:09,169 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:32:09,169 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:32:09,170 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:32:10,176 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:32:11,644 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:32:11,645 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:32:11,645 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:36:05,647 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:36:06,655 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:36:07,968 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:36:07,969 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:36:07,969 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:36:07,969 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:36:08,976 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:36:10,204 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:36:10,205 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:36:10,205 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:47:32,525 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 22:48:25,378 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:48:26,385 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:48:27,998 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:48:28,001 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:48:28,001 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:48:28,002 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:48:29,007 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:48:30,061 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:48:30,062 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:48:30,062 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:49:36,479 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:49:37,482 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:49:39,179 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:49:39,182 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:49:39,182 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:49:39,182 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:49:40,189 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:49:41,464 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:49:41,465 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:49:41,465 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:50:14,245 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:50:15,251 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:50:16,848 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:50:16,849 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:50:16,850 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:50:16,850 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:50:17,856 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:50:18,984 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:50:18,985 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:50:18,985 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:50:30,131 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:50:31,133 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:50:33,437 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:50:33,438 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:50:33,438 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:50:33,438 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:50:34,444 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:50:36,182 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:50:36,183 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:50:36,184 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:51:22,716 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:51:23,723 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:51:25,224 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:51:25,225 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:51:25,225 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:51:25,225 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:51:26,232 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:51:28,796 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:51:28,797 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:51:28,797 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:52:14,760 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:52:15,763 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:52:17,350 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:52:17,351 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:52:17,351 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:52:17,352 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:52:18,354 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:52:20,260 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:52:20,261 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:52:20,261 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:52:53,474 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:52:54,482 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:52:55,614 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:52:55,620 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:52:55,621 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:52:55,621 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:52:56,623 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:52:58,442 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:52:58,443 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:52:58,443 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:53:13,228 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:53:14,234 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:53:15,422 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:53:15,424 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:53:15,424 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:53:15,424 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:53:16,426 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:53:18,496 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:53:18,498 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:53:18,498 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:53:33,785 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:53:34,789 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:53:36,232 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:53:36,234 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:53:36,234 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:53:36,234 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:53:37,238 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:53:39,981 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:53:39,982 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:53:39,982 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:54:04,574 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:54:05,577 - ERROR - ❌ Metrics collection failed: (pid=21043)
+2025-12-14 22:54:07,440 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:54:07,441 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:54:07,441 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:54:07,441 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:54:08,447 - ERROR - ❌ Metrics collection failed: (pid=21043)
+2025-12-14 22:54:10,188 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:54:10,189 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:54:10,189 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:55:13,126 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:55:14,131 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:55:16,207 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:55:16,209 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:55:16,209 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:55:16,210 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:55:17,217 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:55:18,307 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:55:18,309 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:55:18,310 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:56:29,319 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:56:30,324 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:56:32,068 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:56:32,071 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:56:32,071 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:56:32,072 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:56:33,077 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:56:35,085 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:56:35,086 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:56:35,086 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:58:59,616 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:59:00,621 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:59:01,879 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:59:01,883 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:59:01,883 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:59:01,883 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:59:02,888 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 22:59:04,011 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 22:59:04,011 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 22:59:04,012 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 22:59:57,946 - INFO - 🚨 Running emergency system health check
+2025-12-14 22:59:58,994 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:00:00,033 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:00:00,036 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:00:00,037 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:00:00,037 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:00:01,043 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:00:02,011 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:00:02,011 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:00:02,012 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:00:40,262 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:00:41,270 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:00:42,447 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:00:42,462 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:00:42,462 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:00:42,463 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:00:43,467 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:00:44,720 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:00:44,721 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:00:44,721 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:01:22,124 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:01:23,129 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:01:24,401 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:01:24,403 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:24,403 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:01:24,403 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:01:25,405 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:01:26,178 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:01:26,178 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,179 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:01:26,204 - INFO - ✅ Alert acknowledged: 20251214_224826_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,204 - INFO - ✅ Alert acknowledged: 20251214_224829_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,204 - INFO - ✅ Alert acknowledged: 20251214_224937_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_224940_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225015_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225017_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225031_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225034_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225123_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225126_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,205 - INFO - ✅ Alert acknowledged: 20251214_225215_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,206 - INFO - ✅ Alert acknowledged: 20251214_225218_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,206 - INFO - ✅ Alert acknowledged: 20251214_225254_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,207 - INFO - ✅ Alert acknowledged: 20251214_225256_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,207 - INFO - ✅ Alert acknowledged: 20251214_225314_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,207 - INFO - ✅ Alert acknowledged: 20251214_225316_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,208 - INFO - ✅ Alert acknowledged: 20251214_225334_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,208 - INFO - ✅ Alert acknowledged: 20251214_225337_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,209 - INFO - ✅ Alert acknowledged: 20251214_225405_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,209 - INFO - ✅ Alert acknowledged: 20251214_225408_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,209 - INFO - ✅ Alert acknowledged: 20251214_225514_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,209 - INFO - ✅ Alert acknowledged: 20251214_225517_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,217 - INFO - ✅ Alert acknowledged: 20251214_225630_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,217 - INFO - ✅ Alert acknowledged: 20251214_225633_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,217 - INFO - ✅ Alert acknowledged: 20251214_225900_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,217 - INFO - ✅ Alert acknowledged: 20251214_225902_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,217 - INFO - ✅ Alert acknowledged: 20251214_225958_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,217 - INFO - ✅ Alert acknowledged: 20251214_230001_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,218 - INFO - ✅ Alert acknowledged: 20251214_230041_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,218 - INFO - ✅ Alert acknowledged: 20251214_230043_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,218 - INFO - ✅ Alert acknowledged: 20251214_230123_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:26,218 - INFO - ✅ Alert acknowledged: 20251214_230125_SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:57,026 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:01:58,029 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:01:58,775 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:01:58,776 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:01:58,776 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:01:58,776 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:01:59,778 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:02:00,548 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:02:00,552 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:02:00,552 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:03:08,982 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:03:09,990 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:03:10,825 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:03:10,828 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:03:10,828 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:03:10,828 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:03:11,833 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:03:12,616 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:03:12,618 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:03:12,618 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:03:43,538 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:03:44,542 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:03:45,601 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:03:45,602 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:03:45,603 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:03:45,603 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:03:46,605 - ERROR - ❌ Metrics collection failed: (pid=21370)
+2025-12-14 23:03:47,564 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:03:47,564 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:03:47,565 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:17:08,020 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:17:09,027 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:17:10,317 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:17:10,321 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:17:10,321 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:17:10,321 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:17:11,324 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:17:12,062 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:17:12,063 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:17:12,063 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:17:43,210 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:17:44,213 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:17:44,965 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:17:44,965 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:17:44,966 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:17:44,966 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:17:45,971 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:17:46,694 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:17:46,695 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:17:46,695 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:20:35,185 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:20:36,191 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:20:37,074 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:20:37,077 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:20:37,077 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:20:37,077 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:20:38,079 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:20:38,857 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:20:38,858 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:20:38,858 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:27:12,859 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:27:13,863 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:27:15,049 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:27:15,052 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:27:15,052 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:27:15,052 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:27:16,057 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:27:16,783 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:27:16,785 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:27:16,785 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:33:15,956 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:33:17,048 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:33:18,403 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:33:18,405 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:33:18,405 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:33:18,406 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:33:19,408 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:33:20,486 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:33:20,486 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:33:20,487 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:34:01,144 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:34:02,153 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:34:02,975 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:34:02,977 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:34:02,977 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:34:02,978 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:34:03,984 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:34:04,782 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:34:04,783 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:34:04,783 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:35:39,638 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:35:40,646 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:35:42,508 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:35:42,510 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:35:42,510 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:35:42,510 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:35:43,515 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:35:44,222 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:35:44,224 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:35:44,225 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:36:52,902 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:36:53,906 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:36:54,818 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:36:54,819 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:36:54,820 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:36:54,820 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:36:55,823 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:36:56,694 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:36:56,694 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:36:56,695 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:37:49,416 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:37:50,421 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:37:51,607 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:37:51,609 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:37:51,609 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:37:51,610 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:37:52,613 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:37:53,379 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:37:53,380 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:37:53,380 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:40:24,562 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 23:40:24,562 - INFO - 🏥 Production Monitoring System initialized
+2025-12-14 23:44:57,438 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:44:57,438 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:44:58,442 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:44:58,442 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:44:59,611 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:44:59,611 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:44:59,614 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:44:59,614 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:44:59,615 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:44:59,615 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:44:59,615 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:44:59,615 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:45:00,618 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:45:00,618 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:45:01,366 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:45:01,366 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:45:01,367 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:45:01,367 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:45:01,367 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:45:01,367 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:45:41,273 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:45:41,273 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:45:42,277 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:45:42,277 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:45:43,970 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:45:43,970 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:45:43,972 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:45:43,972 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:45:43,973 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:45:43,973 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:45:43,973 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:45:43,973 - INFO - 🚨 Running emergency system health check
+2025-12-14 23:45:44,975 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:45:44,975 - ERROR - ❌ Metrics collection failed: (pid=17506)
+2025-12-14 23:45:46,114 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:45:46,114 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-14 23:45:46,115 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:45:46,115 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-14 23:45:46,115 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-14 23:45:46,115 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:46:25,843 - INFO - 🏥 Production Monitoring System initialized
+2025-12-15 11:47:30,208 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:47:31,216 - ERROR - ❌ Metrics collection failed: (pid=8606)
+2025-12-15 11:47:32,649 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:47:32,652 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:47:32,652 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:47:32,652 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:47:33,659 - ERROR - ❌ Metrics collection failed: (pid=8606)
+2025-12-15 11:47:35,305 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:47:35,307 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:47:35,307 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:50:16,626 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:50:17,652 - ERROR - ❌ Metrics collection failed: (pid=8606)
+2025-12-15 11:50:19,660 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:50:19,663 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:50:19,663 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:50:19,663 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:50:20,667 - ERROR - ❌ Metrics collection failed: (pid=10199)
+2025-12-15 11:50:21,733 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:50:21,734 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:50:21,734 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:52:50,961 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:52:51,967 - ERROR - ❌ Metrics collection failed: (pid=10272)
+2025-12-15 11:52:53,281 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:52:53,300 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:52:53,301 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:52:53,301 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:52:54,305 - ERROR - ❌ Metrics collection failed: (pid=10272)
+2025-12-15 11:52:55,655 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:52:55,656 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:52:55,656 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:54:41,735 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:54:42,749 - ERROR - ❌ Metrics collection failed: (pid=10356)
+2025-12-15 11:54:43,735 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:54:43,739 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:54:43,739 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:54:43,739 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:54:44,741 - ERROR - ❌ Metrics collection failed: (pid=10356)
+2025-12-15 11:54:45,719 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:54:45,720 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:54:45,721 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:55:24,178 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:55:25,186 - ERROR - ❌ Metrics collection failed: (pid=10356)
+2025-12-15 11:55:26,120 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:55:26,122 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:55:26,122 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 11:55:26,122 - INFO - 🚨 Running emergency system health check
+2025-12-15 11:55:27,124 - ERROR - ❌ Metrics collection failed: (pid=10356)
+2025-12-15 11:55:27,999 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 11:55:28,000 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 11:55:28,001 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:00:01,155 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:00:02,165 - ERROR - ❌ Metrics collection failed: (pid=10547)
+2025-12-15 12:00:21,385 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:00:21,407 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:00:21,408 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:00:21,408 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:00:22,412 - ERROR - ❌ Metrics collection failed: (pid=10547)
+2025-12-15 12:00:34,914 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:00:34,916 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:00:34,916 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:09:34,041 - INFO - 🏥 Production Monitoring System initialized
+2025-12-15 12:10:32,024 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:10:33,030 - ERROR - ❌ Metrics collection failed: (pid=10940)
+2025-12-15 12:10:34,206 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:10:34,218 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:10:34,219 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:10:34,219 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:10:35,221 - ERROR - ❌ Metrics collection failed: (pid=10940)
+2025-12-15 12:10:36,458 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:10:36,458 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:10:36,459 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:11:30,104 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:11:31,120 - ERROR - ❌ Metrics collection failed: (pid=11181)
+2025-12-15 12:11:31,939 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:11:31,948 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:11:31,948 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:11:31,949 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:11:32,953 - ERROR - ❌ Metrics collection failed: (pid=10940)
+2025-12-15 12:11:33,725 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:11:33,728 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:11:33,730 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:12:43,199 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:12:44,217 - ERROR - ❌ Metrics collection failed: (pid=10940)
+2025-12-15 12:12:45,443 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:12:45,445 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:12:45,446 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:12:45,446 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:12:46,452 - ERROR - ❌ Metrics collection failed: (pid=10940)
+2025-12-15 12:12:47,419 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:12:47,420 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:12:47,420 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:18:09,552 - INFO - 🏥 Production Monitoring System initialized
+2025-12-15 12:18:35,683 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:18:36,686 - ERROR - ❌ Metrics collection failed: (pid=11331)
+2025-12-15 12:18:37,908 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:18:37,933 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:18:37,936 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:18:37,936 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:18:38,944 - ERROR - ❌ Metrics collection failed: (pid=11331)
+2025-12-15 12:18:40,318 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:18:40,320 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:18:40,320 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:25:22,379 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:25:23,387 - ERROR - ❌ Metrics collection failed: (pid=11594)
+2025-12-15 12:25:25,451 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:25:25,453 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:25:25,453 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:25:25,454 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:25:26,455 - ERROR - ❌ Metrics collection failed: (pid=11594)
+2025-12-15 12:25:27,313 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:25:27,314 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:25:27,314 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:26:17,424 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:26:18,450 - ERROR - ❌ Metrics collection failed: (pid=11671)
+2025-12-15 12:26:19,459 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:26:19,479 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:26:19,479 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-15 12:26:19,480 - INFO - 🚨 Running emergency system health check
+2025-12-15 12:26:20,485 - ERROR - ❌ Metrics collection failed: (pid=11671)
+2025-12-15 12:26:21,664 - ERROR - ❌ Email alert failed: Email password not configured. Set ALERT_EMAIL_PASSWORD in environment variables.
+2025-12-15 12:26:21,664 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-15 12:26:21,664 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:38:03,107 - INFO - 🏥 Production Monitoring System initialized
+2025-12-30 21:39:08,587 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:39:09,592 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:39:09,594 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:39:09,596 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:39:09,596 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:39:09,597 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:39:10,598 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:39:10,600 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:39:10,600 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:39:10,600 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:39:34,283 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:39:35,288 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:39:35,291 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:39:35,293 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:39:35,294 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:39:35,294 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:39:36,296 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:39:36,298 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:39:36,298 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:39:36,298 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:06,628 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:07,631 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:07,633 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:07,634 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:07,634 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:07,635 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:08,638 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:08,639 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:08,640 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:08,640 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:11,400 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:12,403 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:12,406 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:12,406 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:12,406 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:12,406 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:13,411 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:13,413 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:13,413 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:13,414 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:14,272 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:15,276 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:15,278 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:15,279 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:15,279 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:15,280 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:16,284 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:16,286 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:16,287 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:16,287 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:17,546 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:18,551 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:18,552 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:18,553 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:18,553 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:18,553 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:19,555 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:19,556 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:19,557 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:19,557 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:34,912 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:35,916 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:35,917 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:35,918 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:35,918 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:35,918 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:36,920 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:36,921 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:36,922 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:36,922 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:39,866 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:40,871 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:40,874 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:40,879 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:40,879 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:40,879 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:41,882 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:41,884 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:41,884 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:41,884 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:56,043 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:57,050 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:57,051 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:57,052 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:57,052 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:57,052 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:58,054 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:58,056 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:58,057 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:58,057 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:58,910 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:40:59,912 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:40:59,913 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:40:59,914 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:40:59,914 - INFO - 🏥 Health check complete - Status: CRITICAL
+2025-12-30 21:40:59,914 - INFO - 🚨 Running emergency system health check
+2025-12-30 21:41:00,915 - ERROR - ❌ Metrics collection failed: (pid=5300)
+2025-12-30 21:41:00,917 - ERROR - ❌ Email alert failed: [Errno 8] nodename nor servname provided, or not known
+2025-12-30 21:41:00,917 - WARNING - 🚨 ALERT [EMERGENCY]: SYSTEM_HEALTH_CHECK_CRITICAL
+2025-12-30 21:41:00,917 - INFO - 🏥 Health check complete - Status: CRITICAL

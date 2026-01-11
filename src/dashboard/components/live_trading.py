@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 # Import robust timestamp parsing utility
 from src.dashboard.components.ai_trading import parse_timestamp_safely
+from src.charts.chart_utils import create_price_chart, get_demo_chart_data
 
 def render_live_trading():
     """
@@ -59,8 +60,65 @@ def render_live_trading():
                 st.error(f"❌ Close all positions failed: {e}")
     with emergency_cols[2]:
         risk_level = st.selectbox("Risk Level", ["Low", "Medium", "High"], index=0)
+
+    # ─── Instrument & Chart Section ──────────────────────────────────────────────
     
-    trading_tabs = st.tabs(["📊 Portfolio", "🎮 Trade Execution", "📈 Positions", "📊 Performance", "📋 Trade History"])
+    st.markdown("---")
+    
+    # Initialize session state for instrument if needed
+    if "live_trading_instrument" not in st.session_state:
+        st.session_state.live_trading_instrument = "R_10"
+        
+    col_chart_ctrl, col_chart_view = st.columns([1, 3])
+    
+    with col_chart_ctrl:
+        st.subheader("Instrument")
+        selected_instrument = st.selectbox(
+            "Select Asset", 
+            ["R_10", "R_25", "R_50", "frxEURUSD", "frxUSDJPY", "BTCUSD"],
+            key="live_trading_instrument_select",
+            index=["R_10", "R_25", "R_50", "frxEURUSD", "frxUSDJPY", "BTCUSD"].index(st.session_state.get("live_trading_instrument", "R_10"))
+        )
+        
+        # Update session state on change
+        if selected_instrument != st.session_state.get("live_trading_instrument"):
+             st.session_state.live_trading_instrument = selected_instrument
+             st.rerun()
+
+        st.info(f"Viewing: **{selected_instrument}**")
+        
+        timeframe = st.selectbox("Timeframe", ["M1", "M5", "H1", "D"], index=0)
+        
+    with col_chart_view:
+        with st.spinner("Loading chart data..."):
+            broker = st.session_state.get('live_broker')
+            chart_df = pd.DataFrame()
+            is_real = False
+            
+            if broker and broker.is_connected():
+                try:
+                    chart_df = broker.fetch_candles(
+                        selected_instrument, 
+                        timeframe, 
+                        count=100
+                    )
+                    if not chart_df.empty:
+                        is_real = True
+                except Exception as e:
+                    logger.warning(f"Chart data fetch failed: {e}")
+            
+            # Fallback to demo data
+            if chart_df.empty:
+                chart_df = get_demo_chart_data(selected_instrument, timeframe, count=100)
+            
+            # Create and display chart
+            fig = create_price_chart(
+                chart_df, 
+                selected_instrument, 
+                height=400,
+                data_source="Deriv API" if is_real else "Simulation"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
     with trading_tabs[0]:
         render_trading_portfolio()
@@ -159,32 +217,120 @@ def render_trade_execution():
     """Render trade execution interface."""
     st.subheader("🎮 Trade Execution")
     
-    col_setup, col_confirm = st.columns(2)
+    # Use selected instrument from session state
+    instrument = st.session_state.get("live_trading_instrument", "R_10")
+    
+    col_setup, col_confirm = st.columns([2, 1])
     
     with col_setup:
-        instrument = st.selectbox("Instrument", 
-                                ["R_10", "R_25", "R_50", "frxEURUSD", "frxUSDJPY"])
-        direction = st.radio("Direction", ["BUY", "SELL"])
-        stake = st.slider("Stake Amount ($)", 10, 1000, 100)
+        st.markdown(f"### Trading: **{instrument}**")
+        
+        dir_col1, dir_col2 = st.columns(2)
+        with dir_col1:
+             direction = st.radio("Direction", ["BUY", "SELL"], horizontal=True)
+        
+        st.markdown("---")
+        
+        # Improved inputs
+        stake = st.number_input("Stake Amount ($)", min_value=1.0, max_value=50000.0, value=100.0, step=10.0)
+        
+        adv_exp = st.expander("Advanced Options (SL/TP)", expanded=False)
+        with adv_exp:
+            col_sl, col_tp = st.columns(2)
+            with col_sl:
+                sl = st.number_input("Stop Loss (Points)", min_value=0.0, value=0.0, step=10.0, help="0 to disable")
+            with col_tp:
+                tp = st.number_input("Take Profit (Points)", min_value=0.0, value=0.0, step=10.0, help="0 to disable")
     
     with col_confirm:
-        st.write("**Trade Summary:**")
-        st.write(f"**Instrument:** {instrument}")
-        st.write(f"**Direction:** {direction}")
-        st.write(f"**Amount:** ${stake}")
+        st.write("### Order Summary")
+        st.info(f"**{direction}** {instrument}")
+        st.metric("Total Stake", f"${stake:,.2f}")
         
-        if st.button("🚀 EXECUTE TRADE", type="primary", use_container_width=True):
-            execute_demo_trade(instrument, direction, stake)
+        if sl > 0:
+            st.caption(f"🛑 SL: {sl} pts")
+        if tp > 0:
+            st.caption(f"🎯 TP: {tp} pts")
+        
+        st.markdown("---")
+        
+        # Color-coded button
+        btn_type = "primary" if direction == "BUY" else "secondary" # Streamlit only has primary/secondary
+        # We can use type="primary" for both but change label/emoji
+        
+        btn_label = f"🚀 {direction} NOW" if direction == "BUY" else f"🔻 {direction} NOW"
+        
+        if st.button(btn_label, type="primary", use_container_width=True):
+            kwargs = {}
+            if sl > 0: kwargs["stop_loss"] = sl
+            if tp > 0: kwargs["take_profit"] = tp
+            
+            execute_demo_trade(instrument, direction, stake, **kwargs)
 
 def render_position_monitor():
-    """Render position monitoring interface."""
+    """Render position monitoring interface with real API data priority."""
     st.subheader("📈 Active Positions Monitor")
 
     try:
         positions_found = False
+        data_source = "none"
 
-        # First, check for simulated positions in session state
-        if 'open_positions' in st.session_state and st.session_state.open_positions:
+        # PRIORITY 1: Try to get REAL positions from broker API first
+        broker = st.session_state.get('live_broker')
+        if broker and broker.is_connected():
+            try:
+                positions_response = broker.get_positions()
+
+                if positions_response and not positions_response.get('error'):
+                    portfolio = positions_response.get('portfolio', {})
+                    contracts = portfolio.get('contracts', [])
+
+                    if contracts:
+                        st.success("🟢 **Real-time data from Deriv API**")
+                        positions_data = []
+                        for contract in contracts:
+                            positions_data.append({
+                                'Contract_ID': contract.get('contract_id', 'N/A'),
+                                'Instrument': contract.get('display_name', 'Unknown'),
+                                'Direction': 'BUY' if contract.get('contract_type') == 'CALL' else 'SELL',
+                                'Stake': contract.get('buy_price', 0),
+                                'Entry_Price': contract.get('entry_tick', 'N/A'),
+                                'Current_Price': contract.get('current_spot', 'N/A'),
+                                'P&L': contract.get('profit', 0),
+                                'Status': contract.get('status', 'open')
+                            })
+
+                        positions_df = pd.DataFrame(positions_data)
+                        st.dataframe(positions_df, use_container_width=True, hide_index=True,
+                                   column_config={
+                                       "Contract_ID": st.column_config.TextColumn("Contract ID"),
+                                       "P&L": st.column_config.NumberColumn("P&L", format="$%.2f"),
+                                       "Stake": st.column_config.NumberColumn("Stake", format="$%.2f")
+                                   })
+
+                        # Add close position buttons for real positions
+                        st.subheader("Close Positions")
+                        cols = st.columns(min(len(positions_data), 3))
+                        for i, contract in enumerate(contracts):
+                            contract_id = contract.get('contract_id')
+                            instrument = contract.get('display_name', 'Unknown')
+                            with cols[i % 3]:
+                                if st.button(f"❌ Close {instrument}", key=f"close_real_{contract_id}"):
+                                    close_result = broker.close_position(contract_id)
+                                    if close_result and not close_result.get('error'):
+                                        st.success(f"✅ Successfully closed position for {instrument}")
+                                        st.rerun()
+                                    else:
+                                        st.error(f"❌ Failed to close position: {close_result.get('error', {}).get('message', 'Unknown error')}")
+
+                        positions_found = True
+                        data_source = "real_api"
+            except Exception as e:
+                logger.warning(f"Failed to get real positions from broker: {e}")
+
+        # PRIORITY 2: Check for simulated positions in session state (only if no real positions)
+        if not positions_found and 'open_positions' in st.session_state and st.session_state.open_positions:
+            st.warning("⚠️ **Simulated positions** (for testing)")
             positions_data = []
             for pos in st.session_state.open_positions:
                 positions_data.append({
@@ -193,8 +339,8 @@ def render_position_monitor():
                     'Direction': pos.get('direction', 'BUY').upper(),
                     'Stake': pos.get('stake', 0),
                     'Entry_Price': pos.get('entry_price', 'N/A'),
-                    'Current_Price': pos.get('entry_price', 'N/A'),  # Same as entry for demo
-                    'P&L': pos.get('commission', 0) * -1,  # Show commission as negative P&L initially
+                    'Current_Price': pos.get('entry_price', 'N/A'),
+                    'P&L': pos.get('commission', 0) * -1,
                     'Status': pos.get('status', 'Active')
                 })
 
@@ -207,58 +353,30 @@ def render_position_monitor():
                                "Stake": st.column_config.NumberColumn("Stake", format="$%.2f")
                            })
 
-                # Add close position buttons
+                # Add close position buttons for simulated positions
                 st.subheader("Close Positions")
                 cols = st.columns(min(len(positions_data), 3))
                 for i, pos in enumerate(st.session_state.open_positions):
                     contract_id = pos.get('id')
                     instrument = pos.get('instrument', 'Unknown')
                     with cols[i % 3]:
-                        if st.button(f"❌ Close {instrument}", key=f"close_{contract_id}"):
-                            # Remove from session state
+                        if st.button(f"❌ Close {instrument}", key=f"close_sim_{contract_id}"):
                             st.session_state.open_positions = [
                                 p for p in st.session_state.open_positions if p.get('id') != contract_id
                             ]
-                            st.success(f"✅ Successfully closed position for {instrument}")
-                            st.rerun()  # Refresh the page
+                            st.success(f"✅ Successfully closed simulated position for {instrument}")
+                            st.rerun()
 
                 positions_found = True
+                data_source = "simulated"
 
-        # Also try to get positions from broker
-        broker = st.session_state.get('live_broker')
-        if broker:
-            positions_response = broker.get_positions()
-
-            if positions_response and not positions_response.get('error'):
-                portfolio = positions_response.get('portfolio', {})
-                contracts = portfolio.get('contracts', [])
-
-                if contracts and not positions_found:  # Only show if we didn't show session positions
-                    positions_data = []
-                    for contract in contracts:
-                        positions_data.append({
-                            'Contract_ID': contract.get('contract_id', 'N/A'),
-                            'Instrument': contract.get('display_name', 'Unknown'),
-                            'Direction': 'BUY' if contract.get('contract_type') == 'CALL' else 'SELL',
-                            'Stake': contract.get('stake', 0),
-                            'Entry_Price': contract.get('entry_tick', 'N/A'),
-                            'Current_Price': contract.get('current_tick', 'N/A'),
-                            'P&L': contract.get('profit_loss', 0),
-                            'Status': contract.get('status', 'Active')
-                        })
-
-                    positions_df = pd.DataFrame(positions_data)
-                    st.dataframe(positions_df, use_container_width=True, hide_index=True,
-                               column_config={
-                                   "Contract_ID": st.column_config.TextColumn("Contract ID"),
-                                   "P&L": st.column_config.NumberColumn("P&L", format="$%.2f"),
-                                   "Stake": st.column_config.NumberColumn("Stake", format="$%.2f")
-                               })
-
-                    positions_found = True
-
+        # No positions found
         if not positions_found:
-            st.info("No open positions")
+            if broker and broker.is_connected():
+                st.info("✅ Connected to Deriv API - No open positions")
+            else:
+                st.info("⚠️ No broker connection - No positions to display")
+                st.caption("Connect to Deriv API to see real positions")
 
     except Exception as e:
         st.error(f"Error loading positions: {e}")
@@ -281,9 +399,56 @@ def render_demo_positions():
     st.dataframe(positions, use_container_width=True, hide_index=True)
 
 def render_trading_performance():
-    """Render trading performance metrics."""
+    """Render trading performance metrics with real data from broker API."""
     st.subheader("📊 Trading Performance")
     
+    try:
+        # Try to get real trading performance from broker
+        broker = st.session_state.get('live_broker')
+        
+        if broker and broker.is_connected():
+            # Get trading statement from Deriv API
+            statement = broker.get_statement(limit=100)
+            
+            if statement and not statement.get('error'):
+                transactions = statement.get('statement', {}).get('transactions', [])
+                
+                if transactions:
+                    # Calculate real metrics from transactions
+                    total_pnl = sum(t.get('amount', 0) for t in transactions if t.get('action_type') in ['buy', 'sell'])
+                    winning_trades = sum(1 for t in transactions if t.get('amount', 0) > 0 and t.get('action_type') == 'sell')
+                    total_trades = sum(1 for t in transactions if t.get('action_type') == 'sell')
+                    win_rate = (winning_trades / total_trades * 100) if total_trades > 0 else 0
+                    
+                    # Calculate today's P&L
+                    from datetime import datetime, timedelta
+                    today_start = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+                    today_transactions = [t for t in transactions if datetime.fromtimestamp(t.get('transaction_time', 0)) >= today_start]
+                    today_pnl = sum(t.get('amount', 0) for t in today_transactions if t.get('action_type') in ['buy', 'sell'])
+                    
+                    # Calculate weekly P&L
+                    week_start = datetime.now() - timedelta(days=7)
+                    week_transactions = [t for t in transactions if datetime.fromtimestamp(t.get('transaction_time', 0)) >= week_start]
+                    weekly_pnl = sum(t.get('amount', 0) for t in week_transactions if t.get('action_type') in ['buy', 'sell'])
+                    
+                    st.success("🟢 **Real trading data from Deriv API**")
+                    
+                    perf_cols = st.columns(4)
+                    with perf_cols[0]:
+                        pnl_trend = "+{:.2f}%".format(abs(today_pnl / 10000 * 100)) if today_pnl > 0 else "{:.2f}%".format(today_pnl / 10000 * 100)
+                        st.metric("Today's P&L", f"${today_pnl:.2f}", pnl_trend)
+                    with perf_cols[1]:
+                        st.metric("Weekly P&L", f"${weekly_pnl:.2f}")
+                    with perf_cols[2]:
+                        st.metric("Win Rate", f"{win_rate:.1f}%")
+                    with perf_cols[3]:
+                        st.metric("Total Trades", str(total_trades))
+                    return
+    except Exception as e:
+        logger.warning(f"Failed to fetch real trading performance: {e}")
+    
+    # Fallback to demo data
+    st.warning("⚠️ **Demo trading performance data**")
     perf_cols = st.columns(4)
     with perf_cols[0]:
         st.metric("Today's P&L", "+$569.35", "+12.2%")
@@ -294,7 +459,7 @@ def render_trading_performance():
     with perf_cols[3]:
         st.metric("Avg Trade Duration", "3.2h")
 
-def execute_demo_trade(instrument, direction, stake):
+def execute_demo_trade(instrument, direction, stake, **kwargs):
     """Execute demo trade and update position tracking."""
     try:
         # Get broker instance to update positions
@@ -319,7 +484,7 @@ def execute_demo_trade(instrument, direction, stake):
         }
 
         # Update broker's position tracking if available
-        if broker and hasattr(broker, '_positions'):
+        if broker:
             if not hasattr(broker, '_positions') or broker._positions is None:
                 broker._positions = {'portfolio': {'contracts': []}}
 
@@ -332,20 +497,20 @@ def execute_demo_trade(instrument, direction, stake):
             # Add the new position
             broker._positions['portfolio']['contracts'].append(position_data)
 
-            # Also store in session state for persistence
-            if 'open_positions' not in st.session_state:
-                st.session_state.open_positions = []
+        # Also store in session state for persistence
+        if 'open_positions' not in st.session_state:
+            st.session_state.open_positions = []
 
-            st.session_state.open_positions.append({
-                'id': order_id,
-                'instrument': instrument,
-                'direction': direction,
-                'stake': stake,
-                'entry_price': simulated_price,
-                'commission': commission,
-                'timestamp': execution_time,
-                'status': 'active'
-            })
+        st.session_state.open_positions.append({
+            'id': order_id,
+            'instrument': instrument,
+            'direction': direction,
+            'stake': stake,
+            'entry_price': simulated_price,
+            'commission': commission,
+            'timestamp': execution_time,
+            'status': 'active'
+        })
 
         st.success("🚀 TRADE EXECUTED SUCCESSFULLY!")
 

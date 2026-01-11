@@ -144,7 +144,7 @@ class PositionSizer:
                     'profit_percentage': (risk_amount * risk_reward_ratio / (final_size * entry_price)) * 100
                 })
 
-            logger.info(".2f")
+            logger.info(f"Position size calculated: {final_size:.2f} units, risk: ${risk_amount:.2f} ({risk_percentage:.2f}%)")
             return result
 
         except Exception as e:
@@ -266,7 +266,8 @@ class PositionSizer:
         base_size = capital_at_risk / risk_per_trade
         adjusted_size = base_size * vol_adjustment
 
-        logger.debug(".4f"                   return adjusted_size
+        logger.debug(f"Volatility adjustment: {vol_adjustment:.4f}, adjusted size: {adjusted_size:.2f}")
+        return adjusted_size
 
     def _apply_volatility_adjustment(self, base_size: float, market_data: Optional[pd.DataFrame]) -> float:
         """
@@ -314,7 +315,8 @@ class PositionSizer:
 
         constrained_value = np.clip(trade_value, min_value, max_value)
 
-        logger.debug(".2f"        return constrained_value
+        logger.debug(f"Position size constrained: raw={raw_size:.2f}, final={constrained_value:.2f}")
+        return constrained_value
 
     def _create_error_result(self, error_message: str) -> Dict[str, Any]:
         """Create standardized error result."""

@@ -447,7 +447,7 @@ class DerivBroker(TradingBroker):
             if "take_profit" in kwargs:
                 req["take_profit"] = kwargs["take_profit"]
 
-            response = self._send_request(req)
+            response = self._execute_with_oauth_fallback(req)
 
             if response and not response.get("error"):
                 logger.info(f"Order placed successfully for {instrument}: {stake} units")
@@ -460,6 +460,58 @@ class DerivBroker(TradingBroker):
             logger.error(f"Error placing order: {e}")
             return {"error": {"message": f"Order placement failed: {str(e)}"}}
 
+    def _execute_with_oauth_fallback(self, request_msg: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Execute request with automatic OAuth escalation if needed.
+        
+        Args:
+            request_msg: Request message dictionary
+            
+        Returns:
+            Response dictionary
+        """
+        response = self._send_request(request_msg)
+
+        if response and response.get("error"):
+            error_msg = response["error"]["message"]
+            
+            # Check for OAuth permission errors
+            if ("permission denied" in error_msg.lower() and "oauth" in error_msg.lower()) or \
+               ("oauth" in error_msg.lower() and "permission" in error_msg.lower()):
+                
+                logger.info("Request requires OAuth token - attempting escalation...")
+                
+                # Check if we have an OAuth token
+                if self.config.deriv_oauth_token:
+                    # Close current connection
+                    self._close_connection()
+                    
+                    # Switch to OAuth
+                    logger.info("Switching to OAuth mode...")
+                    old_auth_mode = self.config.auth_mode
+                    self.config.auth_mode = "oauth"
+                    
+                    if self.connect_and_authenticate():
+                        logger.info("OAuth authentication successful, retrying request...")
+                        retry_response = self._send_request(request_msg)
+                        
+                        if retry_response and not retry_response.get("error"):
+                            # Success! Keep OAuth mode
+                            self.account_type = "REAL_OAUTH"
+                            return retry_response
+                        else:
+                            # Failed even with OAuth
+                            logger.warning("Request failed even with OAuth")
+                            return retry_response
+                    else:
+                        # Auth failed, restore old mode
+                        self.config.auth_mode = old_auth_mode
+                        logger.warning("OAuth authentication failed")
+                else:
+                    logger.warning("No OAuth token available for escalation")
+                    
+        return response
+
     def get_account_balance(self) -> Dict[str, Any]:
         """
         Get current account balance with automatic OAuth fallback.
@@ -470,55 +522,17 @@ class DerivBroker(TradingBroker):
         logger.info("Checking account balance...")
 
         req = {"balance": 1, "account": "all"}
-        response = self._send_request(req)
-
-        if response and response.get("error"):
-            error_msg = response["error"]["message"]
-            logger.warning(f"Balance access failed: {error_msg}")
-
-            # Check if this is an OAuth permission error
-            if "permission denied" in error_msg.lower() and "oauth" in error_msg.lower():
-                logger.info("Account requires OAuth token - attempting OAuth authentication...")
-
-                # Close current connection and try OAuth
-                self._close_connection()
-
-                if self.config.deriv_oauth_token:
-                    logger.info("Switching to OAuth mode...")
-                    # Temporarily change auth mode for this attempt
-                    old_auth_mode = self.config.auth_mode
-                    self.config.auth_mode = "oauth"
-
-                    if self.connect_and_authenticate():
-                        logger.info("OAuth authentication successful, retrying balance request...")
-                        response = self._send_request(req)
-
-                        if response and not response.get("error"):
-                            logger.info("Account balance retrieved successfully with OAuth")
-                            self.account_type = "REAL_OAUTH"
-                        else:
-                            # Restore original auth mode and try account status
-                            self.config.auth_mode = old_auth_mode
-                            logger.error("Even OAuth balance access failed")
-                            logger.info("Falling back to account status...")
-                            return self.get_account_status()
-                    else:
-                        # Restore original auth mode
-                        self.config.auth_mode = old_auth_mode
-                        logger.error("OAuth authentication failed")
-                        logger.info("Falling back to account status...")
-                        return self.get_account_status()
-                else:
-                    logger.warning("No OAuth token available for balance access")
-                    logger.info("Falling back to account status...")
-                    return self.get_account_status()
-
-            if "oauth" in error_msg.lower() or "permission" in error_msg.lower():
-                logger.info("This account requires OAuth token for balance access")
-                logger.info("Set DERIV_OAUTH_TOKEN in your .env file or use DERIV_AUTH_MODE=oauth")
+        response = self._execute_with_oauth_fallback(req)
 
         # Fallback to account status if balance still fails
         if not response or response.get("error"):
+            if response and response.get("error"):
+                logger.warning(f"Balance access failed: {response['error']['message']}")
+                
+                if "oauth" in response['error']['message'].lower():
+                     logger.info("This account requires OAuth token for balance access")
+                     logger.info("Set DERIV_OAUTH_TOKEN in your .env file or use DERIV_AUTH_MODE=oauth")
+
             logger.info("Falling back to account status...")
             return self.get_account_status()
 
@@ -551,7 +565,8 @@ class DerivBroker(TradingBroker):
             "limit": limit,
             "offset": 0
         }
-        response = self._send_request(req)
+        # Use fallback as statement/profit table often requires OAuth too
+        response = self._execute_with_oauth_fallback(req)
 
         if not response or response.get("error"):
             logger.warning("Failed to get trading statement")
@@ -576,7 +591,7 @@ class DerivBroker(TradingBroker):
 
         # Otherwise, try to get real positions from API
         req = {"portfolio": 1}
-        response = self._send_request(req)
+        response = self._execute_with_oauth_fallback(req)
 
         if not response or response.get("error"):
             # If API call fails and we have simulated positions, return those
@@ -600,11 +615,27 @@ class DerivBroker(TradingBroker):
         Returns:
             Close position response dictionary
         """
+        # Check if it's a simulated position first
+        if hasattr(self, '_positions') and self._positions:
+            contracts = self._positions.get('portfolio', {}).get('contracts', [])
+            for i, contract in enumerate(contracts):
+                if str(contract.get('contract_id')) == str(contract_id):
+                    # Found simulated position, remove it
+                    removed_contract = contracts.pop(i)
+                    logger.info(f"Simulated position {contract_id} closed successfully")
+                    return {
+                        "sell": {
+                            "contract_id": contract_id, 
+                            "sold_for": removed_contract.get("stake", 0),
+                            "transaction_id": contract_id
+                        }
+                    }
+
         req = {
-            "sell": 1,
-            "contract_id": contract_id
+            "sell": contract_id,
+            "price": 0  # Market sell
         }
-        response = self._send_request(req)
+        response = self._execute_with_oauth_fallback(req)
 
         if response and not response.get("error"):
             logger.info(f"Position {contract_id} closed successfully")

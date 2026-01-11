@@ -432,7 +432,8 @@ def _verify_api_connectivity() -> dict:
         # Try to access broker
         if hasattr(st.session_state.bt_engine, 'data_handler') and st.session_state.bt_engine.data_handler:
             if st.session_state.bt_engine.data_handler.broker is None:
-                return {'connected': False, 'message': 'No broker connection configured'}
+                # No broker means Demo mode - this is a valid state for backtesting
+                return {'connected': True, 'message': 'Demo Mode (Synthetic Data)'}
 
             # Test basic connectivity (this would ping API in real implementation)
             return {'connected': True, 'message': 'API connection available'}
@@ -671,14 +672,23 @@ def execute_backtest():
                 pnl = results.get('net_profit', 0)
                 st.metric("Net P&L", f"${pnl:.2f}")
             with metrics_cols[1]:
-                sharpe = results.get('sharpe_ratio', 0)
-                st.metric("Sharpe Ratio", f"{sharpe:.2f}")
+                sharpe = results.get('sharpe_ratio')
+                if sharpe is not None:
+                    st.metric("Sharpe Ratio", f"{sharpe:.2f}")
+                else:
+                    st.metric("Sharpe Ratio", "N/A")
             with metrics_cols[2]:
-                max_dd = results.get('max_drawdown', 0)
-                st.metric("Max Drawdown", f"{max_dd:.1f}%")
+                max_dd = results.get('max_drawdown')
+                if max_dd is not None:
+                    st.metric("Max Drawdown", f"{max_dd:.1f}%")
+                else:
+                    st.metric("Max Drawdown", "N/A")
             with metrics_cols[3]:
-                profit_factor = results.get('profit_factor', 1.0)
-                st.metric("Profit Factor", f"{profit_factor:.2f}")
+                profit_factor = results.get('profit_factor')
+                if profit_factor is not None and profit_factor != float('inf'):
+                    st.metric("Profit Factor", f"{profit_factor:.2f}")
+                else:
+                    st.metric("Profit Factor", "N/A")
 
     except Exception as e:
         st.error(f"❌ Backtest execution failed: {str(e)}")

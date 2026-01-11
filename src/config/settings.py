@@ -17,6 +17,10 @@ from typing import Dict, Any, Optional, List
 from dataclasses import dataclass, field
 import json
 
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()  # This loads the .env file into os.environ
+
 logger = logging.getLogger(__name__)
 
 

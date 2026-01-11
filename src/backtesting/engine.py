@@ -406,7 +406,7 @@ class BacktestEngine:
         strat_cls: Type[BaseStrategy],
         strat_kwargs: Dict[str, Any],
     ) -> bt.Cerebro:
-        """Prepare Cerebro instance with standard configuration"""
+        """Prepare Cerebro instance with standard configuration (without strategy yet)"""
         cerebro = bt.Cerebro()
         cerebro.broker.setcash(self.cash)
         cerebro.broker.setcommission(commission=self.comm)
@@ -417,7 +417,8 @@ class BacktestEngine:
         else:
             cerebro.broker.set_slippage_perc(self.slip)
 
-        cerebro.addstrategy(strat_cls, **strat_kwargs)
+        # NOTE: Strategy is NOT added here anymore - it must be added AFTER data feeds
+        # to ensure self.data is available in strategy __init__
 
         # Add standard analyzers - using daily timeframe for Sharpe calculation
         cerebro.addanalyzer(bt.analyzers.SharpeRatio, _name="sharpe", annualize=True)
@@ -701,6 +702,10 @@ class BacktestEngine:
                     logger.error(f"❌ Could not generate demo data for {inst}")
                     return {"error": f"No data available for {inst} (live or demo)"}
 
+        # CRITICAL: Add strategy AFTER data feeds so self.data is available in __init__
+        logger.info(f"Adding strategy {strat_cls.__name__} with params: {strat_kwargs}")
+        cerebro.addstrategy(strat_cls, **strat_kwargs)
+
         # Execute backtest
         try:
             results = cerebro.run()
@@ -807,10 +812,20 @@ class BacktestEngine:
     def _calculate_advanced_metrics(self, returns: pd.Series, basic_stats: Dict) -> Dict[str, Any]:
         """Calculate advanced performance metrics"""
         try:
-            metrics = {}
+            metrics = {
+                "sortino_ratio": 0,
+                "recovery_factor": 0,
+                "profit_factor": 0,
+                "max_consecutive_wins": 0,
+                "max_consecutive_losses": 0,
+                "calmar_ratio": 0,
+                "win_loss_ratio": 0
+            }
 
             if returns is None or returns.empty:
-                return {"error": "No returns data available for advanced metrics"}
+                # Instead of error, return default metrics
+                logger.debug("No returns data available for advanced metrics - using defaults")
+                return metrics
 
             # Sortino Ratio (downside deviation only)
             downside_returns = returns[returns < 0]
@@ -839,9 +854,6 @@ class BacktestEngine:
 
                 metrics["max_consecutive_wins"] = consecutive_wins
                 metrics["max_consecutive_losses"] = consecutive_losses
-            else:
-                metrics["max_consecutive_wins"] = 0
-                metrics["max_consecutive_losses"] = 0
 
             # Calmar Ratio (annual return / max drawdown)
             if max_dd > 0:
@@ -858,7 +870,16 @@ class BacktestEngine:
 
         except Exception as e:
             logger.error(f"Error calculating advanced metrics: {e}")
-            return {"error": f"Failed to calculate advanced metrics: {str(e)}"}
+            # Return defaults on error instead of failing
+            return {
+                "sortino_ratio": 0,
+                "recovery_factor": 0,
+                "profit_factor": 0,
+                "max_consecutive_wins": 0,
+                "max_consecutive_losses": 0,
+                "calmar_ratio": 0,
+                "win_loss_ratio": 0
+            }
 
     def optimize(
         self,

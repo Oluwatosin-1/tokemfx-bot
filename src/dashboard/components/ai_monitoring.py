@@ -44,17 +44,21 @@ def render_ai_monitoring():
     # AI performance chart with real data
     try:
         ai_perf = get_ai_performance_history()
-    except:
-        # Fallback to demo data
-        ai_perf = pd.DataFrame({
-            'Hour': range(24),
-            'Win_Rate': np.random.uniform(60, 85, 24),
-            'Confidence': np.random.uniform(65, 90, 24),
-            'Trades': np.random.poisson(3, 24)
-        })
-
-    if ai_perf is not None and not ai_perf.empty:
-        st.line_chart(ai_perf.set_index('Hour')[['Win_Rate', 'Confidence']], use_container_width=True)
+        
+        # Verify the DataFrame has the required columns
+        if ai_perf is not None and not ai_perf.empty:
+            required_cols = ['Win_Rate', 'Confidence']
+            if all(col in ai_perf.columns for col in required_cols):
+                st.line_chart(ai_perf.set_index('Hour')[required_cols], use_container_width=True)
+            else:
+                st.warning("⚠️ 🤖 AI Health Monitor is currently being developed")
+                st.caption("Component Information")
+        else:
+            st.info("⚠️ 🤖 AI Health Monitor is currently being developed")
+    except Exception as e:
+        st.error(f'❌ Error loading ai_health: "{str(e)}"')
+        st.warning("⚠️ 🤖 AI Health Monitor is currently being developed")
+        st.caption("Component Information")
 
     # Additional AI health metrics
     st.subheader("Model Health Details")
